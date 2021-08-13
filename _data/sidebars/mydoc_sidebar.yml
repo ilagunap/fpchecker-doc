@@ -1,0 +1,58 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: #Jekyll Doc Theme
+  version: #6.0
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Get Started
+    output: web, pdf
+    folderitems:
+
+    - title: Get started
+      url: /index.html
+      output: web, pdf
+      type: homepage
+
+    - title: Building
+      url: /installation.html
+      output: web, pdf
+
+    - title: How to Use
+      url: /how-to-use.html
+      output: web, pdf
+
+    - title: FPChecker Reports
+      url: /reports.html
+      output: web, pdf
+
+  - title: Blog
+    output: web
+    folderitems:
+    
+    - title: Blog
+      url: /blog.html
+      output: web
+
+  - title: Reports
+    output: web
+    folderitems:
+    
+    - title: Open Source Reports
+      url: /open-source-reports.html
+      output: web
+

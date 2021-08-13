@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+Quicksilver
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./cancellation.html">Cancellation
+	</a> &nbsp; &gt; &nbsp;
+/home/ignacio/projects/fpchecker/apps/cpu_testing/quicksilver/Quicksilver-master/src/GridAssignmentObject.cc
+</div>
+<h2 id="heading">
+Cancellation
+	Report
+</h2>
+<h3 id="heading">
+GridAssignmentObject.cc
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">51</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">52</td><td><code>   // 1.</code></td></tr>
+<tr><td class="code_line_class">53</td><td><span class="highlightme"><code>   double lx = max(1., (maxCoord.x - minCoord.x));</code></span></td></tr>
+<tr><td class="code_line_class">54</td><td><code>   double ly = max(1., (maxCoord.y - minCoord.y));</code></td></tr>
+<tr><td class="code_line_class">55</td><td><span class="highlightme"><code>   double lz = max(1., (maxCoord.z - minCoord.z));</code></span></td></tr>
+<tr><td class="code_line_class">56</td><td><code></code></td></tr>
+<tr><td class="code_line_class">57</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">81</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">82</td><td><code>   addTupleToQueue(whichCellTuple(r));</code></td></tr>
+<tr><td class="code_line_class">83</td><td><span class="highlightme"><code></code></span></td></tr>
+<tr><td class="code_line_class">84</td><td><code>   while (_floodQueue.size() > 0)</code></td></tr>
+<tr><td class="code_line_class">85</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">121</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">122</td><td><code>{</code></td></tr>
+<tr><td class="code_line_class">123</td><td><span class="highlightme"><code>   int ix = (r.x-_corner.x)/_dx;</code></span></td></tr>
+<tr><td class="code_line_class">124</td><td><span class="highlightme"><code>   int iy = (r.y-_corner.y)/_dy;</code></span></td></tr>
+<tr><td class="code_line_class">125</td><td><span class="highlightme"><code>   int iz = (r.z-_corner.z)/_dz;</code></span></td></tr>
+<tr><td class="code_line_class">126</td><td><code>   ix = max(0, ix);</code></td></tr>
+<tr><td class="code_line_class">127</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>
