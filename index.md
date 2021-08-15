@@ -45,18 +45,15 @@ FPChecker detects the following floating-point issues:
 
 FPChecker is designed as an extension of the clang/LLVM compiler. When the application is compiled, an LLVM pass instruments the LLVM IR code after optimizations and inserts check code to all floating-point operations. The check code calls routines in the FPChecker runtime system, which detects several floating-point events (see above). When the code execution ends, traces are saved in the current directory. These traces are then used to build a detailed report of the location of the detected events.
 
+## Demo
+
+<div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/587361303?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=a37bb27cfd" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="FPChecker demo"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
 ## Contact
 For questions, contact Ignacio Laguna <ilaguna@llnl.gov>.
 
 To cite FPChecker please use
 
 ```
-@inproceedings{laguna2019fpchecker,
-title={FPChecker: Detecting Floating-Point Exceptions in GPU Applications},
-  author={Laguna, Ignacio},
-  booktitle={2019 34th IEEE/ACM International Conference on Automated Software Engineering (ASE)},
-  pages={1126--1129},
-  year={2019},
-  organization={IEEE}
-}
+Laguna, Ignacio. "FPChecker: Detecting Floating-point Exceptions in GPU Applications." In 2019 34th IEEE/ACM International Conference on Automated Software Engineering (ASE), pp. 1126-1129. IEEE, 2019.
 ```

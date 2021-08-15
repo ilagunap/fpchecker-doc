@@ -40,6 +40,14 @@ entries:
       url: /reports.html
       output: web, pdf
 
+  - title: Videos
+    output: web
+    folderitems:
+    
+    - title: Videos
+      url: /videos.html
+      output: web
+
   - title: Blog
     output: web
     folderitems:
