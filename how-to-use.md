@@ -41,6 +41,8 @@ $ fpchecker make -j
 ```
 This mode doesn’t require setting `FPC_INSTRUMENT` (it does it automatically).
 
+See the [videos](videos.html) for how to use the wrappers and the automatic mode.
+
 ## Compiling CUDA
 To compile CUDA, FPChecker uses a simple front-end that instruments arithmetic operations (e.g., x = a + b …) with no dependencies on clang/LLVM. While this version is a work in progress, it can instrument most CUDA kernels.
 
