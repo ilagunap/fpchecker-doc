@@ -40,6 +40,10 @@ entries:
       url: /reports.html
       output: web, pdf
 
+    - title: Known Issues
+      url: /known_issues.html
+      output: web, pdf
+
   - title: Videos
     output: web
     folderitems:
