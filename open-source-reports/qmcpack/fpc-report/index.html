@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+./bin/qmcpack ../examples/molecules/He/he_example_wf.xml
+</div>
+
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="#">Main Report</a></div>
+<h2 id="heading">Main Report</h2>
+	
+
+<table width="150" border="0" class="report_box">
+  <tbody>
+	<tr class="tr_class">
+	<th></th> <th> </th> <th class="th_class"> Events</th> <th class="th_class"> Severity</th>
+	</tr>
+    <tr class="tr_class">
+      <td class="icon_class"><img src="icons_3/infinity_pos.svg" alt="" width="50"/></td>
+      <td><div class="tooltip">Infinity (+)
+  		<span class="tooltiptext">This is detected when operations produce positive infinity, such as 1.0 / 0.0. 
+			Infinities propagate through calculations: for example, 2 + ∞ = ∞.</span></div>
+	  </td>
+      <td>
+0
+	  </td>
+	  <td><img src="icons_3/high_icon.svg" alt="" width="50"/></td>
+    </tr>
+    <tr class="tr_class">
+      <td class="icon_class"><img src="icons_3/infinity_neg.svg" alt="" width="50"/></td>
+      <td><div class="tooltip">Infinity (-)
+		  <span class="tooltiptext">This is detected when operations produce negative infinity.</span></div>
+		</td>
+      <td>
+0
+	  </td>
+	  <td><img src="icons_3/high_icon.svg" alt="" width="50"/></td>
+    </tr>
+    <tr class="tr_class">
+      <td class="icon_class"><img src="icons_3/nan.svg" alt="" width="50"/></td>
+      <td><div class="tooltip">NaN
+		  <span class="tooltiptext">NaN (not a number) are the result of invalid operations, such as 0/0 or sqrt(-1).</span></div>
+	   </td>
+       <td>
+0
+	   </td>
+	   <td><img src="icons_3/high_icon.svg" alt="" width="50"/></td>
+    </tr>
+    <tr class="tr_class">
+      <td class="icon_class"><img src="icons_3/div_zero.svg" alt="" width="50"/></td>
+      <td><div class="tooltip">Division by zero
+		  <span class="tooltiptext">This occurs when a finite nonzero number is divided by zero. This typically produce an infinity.</span></div>
+	  </td>
+      <td>
+0
+	  </td>
+	  <td><img src="icons_3/high_icon.svg" alt="" width="50"/></td>
+    </tr>
+	<tr class="tr_class">
+      <td class="icon_class"><img src="icons_3/underflow.svg" alt="" width="50"/></td>
+      <td><div class="tooltip">Underflow (subnormal)
+		  <span class="tooltiptext">Underflows are detected when an operation produces a subnormal number 
+			  because the result was not representable as a normal number. Certain compiler optimizations 
+			  can produce unexpected results when operands are subnormal numbers.</span></div>
+	  </td>
+      <td>
+<a href="./underflow/underflow.html">450366</a>
+	  </td>
+	  <td><img src="icons_3/medium_icon.svg" alt="" width="75"/></td>
+    </tr>
+    <tr class="tr_class">
+      <td class="icon_class"><img src="icons_3/comparison.svg" alt="" width="50"/></td>
+      <td><div class="tooltip">Comparison
+		  <span class="tooltiptext">This occurs when two floating-point numbers are compared for equality. 
+			  Often comparing if two floating-point numbers are equal is not a good idea.</span></div>
+	  </td>
+      <td>
+<a href="./comparison/comparison.html">362</a>
+	  </td>
+	  <td><img src="icons_3/medium_icon.svg" alt="" width="75"/></td>
+    </tr>
+	<tr class="tr_class">
+      <td class="icon_class"><img src="icons_3/cancellation.svg" alt="" width="50"/></td>
+      <td><div class="tooltip">Cancellation
+		  <span class="tooltiptext">Cancellation occurs when two nearly equal numbers are subtracted. 
+			  By default, this event is detected when at least ten decimal digits are lost due to a subtraction.</span></div>
+	  </td>
+      <td>
+<a href="./cancellation/cancellation.html">130449698</a>
+	  </td>
+	  <td><img src="icons_3/low_icon.svg" alt="" width="45"/></td>
+    </tr>
+    <tr class="tr_class">
+      <td class="icon_class"><img src="icons_3/warning.svg" alt="" width="50"/></td>
+      <td><div class="tooltip">Latent Infinity (+)
+		  <span class="tooltiptext">This is detected when an operation produces a normal number that is large, 
+			  and it is in close proximity to positive infinity.</span></div>
+	  </td>
+      <td>
+<a href="./latent_positive_infinity/latent_positive_infinity.html">383348</a>
+	  </td>
+	  <td><img src="icons_3/low_icon.svg" alt="" width="45"/></td>
+    </tr>
+    <tr class="tr_class">
+      <td class="icon_class"><img src="icons_3/warning.svg" alt="" width="50"/></td>
+      <td><div class="tooltip">Latent Infinity (-)
+		  <span class="tooltiptext">This is detected when an operation produces a normal number that is large, 
+			  and it is in close proximity to negative infinity.</span></div>
+	  </td>
+      <td>
+0
+	  </td>
+	  <td><img src="icons_3/low_icon.svg" alt="" width="45"/></td>
+    </tr>
+    <tr class="tr_class">
+      <td class="icon_class"><img src="icons_3/warning.svg" alt="" width="50"/></td>
+      <td><div class="tooltip">Latent underflow
+		  <span class="tooltiptext">This is detected when an operation produces a normal number that is small 
+			  and it is in close proximity to becoming an underflow (subnormal number).</span></div>
+	  </td>
+      <td>
+<a href="./latent_underflow/latent_underflow.html">1987935</a>
+	  </td>
+	  <td><img src="icons_3/low_icon.svg" alt="" width="45"/></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="separation_class"></div>
+<div class="separation_class"></div>
+	
+<table width="200" border="0" class="report_box_stats">
+  <tbody>
+    <tr>
+      <td class="td_class">Code paths:</td>
+      <td class="td_class">
+/
+	  </td>
+    </tr>
+    <tr>
+      <td class="td_class">Files affected:</td>
+      <td class="td_class">
+12
+	  </td>
+    </tr>
+    <tr>
+      <td class="td_class">Lines affected:</td>
+      <td class="td_class">
+27
+	  </td>
+    </tr>
+  </tbody>
+</table>
+
+	
+</body>
+</html>
