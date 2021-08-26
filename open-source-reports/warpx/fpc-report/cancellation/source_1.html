@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+mpirun -np 4 ./bin/warpx ../Examples/Modules/qed/breit_wheeler/inputs_3d max_step=10 warpx.numprocs=1 2 2
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./cancellation.html">Cancellation
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/warpx/WarpX/build/_deps/fetchedpicsar-src/multi_physics/QED/include/picsar_qed/physics/quantum_sync/quantum_sync_engine_core.hpp
+</div>
+<h2 id="heading">
+Cancellation
+	Report
+</h2>
+<h3 id="heading">
+quantum_sync_engine_core.hpp
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">59</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">60</td><td><code>    * for more details.</code></td></tr>
+<tr><td class="code_line_class">61</td><td><span class="highlightme"><code>    *</code></span></td></tr>
+<tr><td class="code_line_class">62</td><td><code>    * @tparam RealType the floating point type to be used</code></td></tr>
+<tr><td class="code_line_class">63</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">120</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">121</td><td><code>    * @param[in] chi_part particle chi parameter</code></td></tr>
+<tr><td class="code_line_class">122</td><td><span class="highlightme"><code>    * @param[in] t_dt timestep</code></span></td></tr>
+<tr><td class="code_line_class">123</td><td><code>    * @param[in,out] the optical depth</code></td></tr>
+<tr><td class="code_line_class">124</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">141</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">142</td><td><code>        const auto energy_part = t_energy_part*conv<</code></td></tr>
+<tr><td class="code_line_class">143</td><td><span class="highlightme"><code>            quantity::energy, UnitSystem,</code></span></td></tr>
+<tr><td class="code_line_class">144</td><td><code>            unit_system::heaviside_lorentz, RealType>::fact(ref_quantity);</code></td></tr>
+<tr><td class="code_line_class">145</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">170</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">171</td><td><code>    * @tparam TableType the type of the lookup table to be used. Must have an "interp" method.</code></td></tr>
+<tr><td class="code_line_class">172</td><td><span class="highlightme"><code>    * @tparam UnitSystem unit system to be used (default is SI)</code></span></td></tr>
+<tr><td class="code_line_class">173</td><td><span class="highlightme"><code>    *</code></span></td></tr>
+<tr><td class="code_line_class">174</td><td><span class="highlightme"><code>    * @param[in] chi_particle particle chi parameter</code></span></td></tr>
+<tr><td class="code_line_class">175</td><td><code>    * @param[in, out] t_v_momentum_particle 3-momentum of the particle</code></td></tr>
+<tr><td class="code_line_class">176</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>

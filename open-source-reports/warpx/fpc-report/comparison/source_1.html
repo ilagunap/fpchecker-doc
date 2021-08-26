@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+mpirun -np 4 ./bin/warpx ../Examples/Modules/qed/breit_wheeler/inputs_3d max_step=10 warpx.numprocs=1 2 2
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./comparison.html">Comparison
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/warpx/WarpX/build/_deps/fetchedpicsar-src/multi_physics/QED/include/picsar_qed/physics/quantum_sync/quantum_sync_engine_core.hpp
+</div>
+<h2 id="heading">
+Comparison
+	Report
+</h2>
+<h3 id="heading">
+quantum_sync_engine_core.hpp
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">41</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">42</td><td><code>    *</code></td></tr>
+<tr><td class="code_line_class">43</td><td><span class="highlightme"><code>    * @tparam RealType the floating point type to be used</code></span></td></tr>
+<tr><td class="code_line_class">44</td><td><code>    * @param[in] unf_zero_one_minus_epsi a random number uniformly distributed in [0,1)</code></td></tr>
+<tr><td class="code_line_class">45</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">56</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">57</td><td><code>    /**</code></td></tr>
+<tr><td class="code_line_class">58</td><td><span class="highlightme"><code>    * Computes dN/dt for Quantum Synchrotron photon emission. Needs a</code></span></td></tr>
+<tr><td class="code_line_class">59</td><td><code>    * lookup table to provide G(chi_particle). See validation script</code></td></tr>
+<tr><td class="code_line_class">60</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>
