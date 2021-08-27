@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+ctest -L deterministic
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./cancellation.html">Cancellation
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Containers/OhmmsPETE/TinyVectorOps.h
+</div>
+<h2 id="heading">
+Cancellation
+	Report
+</h2>
+<h3 id="heading">
+TinyVectorOps.h
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">27</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">28</td><td><code>  typedef std::complex<T1> Type_t;</code></td></tr>
+<tr><td class="code_line_class">29</td><td><span class="highlightme"><code>};</code></span></td></tr>
+<tr><td class="code_line_class">30</td><td><code></code></td></tr>
+<tr><td class="code_line_class">31</td><td><span class="highlightme"><code>///////////////////////////////////////////////////////////////////////</code></span></td></tr>
+<tr><td class="code_line_class">32</td><td><code>//</code></td></tr>
+<tr><td class="code_line_class">33</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">72</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">73</td><td><code>{</code></td></tr>
+<tr><td class="code_line_class">74</td><td><span class="highlightme"><code>  inline static void apply(TinyVector<T1, 1>& lhs, const T2& rhs, OP op) { op(lhs[0], rhs); }</code></span></td></tr>
+<tr><td class="code_line_class">75</td><td><span class="highlightme"><code>};</code></span></td></tr>
+<tr><td class="code_line_class">76</td><td><span class="highlightme"><code></code></span></td></tr>
+<tr><td class="code_line_class">77</td><td><code>//////////////////////////////////////////////////////////////////////</code></td></tr>
+<tr><td class="code_line_class">78</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">84</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">85</td><td><code>  {</code></td></tr>
+<tr><td class="code_line_class">86</td><td><span class="highlightme"><code>    op(lhs[0], rhs[0]);</code></span></td></tr>
+<tr><td class="code_line_class">87</td><td><code>    op(lhs[1], rhs[1]);</code></td></tr>
+<tr><td class="code_line_class">88</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">122</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">123</td><td><code>    op(lhs[2], rhs[2].real());</code></td></tr>
+<tr><td class="code_line_class">124</td><td><span class="highlightme"><code>  }</code></span></td></tr>
+<tr><td class="code_line_class">125</td><td><code>};</code></td></tr>
+<tr><td class="code_line_class">126</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">143</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">144</td><td><code>    op(lhs[1], rhs);</code></td></tr>
+<tr><td class="code_line_class">145</td><td><span class="highlightme"><code>    op(lhs[2], rhs);</code></span></td></tr>
+<tr><td class="code_line_class">146</td><td><span class="highlightme"><code>  }</code></span></td></tr>
+<tr><td class="code_line_class">147</td><td><code>};</code></td></tr>
+<tr><td class="code_line_class">148</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">168</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">169</td><td><code>    return ret;</code></td></tr>
+<tr><td class="code_line_class">170</td><td><span class="highlightme"><code>  }</code></span></td></tr>
+<tr><td class="code_line_class">171</td><td><code>};</code></td></tr>
+<tr><td class="code_line_class">172</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">196</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">197</td><td><code>};</code></td></tr>
+<tr><td class="code_line_class">198</td><td><span class="highlightme"><code></code></span></td></tr>
+<tr><td class="code_line_class">199</td><td><code>//////////////////////////////////////////////////////////////////////</code></td></tr>
+<tr><td class="code_line_class">200</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">277</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">278</td><td><code>  }</code></td></tr>
+<tr><td class="code_line_class">279</td><td><span class="highlightme"><code>};</code></span></td></tr>
+<tr><td class="code_line_class">280</td><td><code></code></td></tr>
+<tr><td class="code_line_class">281</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">287</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">288</td><td><code>  }</code></td></tr>
+<tr><td class="code_line_class">289</td><td><span class="highlightme"><code>};</code></span></td></tr>
+<tr><td class="code_line_class">290</td><td><code></code></td></tr>
+<tr><td class="code_line_class">291</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">297</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">298</td><td><code>  }</code></td></tr>
+<tr><td class="code_line_class">299</td><td><span class="highlightme"><code>};</code></span></td></tr>
+<tr><td class="code_line_class">300</td><td><code></code></td></tr>
+<tr><td class="code_line_class">301</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">310</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">311</td><td><code>  inline static Type_t apply(const TinyVector<T1, D>& lhs, const TinyVector<T2, D>& rhs)</code></td></tr>
+<tr><td class="code_line_class">312</td><td><span class="highlightme"><code>  {</code></span></td></tr>
+<tr><td class="code_line_class">313</td><td><code>    Type_t res = lhs[0] * rhs[0];</code></td></tr>
+<tr><td class="code_line_class">314</td><td><span class="highlightme"><code>    for (unsigned d = 1; d < D; ++d)</code></span></td></tr>
+<tr><td class="code_line_class">315</td><td><code>      res += lhs[d] * rhs[d];</code></td></tr>
+<tr><td class="code_line_class">316</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">317</td><td><code>  }</code></td></tr>
+<tr><td class="code_line_class">318</td><td><span class="highlightme"><code>};</code></span></td></tr>
+<tr><td class="code_line_class">319</td><td><code></code></td></tr>
+<tr><td class="code_line_class">320</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">341</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">342</td><td><code>  {</code></td></tr>
+<tr><td class="code_line_class">343</td><td><span class="highlightme"><code>    return lhs[0] * rhs[0] + lhs[1] * rhs[1] + lhs[2] * rhs[2];</code></span></td></tr>
+<tr><td class="code_line_class">344</td><td><code>  }</code></td></tr>
+<tr><td class="code_line_class">345</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>

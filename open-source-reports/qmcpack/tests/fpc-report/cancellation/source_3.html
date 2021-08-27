@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+ctest -L deterministic
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./cancellation.html">Cancellation
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/einspline/bspline_create.c
+</div>
+<h2 id="heading">
+Cancellation
+	Report
+</h2>
+<h3 id="heading">
+bspline_create.c
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">948</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">949</td><td><code>  bands[4*(1)+1] -= bands[4*(1)+0]*bands[4*(0)+1];</code></td></tr>
+<tr><td class="code_line_class">950</td><td><span class="highlightme"><code>  bands[4*(1)+2] -= bands[4*(1)+0]*bands[4*(0)+2];</code></span></td></tr>
+<tr><td class="code_line_class">951</td><td><code>  bands[4*(1)+3] -= bands[4*(1)+0]*bands[4*(0)+3];</code></td></tr>
+<tr><td class="code_line_class">952</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">969</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">970</td><td><code>  bands[4*(M+1)+2] -= bands[4*(M+1)+1]*bands[4*(M)+2];</code></td></tr>
+<tr><td class="code_line_class">971</td><td><span class="highlightme"><code>  bands[4*(M+1)+3] -= bands[4*(M+1)+1]*bands[4*(M)+3];</code></span></td></tr>
+<tr><td class="code_line_class">972</td><td><code>  bands[4*(M+1)+3] /= bands[4*(M+1)+2];</code></td></tr>
+<tr><td class="code_line_class">973</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">976</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">977</td><td><code>  for (int row=M; row>0; row--)</code></td></tr>
+<tr><td class="code_line_class">978</td><td><span class="highlightme"><code>    coefs[row*cstride] = bands[4*(row)+3] - bands[4*(row)+2]*coefs[cstride*(row+1)];</code></span></td></tr>
+<tr><td class="code_line_class">979</td><td><code>  </code></td></tr>
+<tr><td class="code_line_class">980</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1023</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1024</td><td><code>  bands[4*(M-1)+1] -= bands[4*(M-1)+0] * (bands[4*(M-2)+2]+lastCol[M-2]);</code></td></tr>
+<tr><td class="code_line_class">1025</td><td><span class="highlightme"><code>  bands[4*(M-1)+3] -= bands[4*(M-1)+0] *  bands[4*(M-2)+3];</code></span></td></tr>
+<tr><td class="code_line_class">1026</td><td><code>  bands[4*(M-1)+3] /= bands[4*(M-1)+1];</code></td></tr>
+<tr><td class="code_line_class">1027</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1028</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1029</td><td><code>    coefs[(row+1)*cstride] = </code></td></tr>
+<tr><td class="code_line_class">1030</td><td><span class="highlightme"><code>      bands[4*(row)+3] - bands[4*(row)+2]*coefs[(row+2)*cstride] - lastCol[row]*coefs[M*cstride];</code></span></td></tr>
+<tr><td class="code_line_class">1031</td><td><code>  </code></td></tr>
+<tr><td class="code_line_class">1032</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>

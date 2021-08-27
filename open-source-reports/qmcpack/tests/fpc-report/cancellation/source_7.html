@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+ctest -L deterministic
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./cancellation.html">Cancellation
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/external_codes/catch/catch.hpp
+</div>
+<h2 id="heading">
+Cancellation
+	Report
+</h2>
+<h3 id="heading">
+catch.hpp
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">214</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">215</td><td><code></code></td></tr>
+<tr><td class="code_line_class">216</td><td><span class="highlightme"><code>////////////////////////////////////////////////////////////////////////////////</code></span></td></tr>
+<tr><td class="code_line_class">217</td><td><code>// PS4</code></td></tr>
+<tr><td class="code_line_class">218</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">287</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">288</td><td><code>////////////////////////////////////////////////////////////////////////////////</code></td></tr>
+<tr><td class="code_line_class">289</td><td><span class="highlightme"><code></code></span></td></tr>
+<tr><td class="code_line_class">290</td><td><code>// Use of __COUNTER__ is suppressed during code analysis in</code></td></tr>
+<tr><td class="code_line_class">291</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">341</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">342</td><td><code>  #      else</code></td></tr>
+<tr><td class="code_line_class">343</td><td><span class="highlightme"><code>  #        define CATCH_INTERNAL_CONFIG_CPP17_VARIANT</code></span></td></tr>
+<tr><td class="code_line_class">344</td><td><code>  #      endif // defined(__GLIBCXX__) && defined(_GLIBCXX_RELEASE) && (_GLIBCXX_RELEASE < 9)</code></td></tr>
+<tr><td class="code_line_class">345</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1018</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1019</td><td><code>    #ifndef CATCH_CONFIG_TRADITIONAL_MSVC_PREPROCESSOR</code></td></tr>
+<tr><td class="code_line_class">1020</td><td><span class="highlightme"><code>        #define INTERNAL_CATCH_TEMPLATE_TEST_CASE_SIG_NO_REGISTRATION(Name, Tags, Signature, ...) \</code></span></td></tr>
+<tr><td class="code_line_class">1021</td><td><span class="highlightme"><code>            INTERNAL_CATCH_TEMPLATE_TEST_CASE_NO_REGISTRATION_2( INTERNAL_CATCH_UNIQUE_NAME( ____C_A_T_C_H____T_E_M_P_L_A_T_E____T_E_S_T____ ), INTERNAL_CATCH_UNIQUE_NAME( ____C_A_T_C_H____T_E_M_P_L_A_T_E____T_E_S_T____F_U_N_C____ ), Name, Tags, Signature, __VA_ARGS__ )</code></span></td></tr>
+<tr><td class="code_line_class">1022</td><td><code>    #else</code></td></tr>
+<tr><td class="code_line_class">1023</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>

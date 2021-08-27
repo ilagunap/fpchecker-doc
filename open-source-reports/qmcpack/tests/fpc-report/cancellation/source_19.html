@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+ctest -L deterministic
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./cancellation.html">Cancellation
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Numerics/SplineSolvers.h
+</div>
+<h2 id="heading">
+Cancellation
+	Report
+</h2>
+<h3 id="heading">
+SplineSolvers.h
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">39</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">40</td><td><code>  T rhs_start =</code></td></tr>
+<tr><td class="code_line_class">41</td><td><span class="highlightme"><code>      ((yp0 < 9.9000000000000002e+29) ? (6 * yp0 + 6 * y[0] / (-x[0] + x[1]) - 6 * y[1] / (-x[0] + x[1])) : (0));</code></span></td></tr>
+<tr><td class="code_line_class">42</td><td><code>  T rhs_end = ((ypn < 9.9000000000000002e+29)</code></td></tr>
+<tr><td class="code_line_class">43</td><td><span class="highlightme"><code>                   ? (6 * ypn - 6 * y[n - 1] / (x[n - 1] - x[n - 2]) + 6 * y[n - 2] / (x[n - 1] - x[n - 2]))</code></span></td></tr>
+<tr><td class="code_line_class">44</td><td><code>                   : (0));</code></td></tr>
+<tr><td class="code_line_class">45</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">54</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">55</td><td><code>    T z6 = -y[i];</code></td></tr>
+<tr><td class="code_line_class">56</td><td><span class="highlightme"><code>    u[i] = (z1 * z2 * z2 * u[i - 1] - 6 * z1 * (z6 + y[i - 1]) + 6 * z2 * (z6 + y[i + 1])) / (z1 * z2 * (z3 - z4 + z5));</code></span></td></tr>
+<tr><td class="code_line_class">57</td><td><code>    y2[i] = (-x[i + 1] + x[i]) / (-z3 + z4 - z5);</code></td></tr>
+<tr><td class="code_line_class">58</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">71</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">72</td><td><code> *  Copy of routine from: "One dimensional spline interpolation algorithms" by Helmuth Spath</code></td></tr>
+<tr><td class="code_line_class">73</td><td><span class="highlightme"><code> * QUINAT routine</code></span></td></tr>
+<tr><td class="code_line_class">74</td><td><code> */</code></td></tr>
+<tr><td class="code_line_class">75</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">105</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">106</td><td><code>      D[i + 1] = E[i] = F[i - 1] = 0.0;</code></td></tr>
+<tr><td class="code_line_class">107</td><td><span class="highlightme"><code>    }</code></span></td></tr>
+<tr><td class="code_line_class">108</td><td><code>    else</code></td></tr>
+<tr><td class="code_line_class">109</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">116</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">117</td><td><code>      D[i - 1] += 6.0 * Q3 / (PQ * PQ);</code></td></tr>
+<tr><td class="code_line_class">118</td><td><span class="highlightme"><code>      E[i] = Q2 * (P * QR + 3.0 * PQ * (QR + 2.0 * R)) / (PQQR * QR);</code></span></td></tr>
+<tr><td class="code_line_class">119</td><td><code>      E[i - 1] += Q2 * (R * PQ + 3.0 * QR * (PQ + 2.0 * P)) / (PQQR * PQ);</code></td></tr>
+<tr><td class="code_line_class">120</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">127</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">128</td><td><code>    {</code></td></tr>
+<tr><td class="code_line_class">129</td><td><span class="highlightme"><code>      B[i] = Y[i];</code></span></td></tr>
+<tr><td class="code_line_class">130</td><td><code>      Y[i] = Y[i - 1];</code></td></tr>
+<tr><td class="code_line_class">131</td><td><span class="highlightme"><code>    }</code></span></td></tr>
+<tr><td class="code_line_class">132</td><td><span class="highlightme"><code>    else</code></span></td></tr>
+<tr><td class="code_line_class">133</td><td><code>    {</code></td></tr>
+<tr><td class="code_line_class">134</td><td><span class="highlightme"><code>      B[i] = (Y[i] - Y[i - 1]) / (X[i] - X[i - 1]);</code></span></td></tr>
+<tr><td class="code_line_class">135</td><td><code>    }</code></td></tr>
+<tr><td class="code_line_class">136</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">144</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">145</td><td><code>    {</code></td></tr>
+<tr><td class="code_line_class">146</td><td><span class="highlightme"><code>      C[i] = (B[i] - B[i - 1]) / (X[i] - X[i - 2]);</code></span></td></tr>
+<tr><td class="code_line_class">147</td><td><code>    }</code></td></tr>
+<tr><td class="code_line_class">148</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">149</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">150</td><td><code>  P = C[0] = E[N - 3] = F[0] = F[N - 4] = F[N - 3] = 0.0;</code></td></tr>
+<tr><td class="code_line_class">151</td><td><span class="highlightme"><code>  C[1]                                             = C[3] - C[2];</code></span></td></tr>
+<tr><td class="code_line_class">152</td><td><code>  D[1]                                             = 1.0 / D[1];</code></td></tr>
+<tr><td class="code_line_class">153</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">156</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">157</td><td><code>    E[i] -= Q * F[i - 1];</code></td></tr>
+<tr><td class="code_line_class">158</td><td><span class="highlightme"><code>    C[i] = C[i + 2] - C[i + 1] - P * C[i - 2] - Q * C[i - 1];</code></span></td></tr>
+<tr><td class="code_line_class">159</td><td><code>    P    = D[i - 1] * F[i - 1];</code></td></tr>
+<tr><td class="code_line_class">160</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">210</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">211</td><td><code>      D[i] = 10.0 * (C[i] - Q * S);</code></td></tr>
+<tr><td class="code_line_class">212</td><td><span class="highlightme"><code>      C[i] = D[i] * (P - Q) + (B[i + 1] - B[i] + (U - E[i]) * P3 - (V + E[i]) * Q3) / PQ;</code></span></td></tr>
+<tr><td class="code_line_class">213</td><td><code>      B[i] = (P * (B[i + 1] - V * Q3) + Q * (B[i] - U * P3)) / PQ - P * Q * (D[i] + E[i] * (Q - P));</code></td></tr>
+<tr><td class="code_line_class">214</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>

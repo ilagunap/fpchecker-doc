@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+ctest -L deterministic
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./latent_underflow.html">Latent Underflow
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/QMCHamiltonians/CoulombPBCAA.cpp
+</div>
+<h2 id="heading">
+Latent Underflow
+	Report
+</h2>
+<h3 id="heading">
+CoulombPBCAA.cpp
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">73</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">74</td><td><code>      msg << "  QMCPACK   ion-ion energy: " << Value << std::endl;</code></td></tr>
+<tr><td class="code_line_class">75</td><td><span class="highlightme"><code>      msg << "            ion-ion diff  : " << Value - Vii_ref << std::endl;</code></span></td></tr>
+<tr><td class="code_line_class">76</td><td><code>      msg << "            diff/atom     : " << (Value - Vii_ref) / NumCenters << std::endl;</code></td></tr>
+<tr><td class="code_line_class">77</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">99</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">100</td><td><code>CoulombPBCAA::~CoulombPBCAA() = default;</code></td></tr>
+<tr><td class="code_line_class">101</td><td><span class="highlightme"><code></code></span></td></tr>
+<tr><td class="code_line_class">102</td><td><code>void CoulombPBCAA::addObservables(PropertySetType& plist, BufferType& collectables)</code></td></tr>
+<tr><td class="code_line_class">103</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">125</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">126</td><td><code>void CoulombPBCAA::resetTargetParticleSet(ParticleSet& P)</code></td></tr>
+<tr><td class="code_line_class">127</td><td><span class="highlightme"><code>{</code></span></td></tr>
+<tr><td class="code_line_class">128</td><td><code>  if (is_active)</code></td></tr>
+<tr><td class="code_line_class">129</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">154</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">155</td><td><code>}</code></td></tr>
+<tr><td class="code_line_class">156</td><td><span class="highlightme"><code>#endif</code></span></td></tr>
+<tr><td class="code_line_class">157</td><td><code></code></td></tr>
+<tr><td class="code_line_class">158</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">204</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">205</td><td><code>        V_samp(jpart) += pairpot;</code></td></tr>
+<tr><td class="code_line_class">206</td><td><span class="highlightme"><code>        Vsr += pairpot;</code></span></td></tr>
+<tr><td class="code_line_class">207</td><td><span class="highlightme"><code>      }</code></span></td></tr>
+<tr><td class="code_line_class">208</td><td><code>    }</code></td></tr>
+<tr><td class="code_line_class">209</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">217</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">218</td><td><code>    else</code></td></tr>
+<tr><td class="code_line_class">219</td><td><span class="highlightme"><code>    {</code></span></td></tr>
+<tr><td class="code_line_class">220</td><td><span class="highlightme"><code>      assert(PtclRhoK.isStorePerParticle()); // ensure this so we know eikr_r has been allocated</code></span></td></tr>
+<tr><td class="code_line_class">221</td><td><code>      //jtk mark: needs optimizations for USE_REAL_STRUCT_FACTOR</code></td></tr>
+<tr><td class="code_line_class">222</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">230</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">231</td><td><code>          v1 += z * Zspec[s] *</code></td></tr>
+<tr><td class="code_line_class">232</td><td><span class="highlightme"><code>              AA->evaluate(PtclRhoK.getKLists().kshell, PtclRhoK.rhok_r[s], PtclRhoK.rhok_i[s], PtclRhoK.eikr_r[i],</code></span></td></tr>
+<tr><td class="code_line_class">233</td><td><span class="highlightme"><code>                           PtclRhoK.eikr_i[i]);</code></span></td></tr>
+<tr><td class="code_line_class">234</td><td><code>#else</code></td></tr>
+<tr><td class="code_line_class">235</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+ctest -L deterministic
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./cancellation.html">Cancellation
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/QMCDrivers/tests/test_drift.cpp
+</div>
+<h2 id="heading">
+Cancellation
+	Report
+</h2>
+<h3 id="heading">
+test_drift.cpp
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">47</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">48</td><td><code></code></td></tr>
+<tr><td class="code_line_class">49</td><td><span class="highlightme"><code>    double scale_factor = (-1. + std::sqrt(1. + 2. * gradx * gradx * tau / mass)) / (gradx * gradx * tau / mass);</code></span></td></tr>
+<tr><td class="code_line_class">50</td><td><code>    REQUIRE(dval == Approx(scale_factor * gradx * tau / mass));</code></td></tr>
+<tr><td class="code_line_class">51</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">52</td><td><code>    //app_log() << gradx << " " << dval << std::endl;</code></td></tr>
+<tr><td class="code_line_class">53</td><td><span class="highlightme"><code>    gradx += dx;</code></span></td></tr>
+<tr><td class="code_line_class">54</td><td><code>  }</code></td></tr>
+<tr><td class="code_line_class">55</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">120</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">121</td><td><code></code></td></tr>
+<tr><td class="code_line_class">122</td><td><span class="highlightme"><code>    double scale_factor = (-1. + std::sqrt(1. + 2. * gradx * gradx * tau / mass)) / (gradx * gradx * tau / mass);</code></span></td></tr>
+<tr><td class="code_line_class">123</td><td><code>    REQUIRE(dval == Approx(scale_factor * gradx * tau / mass));</code></td></tr>
+<tr><td class="code_line_class">124</td><td><code></code></td></tr>
+<tr><td class="code_line_class">125</td><td><span class="highlightme"><code>    gradx += dx;</code></span></td></tr>
+<tr><td class="code_line_class">126</td><td><code>  }</code></td></tr>
+<tr><td class="code_line_class">127</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>

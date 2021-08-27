@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+ctest -L deterministic
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./nan.html">Nan
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/QMCHamiltonians/CoulombPBCAA.cpp
+</div>
+<h2 id="heading">
+Nan
+	Report
+</h2>
+<h3 id="heading">
+CoulombPBCAA.cpp
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">121</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">122</td><td><code>  }</code></td></tr>
+<tr><td class="code_line_class">123</td><td><span class="highlightme"><code>  NewValue = Value = eL + eS + myConst;</code></span></td></tr>
+<tr><td class="code_line_class">124</td><td><code>}</code></td></tr>
+<tr><td class="code_line_class">125</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">307</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">308</td><td><code>  if (ComputeForces)</code></td></tr>
+<tr><td class="code_line_class">309</td><td><span class="highlightme"><code>  {</code></span></td></tr>
+<tr><td class="code_line_class">310</td><td><code>    dAA = LRCoulombSingleton::getDerivHandler(P);</code></td></tr>
+<tr><td class="code_line_class">311</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">347</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">348</td><td><code>      RealType V, rV, d_rV_dr, d2_rV_dr2;</code></td></tr>
+<tr><td class="code_line_class">349</td><td><span class="highlightme"><code>      RealType rinv = 1.0 / dist[j];</code></span></td></tr>
+<tr><td class="code_line_class">350</td><td><code>      rV            = rVsforce->splint(dist[j], d_rV_dr, d2_rV_dr2);</code></td></tr>
+<tr><td class="code_line_class">351</td><td><span class="highlightme"><code>      V             = rV * rinv;</code></span></td></tr>
+<tr><td class="code_line_class">352</td><td><span class="highlightme"><code>      esum += Zat[j] * rVs->splint(dist[j]) * rinv;</code></span></td></tr>
+<tr><td class="code_line_class">353</td><td><code></code></td></tr>
+<tr><td class="code_line_class">354</td><td><span class="highlightme"><code>      PosType grad = Zat[j] * Zat[ipart] * (d_rV_dr - V) * rinv * rinv * dr[j];</code></span></td></tr>
+<tr><td class="code_line_class">355</td><td><code>      forces[ipart] += grad;</code></td></tr>
+<tr><td class="code_line_class">356</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">357</td><td><code>    }</code></td></tr>
+<tr><td class="code_line_class">358</td><td><span class="highlightme"><code>    SR += Zat[ipart] * esum;</code></span></td></tr>
+<tr><td class="code_line_class">359</td><td><code></code></td></tr>
+<tr><td class="code_line_class">360</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>

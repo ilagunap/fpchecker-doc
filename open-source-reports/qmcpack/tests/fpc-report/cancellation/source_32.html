@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+ctest -L deterministic
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./cancellation.html">Cancellation
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/QMCWaveFunctions/LCAO/SoaSphericalTensor.h
+</div>
+<h2 id="heading">
+Cancellation
+	Report
+</h2>
+<h3 id="heading">
+SoaSphericalTensor.h
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">203</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">204</td><td><code>  }</code></td></tr>
+<tr><td class="code_line_class">205</td><td><span class="highlightme"><code>  T stheta = std::sqrt(cone - ctheta * ctheta);</code></span></td></tr>
+<tr><td class="code_line_class">206</td><td><code>  /* Now to calculate the associated legendre functions P_lm from the</code></td></tr>
+<tr><td class="code_line_class">207</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">231</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">232</td><td><code>      int l2  = index(l - 2, m);</code></td></tr>
+<tr><td class="code_line_class">233</td><td><span class="highlightme"><code>      Ylm[lm] = (ctheta * j * Ylm[l1] - (l + m - 1) * Ylm[l2]) / (l - m);</code></span></td></tr>
+<tr><td class="code_line_class">234</td><td><code>    }</code></td></tr>
+<tr><td class="code_line_class">235</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">250</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">251</td><td><code>    {</code></td></tr>
+<tr><td class="code_line_class">252</td><td><span class="highlightme"><code>      temp   = cphim * cphi - sphim * sphi;</code></span></td></tr>
+<tr><td class="code_line_class">253</td><td><span class="highlightme"><code>      sphim  = sphim * cphi + cphim * sphi;</code></span></td></tr>
+<tr><td class="code_line_class">254</td><td><code>      cphim  = temp;</code></td></tr>
+<tr><td class="code_line_class">255</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>

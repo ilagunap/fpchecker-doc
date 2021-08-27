@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+ctest -L deterministic
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./cancellation.html">Cancellation
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/einspline/bspline_eval_d_std.cpp
+</div>
+<h2 id="heading">
+Cancellation
+	Report
+</h2>
+<h3 id="heading">
+bspline_eval_d_std.cpp
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">24</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">25</td><td><code>{</code></td></tr>
+<tr><td class="code_line_class">26</td><td><span class="highlightme"><code>  x -= grid->start;</code></span></td></tr>
+<tr><td class="code_line_class">27</td><td><code>  double u = x * grid->delta_inv;</code></td></tr>
+<tr><td class="code_line_class">28</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">66</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">67</td><td><code>  double* restrict coefs = spline->coefs;</code></td></tr>
+<tr><td class="code_line_class">68</td><td><span class="highlightme"><code>  *val = coefs[i+0]*(Ad[ 0]*tp[0] + Ad[ 1]*tp[1] + Ad[ 2]*tp[2] + Ad[ 3]*tp[3]);</code></span></td></tr>
+<tr><td class="code_line_class">69</td><td><code>  *val += coefs[i+1]*(Ad[ 4]*tp[0] + Ad[ 5]*tp[1] + Ad[ 6]*tp[2] + Ad[ 7]*tp[3]);</code></td></tr>
+<tr><td class="code_line_class">70</td><td><span class="highlightme"><code>  *val += coefs[i+2]*(Ad[ 8]*tp[0] + Ad[ 9]*tp[1] + Ad[10]*tp[2] + Ad[11]*tp[3]);</code></span></td></tr>
+<tr><td class="code_line_class">71</td><td><code>  *val += coefs[i+3]*(Ad[12]*tp[0] + Ad[13]*tp[1] + Ad[14]*tp[2] + Ad[15]*tp[3]);</code></td></tr>
+<tr><td class="code_line_class">72</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">484</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">485</td><td><code>  double* restrict coefs = spline->coefs;</code></td></tr>
+<tr><td class="code_line_class">486</td><td><span class="highlightme"><code>  a[0] = (Ad[ 0]*tpx[0] + Ad[ 1]*tpx[1] + Ad[ 2]*tpx[2] + Ad[ 3]*tpx[3]);</code></span></td></tr>
+<tr><td class="code_line_class">487</td><td><code>  a[1] = (Ad[ 4]*tpx[0] + Ad[ 5]*tpx[1] + Ad[ 6]*tpx[2] + Ad[ 7]*tpx[3]);</code></td></tr>
+<tr><td class="code_line_class">488</td><td><span class="highlightme"><code>  a[2] = (Ad[ 8]*tpx[0] + Ad[ 9]*tpx[1] + Ad[10]*tpx[2] + Ad[11]*tpx[3]);</code></span></td></tr>
+<tr><td class="code_line_class">489</td><td><code>  a[3] = (Ad[12]*tpx[0] + Ad[13]*tpx[1] + Ad[14]*tpx[2] + Ad[15]*tpx[3]);</code></td></tr>
+<tr><td class="code_line_class">490</td><td><span class="highlightme"><code>  b[0] = (Ad[ 0]*tpy[0] + Ad[ 1]*tpy[1] + Ad[ 2]*tpy[2] + Ad[ 3]*tpy[3]);</code></span></td></tr>
+<tr><td class="code_line_class">491</td><td><code>  b[1] = (Ad[ 4]*tpy[0] + Ad[ 5]*tpy[1] + Ad[ 6]*tpy[2] + Ad[ 7]*tpy[3]);</code></td></tr>
+<tr><td class="code_line_class">492</td><td><span class="highlightme"><code>  b[2] = (Ad[ 8]*tpy[0] + Ad[ 9]*tpy[1] + Ad[10]*tpy[2] + Ad[11]*tpy[3]);</code></span></td></tr>
+<tr><td class="code_line_class">493</td><td><code>  b[3] = (Ad[12]*tpy[0] + Ad[13]*tpy[1] + Ad[14]*tpy[2] + Ad[15]*tpy[3]);</code></td></tr>
+<tr><td class="code_line_class">494</td><td><span class="highlightme"><code>  c[0] = (Ad[ 0]*tpz[0] + Ad[ 1]*tpz[1] + Ad[ 2]*tpz[2] + Ad[ 3]*tpz[3]);</code></span></td></tr>
+<tr><td class="code_line_class">495</td><td><code>  c[1] = (Ad[ 4]*tpz[0] + Ad[ 5]*tpz[1] + Ad[ 6]*tpz[2] + Ad[ 7]*tpz[3]);</code></td></tr>
+<tr><td class="code_line_class">496</td><td><span class="highlightme"><code>  c[2] = (Ad[ 8]*tpz[0] + Ad[ 9]*tpz[1] + Ad[10]*tpz[2] + Ad[11]*tpz[3]);</code></span></td></tr>
+<tr><td class="code_line_class">497</td><td><code>  c[3] = (Ad[12]*tpz[0] + Ad[13]*tpz[1] + Ad[14]*tpz[2] + Ad[15]*tpz[3]);</code></td></tr>
+<tr><td class="code_line_class">498</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">501</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">502</td><td><code>                b[1]*(P(0,1,0)*c[0]+P(0,1,1)*c[1]+P(0,1,2)*c[2]+P(0,1,3)*c[3])+</code></td></tr>
+<tr><td class="code_line_class">503</td><td><span class="highlightme"><code>                b[2]*(P(0,2,0)*c[0]+P(0,2,1)*c[1]+P(0,2,2)*c[2]+P(0,2,3)*c[3])+</code></span></td></tr>
+<tr><td class="code_line_class">504</td><td><code>                b[3]*(P(0,3,0)*c[0]+P(0,3,1)*c[1]+P(0,3,2)*c[2]+P(0,3,3)*c[3]))+</code></td></tr>
+<tr><td class="code_line_class">505</td><td><span class="highlightme"><code>          a[1]*(b[0]*(P(1,0,0)*c[0]+P(1,0,1)*c[1]+P(1,0,2)*c[2]+P(1,0,3)*c[3])+</code></span></td></tr>
+<tr><td class="code_line_class">506</td><td><span class="highlightme"><code>                b[1]*(P(1,1,0)*c[0]+P(1,1,1)*c[1]+P(1,1,2)*c[2]+P(1,1,3)*c[3])+</code></span></td></tr>
+<tr><td class="code_line_class">507</td><td><code>                b[2]*(P(1,2,0)*c[0]+P(1,2,1)*c[1]+P(1,2,2)*c[2]+P(1,2,3)*c[3])+</code></td></tr>
+<tr><td class="code_line_class">508</td><td><span class="highlightme"><code>                b[3]*(P(1,3,0)*c[0]+P(1,3,1)*c[1]+P(1,3,2)*c[2]+P(1,3,3)*c[3]))+</code></span></td></tr>
+<tr><td class="code_line_class">509</td><td><code>          a[2]*(b[0]*(P(2,0,0)*c[0]+P(2,0,1)*c[1]+P(2,0,2)*c[2]+P(2,0,3)*c[3])+</code></td></tr>
+<tr><td class="code_line_class">510</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>

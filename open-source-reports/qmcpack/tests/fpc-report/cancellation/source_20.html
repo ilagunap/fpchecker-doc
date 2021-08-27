@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+ctest -L deterministic
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./cancellation.html">Cancellation
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/spline2/MultiBsplineVGHGH.hpp
+</div>
+<h2 id="heading">
+Cancellation
+	Report
+</h2>
+<h3 id="heading">
+MultiBsplineVGHGH.hpp
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">52</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">53</td><td><code>  MultiBsplineData<T>::compute_prefactors(a, da, d2a, d3a, tx);</code></td></tr>
+<tr><td class="code_line_class">54</td><td><span class="highlightme"><code>  MultiBsplineData<T>::compute_prefactors(b, db, d2b, d3b, ty);</code></span></td></tr>
+<tr><td class="code_line_class">55</td><td><code>  MultiBsplineData<T>::compute_prefactors(c, dc, d2c, d3c, tz);</code></td></tr>
+<tr><td class="code_line_class">56</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">66</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">67</td><td><code>  T* restrict hxx = hess;</code></td></tr>
+<tr><td class="code_line_class">68</td><td><span class="highlightme"><code>  T* restrict hxy = hess + out_offset;</code></span></td></tr>
+<tr><td class="code_line_class">69</td><td><code>  T* restrict hxz = hess + 2 * out_offset;</code></td></tr>
+<tr><td class="code_line_class">70</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">71</td><td><code>  T* restrict hyz = hess + 4 * out_offset;</code></td></tr>
+<tr><td class="code_line_class">72</td><td><span class="highlightme"><code>  T* restrict hzz = hess + 5 * out_offset;</code></span></td></tr>
+<tr><td class="code_line_class">73</td><td><code></code></td></tr>
+<tr><td class="code_line_class">74</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">88</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">89</td><td><code>  std::fill(hxx, hxx + num_splines, T());</code></td></tr>
+<tr><td class="code_line_class">90</td><td><span class="highlightme"><code>  std::fill(hxy, hxy + num_splines, T());</code></span></td></tr>
+<tr><td class="code_line_class">91</td><td><code>  std::fill(hxz, hxz + num_splines, T());</code></td></tr>
+<tr><td class="code_line_class">92</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">142</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">143</td><td><code>        gh_xxy[n] += pre21 * sum0;</code></td></tr>
+<tr><td class="code_line_class">144</td><td><span class="highlightme"><code>        gh_xxz[n] += pre20 * sum1;</code></span></td></tr>
+<tr><td class="code_line_class">145</td><td><span class="highlightme"><code>        gh_xyy[n] += pre12 * sum0;</code></span></td></tr>
+<tr><td class="code_line_class">146</td><td><span class="highlightme"><code>        gh_xyz[n] += pre11 * sum1;</code></span></td></tr>
+<tr><td class="code_line_class">147</td><td><code>        gh_xzz[n] += pre10 * sum2;</code></td></tr>
+<tr><td class="code_line_class">148</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">168</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">169</td><td><code>  const T dxx   = dxInv * dxInv;</code></td></tr>
+<tr><td class="code_line_class">170</td><td><span class="highlightme"><code>  const T dyy   = dyInv * dyInv;</code></span></td></tr>
+<tr><td class="code_line_class">171</td><td><code>  const T dzz   = dzInv * dzInv;</code></td></tr>
+<tr><td class="code_line_class">172</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>

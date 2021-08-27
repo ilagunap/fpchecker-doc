@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+ctest -L deterministic
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./cancellation.html">Cancellation
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Containers/OhmmsPETE/TinyVectorTensorOps.h
+</div>
+<h2 id="heading">
+Cancellation
+	Report
+</h2>
+<h3 id="heading">
+TinyVectorTensorOps.h
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">39</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">40</td><td><code>        sum += lhs(i, j) * rhs[j];</code></td></tr>
+<tr><td class="code_line_class">41</td><td><span class="highlightme"><code>      ret[i] = sum;</code></span></td></tr>
+<tr><td class="code_line_class">42</td><td><code>    }</code></td></tr>
+<tr><td class="code_line_class">43</td><td><span class="highlightme"><code>    return ret;</code></span></td></tr>
+<tr><td class="code_line_class">44</td><td><code>  }</code></td></tr>
+<tr><td class="code_line_class">45</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">54</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">55</td><td><code>  }</code></td></tr>
+<tr><td class="code_line_class">56</td><td><span class="highlightme"><code>};</code></span></td></tr>
+<tr><td class="code_line_class">57</td><td><code></code></td></tr>
+<tr><td class="code_line_class">58</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">60</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">61</td><td><code>  typedef typename BinaryReturn<T1, T2, OpMultiply>::Type_t Type_t;</code></td></tr>
+<tr><td class="code_line_class">62</td><td><span class="highlightme"><code>  inline static TinyVector<Type_t, 2> apply(const Tensor<T1, 2>& lhs, const TinyVector<T2, 2>& rhs)</code></span></td></tr>
+<tr><td class="code_line_class">63</td><td><code>  {</code></td></tr>
+<tr><td class="code_line_class">64</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">105</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">106</td><td><code>    for (unsigned int i = 0; i < D; ++i)</code></td></tr>
+<tr><td class="code_line_class">107</td><td><span class="highlightme"><code>    {</code></span></td></tr>
+<tr><td class="code_line_class">108</td><td><code>      Type_t sum = lhs[0] * rhs(0, i);</code></td></tr>
+<tr><td class="code_line_class">109</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">127</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">128</td><td><code>template<class T1, class T2></code></td></tr>
+<tr><td class="code_line_class">129</td><td><span class="highlightme"><code>struct OTDot<TinyVector<T1, 2>, Tensor<T2, 2>></code></span></td></tr>
+<tr><td class="code_line_class">130</td><td><code>{</code></td></tr>
+<tr><td class="code_line_class">131</td><td><span class="highlightme"><code>  typedef typename BinaryReturn<T1, T2, OpMultiply>::Type_t Type_t;</code></span></td></tr>
+<tr><td class="code_line_class">132</td><td><span class="highlightme"><code>  inline static TinyVector<Type_t, 2> apply(const TinyVector<T1, 2>& lhs, const Tensor<T2, 2>& rhs)</code></span></td></tr>
+<tr><td class="code_line_class">133</td><td><code>  {</code></td></tr>
+<tr><td class="code_line_class">134</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">297</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">298</td><td><code>      {</code></td></tr>
+<tr><td class="code_line_class">299</td><td><span class="highlightme"><code>        Type_t sum     = lhs.HL(i, 0) * rhs(0, j);</code></span></td></tr>
+<tr><td class="code_line_class">300</td><td><code>        unsigned int k = 1;</code></td></tr>
+<tr><td class="code_line_class">301</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">567</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">568</td><td><code>                    lhs(2,0)*rhs(0,0)+lhs(2,1)*rhs(1,0)+lhs(2,2)*rhs(2,0),</code></td></tr>
+<tr><td class="code_line_class">569</td><td><span class="highlightme"><code>                    lhs(2,0)*rhs(0,1)+lhs(2,1)*rhs(1,1)+lhs(2,2)*rhs(2,1),</code></span></td></tr>
+<tr><td class="code_line_class">570</td><td><code>                    lhs(2,0)*rhs(0,2)+lhs(2,1)*rhs(1,2)+lhs(2,2)*rhs(2,2));</code></td></tr>
+<tr><td class="code_line_class">571</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+ctest -L deterministic
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./cancellation.html">Cancellation
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/QMCWaveFunctions/Jastrow/JeeIOrbitalSoA.h
+</div>
+<h2 id="heading">
+Cancellation
+	Report
+</h2>
+<h3 id="heading">
+JeeIOrbitalSoA.h
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">584</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">585</td><td><code>      }</code></td></tr>
+<tr><td class="code_line_class">586</td><td><span class="highlightme"><code>      for (int idim = 0; idim < OHMMS_DIM; ++idim)</code></span></td></tr>
+<tr><td class="code_line_class">587</td><td><code>      {</code></td></tr>
+<tr><td class="code_line_class">588</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">712</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">713</td><td><code>      for (int kel_index = 0; kel_index < kel_counter; kel_index++)</code></td></tr>
+<tr><td class="code_line_class">714</td><td><span class="highlightme"><code>        dUk_x[DistIndice_k[kel_index]] += kI[kel_index];</code></span></td></tr>
+<tr><td class="code_line_class">715</td><td><code>    }</code></td></tr>
+<tr><td class="code_line_class">716</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">802</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">803</td><td><code>          computeU3_engine(P, feeI, kel_counter, Uj, dUj, d2Uj, Uk, dUk, d2Uk);</code></td></tr>
+<tr><td class="code_line_class">804</td><td><span class="highlightme"><code>          kel_counter = 0;</code></span></td></tr>
+<tr><td class="code_line_class">805</td><td><span class="highlightme"><code>        }</code></span></td></tr>
+<tr><td class="code_line_class">806</td><td><code>      }</code></td></tr>
+<tr><td class="code_line_class">807</td><td><span class="highlightme"><code>    }</code></span></td></tr>
+<tr><td class="code_line_class">808</td><td><span class="highlightme"><code>  }</code></span></td></tr>
+<tr><td class="code_line_class">809</td><td><code></code></td></tr>
+<tr><td class="code_line_class">810</td><td><code>  inline void registerData(ParticleSet& P, WFBufferType& buf) override</code></td></tr>
+<tr><td class="code_line_class">811</td><td><span class="highlightme"><code>  {</code></span></td></tr>
+<tr><td class="code_line_class">812</td><td><span class="highlightme"><code>    if (Bytes_in_WFBuffer == 0)</code></span></td></tr>
+<tr><td class="code_line_class">813</td><td><code>    {</code></td></tr>
+<tr><td class="code_line_class">814</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">819</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">820</td><td><code>      Uat.free();</code></td></tr>
+<tr><td class="code_line_class">821</td><td><span class="highlightme"><code>      dUat.free();</code></span></td></tr>
+<tr><td class="code_line_class">822</td><td><code>      d2Uat.free();</code></td></tr>
+<tr><td class="code_line_class">823</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">943</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">944</td><td><code>                    gradLogPsi(p, jel) -= dg[1] * disp_Ij - gr_ee;</code></td></tr>
+<tr><td class="code_line_class">945</td><td><span class="highlightme"><code>                    lapLogPsi(p, jel) -=</code></span></td></tr>
+<tr><td class="code_line_class">946</td><td><span class="highlightme"><code>                        (dh(0, 0) + lapfac * dg[0] - ctwo * dh(0, 1) * dot(disp_jk, disp_Ij) * r_jk_inv * r_Ij_inv +</code></span></td></tr>
+<tr><td class="code_line_class">947</td><td><code>                         dh(1, 1) + lapfac * dg[1]);</code></td></tr>
+<tr><td class="code_line_class">948</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">949</td><td><code>                    gradLogPsi(p, kel) -= dg[2] * disp_Ik + gr_ee;</code></td></tr>
+<tr><td class="code_line_class">950</td><td><span class="highlightme"><code>                    lapLogPsi(p, kel) -=</code></span></td></tr>
+<tr><td class="code_line_class">951</td><td><span class="highlightme"><code>                        (dh(0, 0) + lapfac * dg[0] + ctwo * dh(0, 2) * dot(disp_jk, disp_Ik) * r_jk_inv * r_Ik_inv +</code></span></td></tr>
+<tr><td class="code_line_class">952</td><td><code>                         dh(2, 2) + lapfac * dg[2]);</code></td></tr>
+<tr><td class="code_line_class">953</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>
