@@ -44,6 +44,20 @@ entries:
       url: /known_issues.html
       output: web, pdf
 
+  - title: Advanced
+    output: web, pdf
+    folderitems:
+
+    - title: Text Reports
+      url: /text_reports.html
+      output: web, pdf
+      type: homepage
+
+    - title: Exiting on Events
+      url: /traps.html
+      output: web, pdf
+      type: homepage
+
   - title: Videos
     output: web
     folderitems:
