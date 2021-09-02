@@ -21,58 +21,59 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Containers/OhmmsPETE/TinyVectorTensorOps.h
+//opt/rh/devtoolset-8/root/usr/lib/gcc/ppc64le-redhat-linux/8/../../../../include/c++/8/bits/predefined_ops.h
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-TinyVectorTensorOps.h
+predefined_ops.h
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">39</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">40</td><td><code>        sum += lhs(i, j) * rhs[j];</code></td></tr>
-<tr><td class="code_line_class">41</td><td><span class="highlightme"><code>      ret[i] = sum;</code></span></td></tr>
-<tr><td class="code_line_class">42</td><td><code>    }</code></td></tr>
-<tr><td class="code_line_class">43</td><td><span class="highlightme"><code>    return ret;</code></span></td></tr>
-<tr><td class="code_line_class">44</td><td><code>  }</code></td></tr>
-<tr><td class="code_line_class">45</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">54</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">55</td><td><code>  }</code></td></tr>
-<tr><td class="code_line_class">56</td><td><span class="highlightme"><code>};</code></span></td></tr>
-<tr><td class="code_line_class">57</td><td><code></code></td></tr>
-<tr><td class="code_line_class">58</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">60</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">61</td><td><code>  typedef typename BinaryReturn<T1, T2, OpMultiply>::Type_t Type_t;</code></td></tr>
-<tr><td class="code_line_class">62</td><td><span class="highlightme"><code>  inline static TinyVector<Type_t, 2> apply(const Tensor<T1, 2>& lhs, const TinyVector<T2, 2>& rhs)</code></span></td></tr>
-<tr><td class="code_line_class">63</td><td><code>  {</code></td></tr>
-<tr><td class="code_line_class">64</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">105</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">106</td><td><code>    for (unsigned int i = 0; i < D; ++i)</code></td></tr>
-<tr><td class="code_line_class">107</td><td><span class="highlightme"><code>    {</code></span></td></tr>
-<tr><td class="code_line_class">108</td><td><code>      Type_t sum = lhs[0] * rhs(0, i);</code></td></tr>
-<tr><td class="code_line_class">109</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">127</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">128</td><td><code>template<class T1, class T2></code></td></tr>
-<tr><td class="code_line_class">129</td><td><span class="highlightme"><code>struct OTDot<TinyVector<T1, 2>, Tensor<T2, 2>></code></span></td></tr>
-<tr><td class="code_line_class">130</td><td><code>{</code></td></tr>
-<tr><td class="code_line_class">131</td><td><span class="highlightme"><code>  typedef typename BinaryReturn<T1, T2, OpMultiply>::Type_t Type_t;</code></span></td></tr>
-<tr><td class="code_line_class">132</td><td><span class="highlightme"><code>  inline static TinyVector<Type_t, 2> apply(const TinyVector<T1, 2>& lhs, const Tensor<T2, 2>& rhs)</code></span></td></tr>
-<tr><td class="code_line_class">133</td><td><code>  {</code></td></tr>
-<tr><td class="code_line_class">134</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">297</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">298</td><td><code>      {</code></td></tr>
-<tr><td class="code_line_class">299</td><td><span class="highlightme"><code>        Type_t sum     = lhs.HL(i, 0) * rhs(0, j);</code></span></td></tr>
-<tr><td class="code_line_class">300</td><td><code>        unsigned int k = 1;</code></td></tr>
-<tr><td class="code_line_class">301</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">567</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">568</td><td><code>                    lhs(2,0)*rhs(0,0)+lhs(2,1)*rhs(1,0)+lhs(2,2)*rhs(2,0),</code></td></tr>
-<tr><td class="code_line_class">569</td><td><span class="highlightme"><code>                    lhs(2,0)*rhs(0,1)+lhs(2,1)*rhs(1,1)+lhs(2,2)*rhs(2,1),</code></span></td></tr>
-<tr><td class="code_line_class">570</td><td><code>                    lhs(2,0)*rhs(0,2)+lhs(2,1)*rhs(1,2)+lhs(2,2)*rhs(2,2));</code></td></tr>
-<tr><td class="code_line_class">571</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">72</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">73</td><td><code>  __iter_comp_val(_Iter_less_iter)</code></td></tr>
+<tr><td class="code_line_class">74</td><td><span class="highlightme"><code>  { return _Iter_less_val(); }</code></span></td></tr>
+<tr><td class="code_line_class">75</td><td><span class="highlightme"><code></code></span></td></tr>
+<tr><td class="code_line_class">76</td><td><span class="highlightme"><code>  struct _Val_less_iter</code></span></td></tr>
+<tr><td class="code_line_class">77</td><td><code>  {</code></td></tr>
+<tr><td class="code_line_class">78</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">136</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">137</td><td><code>      { }</code></td></tr>
+<tr><td class="code_line_class">138</td><td><span class="highlightme"><code></code></span></td></tr>
+<tr><td class="code_line_class">139</td><td><code>      template<typename _Iterator1, typename _Iterator2></code></td></tr>
+<tr><td class="code_line_class">140</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">150</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">151</td><td><code></code></td></tr>
+<tr><td class="code_line_class">152</td><td><span class="highlightme"><code>  template<typename _Compare></code></span></td></tr>
+<tr><td class="code_line_class">153</td><td><code>    struct _Iter_comp_val</code></td></tr>
+<tr><td class="code_line_class">154</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">155</td><td><code>      _Compare _M_comp;</code></td></tr>
+<tr><td class="code_line_class">156</td><td><span class="highlightme"><code></code></span></td></tr>
+<tr><td class="code_line_class">157</td><td><code>      explicit</code></td></tr>
+<tr><td class="code_line_class">158</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">162</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">163</td><td><code>      _Iter_comp_val(const _Iter_comp_iter<_Compare>& __comp)</code></td></tr>
+<tr><td class="code_line_class">164</td><td><span class="highlightme"><code>	: _M_comp(__comp._M_comp)</code></span></td></tr>
+<tr><td class="code_line_class">165</td><td><code>      { }</code></td></tr>
+<tr><td class="code_line_class">166</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">186</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">187</td><td><code>    __iter_comp_val(_Iter_comp_iter<_Compare> __comp)</code></td></tr>
+<tr><td class="code_line_class">188</td><td><span class="highlightme"><code>    { return _Iter_comp_val<_Compare>(_GLIBCXX_MOVE(__comp)); }</code></span></td></tr>
+<tr><td class="code_line_class">189</td><td><code></code></td></tr>
+<tr><td class="code_line_class">190</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">314</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">315</td><td><code>    struct _Iter_comp_to_iter</code></td></tr>
+<tr><td class="code_line_class">316</td><td><span class="highlightme"><code>    {</code></span></td></tr>
+<tr><td class="code_line_class">317</td><td><code>      _Compare _M_comp;</code></td></tr>
+<tr><td class="code_line_class">318</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">335</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">336</td><td><code>    }</code></td></tr>
+<tr><td class="code_line_class">337</td><td><span class="highlightme"><code></code></span></td></tr>
+<tr><td class="code_line_class">338</td><td><code>  template<typename _Predicate></code></td></tr>
+<tr><td class="code_line_class">339</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

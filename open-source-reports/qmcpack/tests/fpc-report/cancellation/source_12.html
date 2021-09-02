@@ -21,18 +21,100 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Particle/LongRange/tests/test_temp.cpp
+//opt/rh/devtoolset-8/root/usr/lib/gcc/ppc64le-redhat-linux/8/../../../../include/c++/8/complex
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-test_temp.cpp
+complex
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
+<tr><td class="code_line_class">85</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">86</td><td><code>  template<typename _Tp> complex<_Tp> exp(const complex<_Tp>&);</code></td></tr>
+<tr><td class="code_line_class">87</td><td><span class="highlightme"><code>  /// Return complex natural logarithm of @a z.</code></span></td></tr>
+<tr><td class="code_line_class">88</td><td><code>  template<typename _Tp> complex<_Tp> log(const complex<_Tp>&);</code></td></tr>
+<tr><td class="code_line_class">89</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">90</td><td><code>  template<typename _Tp> complex<_Tp> log10(const complex<_Tp>&);</code></td></tr>
+<tr><td class="code_line_class">91</td><td><span class="highlightme"><code>  /// Return @a x to the @a y'th power.</code></span></td></tr>
+<tr><td class="code_line_class">92</td><td><code>  template<typename _Tp> complex<_Tp> pow(const complex<_Tp>&, int);</code></td></tr>
+<tr><td class="code_line_class">93</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">94</td><td><code>  template<typename _Tp> complex<_Tp> pow(const complex<_Tp>&, const _Tp&);</code></td></tr>
+<tr><td class="code_line_class">95</td><td><span class="highlightme"><code>  /// Return @a x to the @a y'th power.</code></span></td></tr>
+<tr><td class="code_line_class">96</td><td><code>  template<typename _Tp> complex<_Tp> pow(const complex<_Tp>&,</code></td></tr>
+<tr><td class="code_line_class">97</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">105</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">106</td><td><code>  /// Return complex tangent of @a z.</code></td></tr>
+<tr><td class="code_line_class">107</td><td><span class="highlightme"><code>  template<typename _Tp> complex<_Tp> tan(const complex<_Tp>&);</code></span></td></tr>
+<tr><td class="code_line_class">108</td><td><code>  /// Return complex hyperbolic tangent of @a z.</code></td></tr>
+<tr><td class="code_line_class">109</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">110</td><td><code></code></td></tr>
+<tr><td class="code_line_class">111</td><td><span class="highlightme"><code></code></span></td></tr>
+<tr><td class="code_line_class">112</td><td><code>  // 26.2.2  Primary template class complex</code></td></tr>
+<tr><td class="code_line_class">113</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">115</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">116</td><td><code>   *  Specializations for float, double, and long double are part of the</code></td></tr>
+<tr><td class="code_line_class">117</td><td><span class="highlightme"><code>   *  library.  Results with any other type are not guaranteed.</code></span></td></tr>
+<tr><td class="code_line_class">118</td><td><code>   *</code></td></tr>
+<tr><td class="code_line_class">119</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">121</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">122</td><td><code>    struct complex</code></td></tr>
+<tr><td class="code_line_class">123</td><td><span class="highlightme"><code>    {</code></span></td></tr>
+<tr><td class="code_line_class">124</td><td><code>      /// Value typedef.</code></td></tr>
+<tr><td class="code_line_class">125</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">139</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">140</td><td><code>	: _M_real(__z.real()), _M_imag(__z.imag()) { }</code></td></tr>
+<tr><td class="code_line_class">141</td><td><span class="highlightme"><code></code></span></td></tr>
+<tr><td class="code_line_class">142</td><td><code>#if __cplusplus >= 201103L</code></td></tr>
+<tr><td class="code_line_class">143</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">146</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">147</td><td><code>      real() const { return _M_real; }</code></td></tr>
+<tr><td class="code_line_class">148</td><td><span class="highlightme"><code></code></span></td></tr>
+<tr><td class="code_line_class">149</td><td><code>      _GLIBCXX_ABI_TAG_CXX11</code></td></tr>
+<tr><td class="code_line_class">150</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">162</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">163</td><td><code>      imag() { return _M_imag; }</code></td></tr>
+<tr><td class="code_line_class">164</td><td><span class="highlightme"><code></code></span></td></tr>
+<tr><td class="code_line_class">165</td><td><code>      ///  Return imaginary part of complex number.</code></td></tr>
+<tr><td class="code_line_class">166</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">167</td><td><code>      imag() const { return _M_imag; }</code></td></tr>
+<tr><td class="code_line_class">168</td><td><span class="highlightme"><code>#endif</code></span></td></tr>
+<tr><td class="code_line_class">169</td><td><code></code></td></tr>
+<tr><td class="code_line_class">170</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">174</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">175</td><td><code>      void</code></td></tr>
+<tr><td class="code_line_class">176</td><td><span class="highlightme"><code>      imag(_Tp __val) { _M_imag = __val; }</code></span></td></tr>
+<tr><td class="code_line_class">177</td><td><code></code></td></tr>
+<tr><td class="code_line_class">178</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">194</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">195</td><td><code>	_M_real -= __t;</code></td></tr>
+<tr><td class="code_line_class">196</td><td><span class="highlightme"><code>	return *this;</code></span></td></tr>
+<tr><td class="code_line_class">197</td><td><code>      }</code></td></tr>
+<tr><td class="code_line_class">198</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">297</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">298</td><td><code>    complex<_Tp>&</code></td></tr>
+<tr><td class="code_line_class">299</td><td><span class="highlightme"><code>    complex<_Tp>::operator*=(const complex<_Up>& __z)</code></span></td></tr>
+<tr><td class="code_line_class">300</td><td><code>    {</code></td></tr>
+<tr><td class="code_line_class">301</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">341</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">342</td><td><code>  template<typename _Tp></code></td></tr>
+<tr><td class="code_line_class">343</td><td><span class="highlightme"><code>    inline complex<_Tp></code></span></td></tr>
+<tr><td class="code_line_class">344</td><td><code>    operator+(const _Tp& __x, const complex<_Tp>& __y)</code></td></tr>
+<tr><td class="code_line_class">345</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1333</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1334</td><td><code>	{</code></td></tr>
+<tr><td class="code_line_class">1335</td><td><span class="highlightme"><code>	  __real__ _M_value -= __z.real();</code></span></td></tr>
+<tr><td class="code_line_class">1336</td><td><span class="highlightme"><code>	  __imag__ _M_value -= __z.imag();</code></span></td></tr>
+<tr><td class="code_line_class">1337</td><td><code>	  return *this;</code></td></tr>
+<tr><td class="code_line_class">1338</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1345</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1346</td><td><code>	  __imag__ __t = __z.imag();</code></td></tr>
+<tr><td class="code_line_class">1347</td><td><span class="highlightme"><code>	  _M_value *= __t;</code></span></td></tr>
+<tr><td class="code_line_class">1348</td><td><code>	  return *this;</code></td></tr>
+<tr><td class="code_line_class">1349</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

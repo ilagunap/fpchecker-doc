@@ -21,23 +21,36 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Utilities/NewTimer.cpp
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/QMCTools/WriteEshdf.cpp
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-NewTimer.cpp
+WriteEshdf.cpp
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">102</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">103</td><td><code>    {</code></td></tr>
-<tr><td class="code_line_class">104</td><td><span class="highlightme"><code>      double elapsed = CLOCK()() - start_time;</code></span></td></tr>
-<tr><td class="code_line_class">105</td><td><code>      total_time += elapsed;</code></td></tr>
-<tr><td class="code_line_class">106</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">60</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">61</td><td><code>  {</code></td></tr>
+<tr><td class="code_line_class">62</td><td><span class="highlightme"><code>    if (abs(kx - kp.kx) > 1e-7)</code></span></td></tr>
+<tr><td class="code_line_class">63</td><td><code>    {</code></td></tr>
+<tr><td class="code_line_class">64</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">65</td><td><code>    }</code></td></tr>
+<tr><td class="code_line_class">66</td><td><span class="highlightme"><code>    else if (abs(ky - kp.ky) > 1e-7)</code></span></td></tr>
+<tr><td class="code_line_class">67</td><td><code>    {</code></td></tr>
+<tr><td class="code_line_class">68</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">69</td><td><code>    }</code></td></tr>
+<tr><td class="code_line_class">70</td><td><span class="highlightme"><code>    else if (abs(kz - kp.kz) > 1e-7)</code></span></td></tr>
+<tr><td class="code_line_class">71</td><td><code>    {</code></td></tr>
+<tr><td class="code_line_class">72</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">679</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">680</td><td><code>  ptv.push_back(invdet * (rlv[1] * rlv[5] - rlv[2] * rlv[4]));</code></td></tr>
+<tr><td class="code_line_class">681</td><td><span class="highlightme"><code>  ptv.push_back(invdet * (rlv[2] * rlv[3] - rlv[0] * rlv[5]));</code></span></td></tr>
+<tr><td class="code_line_class">682</td><td><code>  ptv.push_back(invdet * (rlv[0] * rlv[4] - rlv[1] * rlv[3]));</code></td></tr>
+<tr><td class="code_line_class">683</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

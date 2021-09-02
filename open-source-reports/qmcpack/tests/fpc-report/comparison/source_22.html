@@ -21,23 +21,23 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./comparison.html">Comparison
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/QMCDrivers/WFOpt/QMCCostFunctionBatched.cpp
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Platforms/OMPTarget/ompBLAS.cpp
 </div>
 <h2 id="heading">
 Comparison
 	Report
 </h2>
 <h3 id="heading">
-QMCCostFunctionBatched.cpp
+ompBLAS.cpp
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">677</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">678</td><td><code>  //    app_log()<<"During Purge"<<wgt_tot<<" "<< std::endl;</code></td></tr>
-<tr><td class="code_line_class">679</td><td><span class="highlightme"><code>  wgtnorm = (wgt_tot == 0) ? 1 : 1.0 / wgt_tot;</code></span></td></tr>
-<tr><td class="code_line_class">680</td><td><code>  wgt_tot = 0.0;</code></td></tr>
-<tr><td class="code_line_class">681</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">159</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">160</td><td><code>          dot_sum += x[ib][j] * A[ib][i * lda + j];</code></td></tr>
+<tr><td class="code_line_class">161</td><td><span class="highlightme"><code>        if (beta[ib] == T(0))</code></span></td></tr>
+<tr><td class="code_line_class">162</td><td><code>          y[ib][i] = alpha[ib] * dot_sum; // protecting NaN from y</code></td></tr>
+<tr><td class="code_line_class">163</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

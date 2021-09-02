@@ -21,23 +21,23 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/einspline/tests/test_3d.cpp
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/einspline/multi_bspline_eval_d_std3.cpp
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-test_3d.cpp
+multi_bspline_eval_d_std3.cpp
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">78</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">79</td><td><code>        double z = delta*k;</code></td></tr>
-<tr><td class="code_line_class">80</td><td><span class="highlightme"><code>        data[N*N*i + N*j + k] = sin(tpi*x) + sin(3*tpi*y) + sin(4*tpi*z);</code></span></td></tr>
-<tr><td class="code_line_class">81</td><td><code>      }</code></td></tr>
-<tr><td class="code_line_class">82</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">24</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">25</td><td><code>{</code></td></tr>
+<tr><td class="code_line_class">26</td><td><span class="highlightme"><code>  x -= spline->x_grid.start;</code></span></td></tr>
+<tr><td class="code_line_class">27</td><td><code>  double ux = x*spline->x_grid.delta_inv;</code></td></tr>
+<tr><td class="code_line_class">28</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

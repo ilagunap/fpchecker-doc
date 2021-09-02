@@ -47,18 +47,6 @@ MultiBsplineVGHGH.hpp
 <tr><td class="code_line_class">72</td><td><span class="highlightme"><code>  T* restrict hzz = hess + 5 * out_offset;</code></span></td></tr>
 <tr><td class="code_line_class">73</td><td><code></code></td></tr>
 <tr><td class="code_line_class">74</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">88</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">89</td><td><code>  std::fill(hxx, hxx + num_splines, T());</code></td></tr>
-<tr><td class="code_line_class">90</td><td><span class="highlightme"><code>  std::fill(hxy, hxy + num_splines, T());</code></span></td></tr>
-<tr><td class="code_line_class">91</td><td><code>  std::fill(hxz, hxz + num_splines, T());</code></td></tr>
-<tr><td class="code_line_class">92</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">142</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">143</td><td><code>        gh_xxy[n] += pre21 * sum0;</code></td></tr>
-<tr><td class="code_line_class">144</td><td><span class="highlightme"><code>        gh_xxz[n] += pre20 * sum1;</code></span></td></tr>
-<tr><td class="code_line_class">145</td><td><span class="highlightme"><code>        gh_xyy[n] += pre12 * sum0;</code></span></td></tr>
-<tr><td class="code_line_class">146</td><td><span class="highlightme"><code>        gh_xyz[n] += pre11 * sum1;</code></span></td></tr>
-<tr><td class="code_line_class">147</td><td><code>        gh_xzz[n] += pre10 * sum2;</code></td></tr>
-<tr><td class="code_line_class">148</td><td><code> ... </code></td></tr>
 <tr><td class="code_line_class">168</td><td><code> ... </code></td></tr>
 <tr><td class="code_line_class">169</td><td><code>  const T dxx   = dxInv * dxInv;</code></td></tr>
 <tr><td class="code_line_class">170</td><td><span class="highlightme"><code>  const T dyy   = dyInv * dyInv;</code></span></td></tr>

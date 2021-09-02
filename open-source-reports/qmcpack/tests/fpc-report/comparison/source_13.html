@@ -21,23 +21,23 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./comparison.html">Comparison
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Numerics/OptimizableFunctorBase.cpp
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/QMCWaveFunctions/Jastrow/JeeIOrbitalSoA.h
 </div>
 <h2 id="heading">
 Comparison
 	Report
 </h2>
 <h3 id="heading">
-OptimizableFunctorBase.cpp
+JeeIOrbitalSoA.h
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">16</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">17</td><td><code>  int n       = 1000;</code></td></tr>
-<tr><td class="code_line_class">18</td><td><span class="highlightme"><code>  real_type d = extent == -1.0 ? func.cutoff_radius / n : extent / n;</code></span></td></tr>
-<tr><td class="code_line_class">19</td><td><code>  real_type r = 0;</code></td></tr>
-<tr><td class="code_line_class">20</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">292</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">293</td><td><code>          for (int e2 = 0; e2 < eGroups; ++e2)</code></td></tr>
+<tr><td class="code_line_class">294</td><td><span class="highlightme"><code>            radii_match = radii_match && F(i, e1, e2)->cutoff_radius == rcut;</code></span></td></tr>
+<tr><td class="code_line_class">295</td><td><code>        if (!radii_match)</code></td></tr>
+<tr><td class="code_line_class">296</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

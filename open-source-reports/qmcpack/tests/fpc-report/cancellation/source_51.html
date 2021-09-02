@@ -21,23 +21,23 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Utilities/PooledData.h
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/einspline/nubspline_eval_d_std.cpp
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-PooledData.h
+nubspline_eval_d_std.cpp
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">27</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">28</td><td><code></code></td></tr>
-<tr><td class="code_line_class">29</td><td><span class="highlightme"><code>template<class T></code></span></td></tr>
-<tr><td class="code_line_class">30</td><td><code>struct PooledData</code></td></tr>
-<tr><td class="code_line_class">31</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">22</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">23</td><td><code>  double* restrict coefs = spline->coefs;</code></td></tr>
+<tr><td class="code_line_class">24</td><td><span class="highlightme"><code>  *val = (coefs[i+0]*bfuncs[0] +coefs[i+1]*bfuncs[1] +</code></span></td></tr>
+<tr><td class="code_line_class">25</td><td><code>          coefs[i+2]*bfuncs[2] +coefs[i+3]*bfuncs[3]);</code></td></tr>
+<tr><td class="code_line_class">26</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

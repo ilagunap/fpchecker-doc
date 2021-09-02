@@ -21,18 +21,28 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./comparison.html">Comparison
 	</a> &nbsp; &gt; &nbsp;
-//opt/rh/devtoolset-8/root/usr/lib/gcc/ppc64le-redhat-linux/8/../../../../include/c++/8/bits/predefined_ops.h
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/QMCDrivers/WFOpt/QMCCostFunction.cpp
 </div>
 <h2 id="heading">
 Comparison
 	Report
 </h2>
 <h3 id="heading">
-predefined_ops.h
+QMCCostFunction.cpp
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
+<tr><td class="code_line_class">621</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">622</td><td><code>  //    app_log()<<"During Purge"<<wgt_tot<<" "<< std::endl;</code></td></tr>
+<tr><td class="code_line_class">623</td><td><span class="highlightme"><code>  wgtnorm = (wgt_tot == 0) ? 1 : 1.0 / wgt_tot;</code></span></td></tr>
+<tr><td class="code_line_class">624</td><td><code>  wgt_tot = 0.0;</code></td></tr>
+<tr><td class="code_line_class">625</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">637</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">638</td><td><code>    SumValue[i] = 0.0;</code></td></tr>
+<tr><td class="code_line_class">639</td><td><span class="highlightme"><code>  CSWeight = wgt_tot = (wgt_tot == 0) ? 1 : 1.0 / wgt_tot;</code></span></td></tr>
+<tr><td class="code_line_class">640</td><td><code>  for (int ip = 0; ip < NumThreads; ip++)</code></td></tr>
+<tr><td class="code_line_class">641</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

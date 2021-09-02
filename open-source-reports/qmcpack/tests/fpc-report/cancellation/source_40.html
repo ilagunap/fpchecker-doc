@@ -21,39 +21,23 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Particle/LongRange/LRCoulombSingleton.cpp
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Utilities/Timer.h
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-LRCoulombSingleton.cpp
+Timer.h
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">39</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">40</td><td><code> * - Xk(T k, T rc)</code></td></tr>
-<tr><td class="code_line_class">41</td><td><span class="highlightme"><code> */</code></span></td></tr>
-<tr><td class="code_line_class">42</td><td><code>#if OHMMS_DIM == 3</code></td></tr>
-<tr><td class="code_line_class">43</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">54</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">55</td><td><code>  inline T Xk(T k, T rc) const { return -NormFactor / (k * k) * std::cos(k * rc); }</code></td></tr>
-<tr><td class="code_line_class">56</td><td><span class="highlightme"><code></code></span></td></tr>
-<tr><td class="code_line_class">57</td><td><code>  inline T dVk_dk(T k) const { return -2 * NormFactor / k / k / k; }</code></td></tr>
-<tr><td class="code_line_class">58</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">79</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">80</td><td><code>std::unique_ptr<LRCoulombSingleton::LRHandlerType> LRCoulombSingleton::getHandler(ParticleSet& ref)</code></td></tr>
-<tr><td class="code_line_class">81</td><td><span class="highlightme"><code>{</code></span></td></tr>
-<tr><td class="code_line_class">82</td><td><span class="highlightme"><code>  if (CoulombHandler == 0)</code></span></td></tr>
-<tr><td class="code_line_class">83</td><td><code>  {</code></td></tr>
-<tr><td class="code_line_class">84</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">85</td><td><code>    if (ref.SK->SuperCellEnum == SUPERCELL_SLAB)</code></td></tr>
-<tr><td class="code_line_class">86</td><td><span class="highlightme"><code>    {</code></span></td></tr>
-<tr><td class="code_line_class">87</td><td><span class="highlightme"><code>      app_log() << "\n   Creating CoulombHandler using quasi-2D Ewald method for the slab. " << std::endl;</code></span></td></tr>
-<tr><td class="code_line_class">88</td><td><code>      CoulombHandler = std::make_unique<EwaldHandler>(ref);</code></td></tr>
-<tr><td class="code_line_class">89</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">27</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">28</td><td><code>  inline void restart() { start_time = CPUClock()(); }</code></td></tr>
+<tr><td class="code_line_class">29</td><td><span class="highlightme"><code>  inline double elapsed() const { return CPUClock()() - start_time; }</code></span></td></tr>
+<tr><td class="code_line_class">30</td><td><code>};</code></td></tr>
+<tr><td class="code_line_class">31</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

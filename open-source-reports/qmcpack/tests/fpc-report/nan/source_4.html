@@ -21,18 +21,33 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./nan.html">Nan
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/QMCWaveFunctions/Jastrow/J2KECorrection.h
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Particle/LongRange/EwaldHandler3D.h
 </div>
 <h2 id="heading">
 Nan
 	Report
 </h2>
 <h3 id="heading">
-J2KECorrection.h
+EwaldHandler3D.h
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
+<tr><td class="code_line_class">87</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">88</td><td><code>  {</code></td></tr>
+<tr><td class="code_line_class">89</td><td><span class="highlightme"><code>    return -2.0 * Sigma * std::exp(-Sigma * Sigma * r * r) / (std::sqrt(M_PI) * r) - erfc(Sigma * r) * rinv * rinv;</code></span></td></tr>
+<tr><td class="code_line_class">90</td><td><code>  }</code></td></tr>
+<tr><td class="code_line_class">91</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">151</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">152</td><td><code></code></td></tr>
+<tr><td class="code_line_class">153</td><td><span class="highlightme"><code>    mRealType Sr_r = srDf(rmag, 1.0 / mRealType(rmag)) / mRealType(rmag);</code></span></td></tr>
+<tr><td class="code_line_class">154</td><td><code></code></td></tr>
+<tr><td class="code_line_class">155</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">157</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">158</td><td><code>      {</code></td></tr>
+<tr><td class="code_line_class">159</td><td><span class="highlightme"><code>        deriv_tensor(dim1, dim2) = r[dim1] * r[dim2] * Sr_r;</code></span></td></tr>
+<tr><td class="code_line_class">160</td><td><code>      }</code></td></tr>
+<tr><td class="code_line_class">161</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

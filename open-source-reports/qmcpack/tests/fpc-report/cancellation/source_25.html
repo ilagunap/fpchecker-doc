@@ -21,23 +21,27 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Utilities/Timer.h
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/QMCWaveFunctions/Jastrow/J2KECorrection.h
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-Timer.h
+J2KECorrection.h
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">27</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">28</td><td><code>  inline void restart() { start_time = CPUClock()(); }</code></td></tr>
-<tr><td class="code_line_class">29</td><td><span class="highlightme"><code>  inline double elapsed() const { return CPUClock()() - start_time; }</code></span></td></tr>
-<tr><td class="code_line_class">30</td><td><code>};</code></td></tr>
-<tr><td class="code_line_class">31</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">80</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">81</td><td><code>    }</code></td></tr>
+<tr><td class="code_line_class">82</td><td><span class="highlightme"><code>    for (int iter = 0; iter < 20; iter++)</code></span></td></tr>
+<tr><td class="code_line_class">83</td><td><code>      a = uk / (4.0 * M_PI * (1.0 / (G0mag * G0mag) - 1.0 / (G0mag * G0mag + 1.0 / a)));</code></td></tr>
+<tr><td class="code_line_class">84</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">85</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">86</td><td><code>};</code></td></tr>
+<tr><td class="code_line_class">87</td><td><span class="highlightme"><code>} // namespace qmcplusplus</code></span></td></tr>
+<tr><td class="code_line_class">88</td><td><code>#endif</code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

@@ -21,29 +21,23 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/QMCWaveFunctions/Fermion/MultiSlaterDeterminantFast.cpp
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Utilities/NewTimer.cpp
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-MultiSlaterDeterminantFast.cpp
+NewTimer.cpp
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">906</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">907</td><td><code>      for (size_t i = 0; i < P.getTotalNum(); i++)</code></td></tr>
-<tr><td class="code_line_class">908</td><td><span class="highlightme"><code>        gg += dot(myG_temp[i], myG_temp[i]) - dot(P.G[i], myG_temp[i]);</code></span></td></tr>
-<tr><td class="code_line_class">909</td><td><code></code></td></tr>
-<tr><td class="code_line_class">910</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">978</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">979</td><td><code>            for (size_t l = 0, j = Dets[id]->getFirstIndex(); l < Dets[id]->getNumPtcls(); l++, j++)</code></td></tr>
-<tr><td class="code_line_class">980</td><td><span class="highlightme"><code>              v[id] += tmp *</code></span></td></tr>
-<tr><td class="code_line_class">981</td><td><span class="highlightme"><code>                  static_cast<ValueType>(dot(P.G[j], grads_spin(spinC, l)) - dot(myG_temp[j], grads_spin(spinC, l)));</code></span></td></tr>
-<tr><td class="code_line_class">982</td><td><code>          }</code></td></tr>
-<tr><td class="code_line_class">983</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">102</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">103</td><td><code>    {</code></td></tr>
+<tr><td class="code_line_class">104</td><td><span class="highlightme"><code>      double elapsed = CLOCK()() - start_time;</code></span></td></tr>
+<tr><td class="code_line_class">105</td><td><code>      total_time += elapsed;</code></td></tr>
+<tr><td class="code_line_class">106</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

@@ -21,22 +21,23 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./comparison.html">Comparison
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Utilities/Timer.h
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Particle/LongRange/LRCoulombSingleton.cpp
 </div>
 <h2 id="heading">
 Comparison
 	Report
 </h2>
 <h3 id="heading">
-Timer.h
+LRCoulombSingleton.cpp
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">29</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">30</td><td><code>};</code></td></tr>
-<tr><td class="code_line_class">31</td><td><span class="highlightme"><code>} // namespace qmcplusplus</code></span></td></tr>
-<tr><td class="code_line_class">32</td><td><code>#endif</code></td></tr>
+<tr><td class="code_line_class">155</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">156</td><td><code>    }</code></td></tr>
+<tr><td class="code_line_class">157</td><td><span class="highlightme"><code>    CoulombDerivHandler->initBreakup(ref);</code></span></td></tr>
+<tr><td class="code_line_class">158</td><td><code>    return std::unique_ptr<LRHandlerType>(CoulombDerivHandler->makeClone(ref));</code></td></tr>
+<tr><td class="code_line_class">159</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

@@ -21,23 +21,23 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/einspline/multi_bspline_eval_s_std3.cpp
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/einspline/tests/test_3d.cpp
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-multi_bspline_eval_s_std3.cpp
+test_3d.cpp
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">592</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">593</td><td><code>        float sum1 =  dc[0] * coefs[n] +  dc[1] * coefs[n+zs] +  dc[2] * coefs[n+2*zs] +  dc[3] * coefs[n+3*zs];</code></td></tr>
-<tr><td class="code_line_class">594</td><td><span class="highlightme"><code>        float sum2 = d2c[0] * coefs[n] + d2c[1] * coefs[n+zs] + d2c[2] * coefs[n+2*zs] + d2c[3] * coefs[n+3*zs];</code></span></td></tr>
-<tr><td class="code_line_class">595</td><td><code>        hess [9*n  ] += pre20 * sum0;</code></td></tr>
-<tr><td class="code_line_class">596</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">78</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">79</td><td><code>        double z = delta*k;</code></td></tr>
+<tr><td class="code_line_class">80</td><td><span class="highlightme"><code>        data[N*N*i + N*j + k] = sin(tpi*x) + sin(3*tpi*y) + sin(4*tpi*z);</code></span></td></tr>
+<tr><td class="code_line_class">81</td><td><code>      }</code></td></tr>
+<tr><td class="code_line_class">82</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

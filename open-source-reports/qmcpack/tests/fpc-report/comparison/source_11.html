@@ -21,23 +21,23 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./comparison.html">Comparison
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Platforms/OMPTarget/ompBLAS.cpp
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Numerics/OptimizableFunctorBase.cpp
 </div>
 <h2 id="heading">
 Comparison
 	Report
 </h2>
 <h3 id="heading">
-ompBLAS.cpp
+OptimizableFunctorBase.cpp
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">159</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">160</td><td><code>          dot_sum += x[ib][j] * A[ib][i * lda + j];</code></td></tr>
-<tr><td class="code_line_class">161</td><td><span class="highlightme"><code>        if (beta[ib] == T(0))</code></span></td></tr>
-<tr><td class="code_line_class">162</td><td><code>          y[ib][i] = alpha[ib] * dot_sum; // protecting NaN from y</code></td></tr>
-<tr><td class="code_line_class">163</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">16</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">17</td><td><code>  int n       = 1000;</code></td></tr>
+<tr><td class="code_line_class">18</td><td><span class="highlightme"><code>  real_type d = extent == -1.0 ? func.cutoff_radius / n : extent / n;</code></span></td></tr>
+<tr><td class="code_line_class">19</td><td><code>  real_type r = 0;</code></td></tr>
+<tr><td class="code_line_class">20</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

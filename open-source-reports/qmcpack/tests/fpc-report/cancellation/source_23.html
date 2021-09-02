@@ -21,38 +21,33 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/QMCWaveFunctions/WaveFunctionComponent.h
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/QMCWaveFunctions/Jastrow/CountingGaussian.h
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-WaveFunctionComponent.h
+CountingGaussian.h
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">132</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">133</td><td><code></code></td></tr>
-<tr><td class="code_line_class">134</td><td><span class="highlightme"><code>public:</code></span></td></tr>
-<tr><td class="code_line_class">135</td><td><code>  const LogValueType get_log_value() const { return log_value_; }</code></td></tr>
-<tr><td class="code_line_class">136</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">193</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">194</td><td><code>                              const RefVector<ParticleSet::ParticleGradient_t>& G_list,</code></td></tr>
-<tr><td class="code_line_class">195</td><td><span class="highlightme"><code>                              const RefVector<ParticleSet::ParticleLaplacian_t>& L_list) const;</code></span></td></tr>
-<tr><td class="code_line_class">196</td><td><code></code></td></tr>
-<tr><td class="code_line_class">197</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">282</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">283</td><td><code>        std::transform(opt.begin(), opt.end(), opt.begin(), (int (*)(int))std::tolower);</code></td></tr>
+<tr><td class="code_line_class">284</td><td><span class="highlightme"><code>        std::transform(name.begin(), name.end(), name.begin(), (int (*)(int))std::tolower);</code></span></td></tr>
+<tr><td class="code_line_class">285</td><td><code>        if (name == "a") // input is the upper-triangle of A</code></td></tr>
+<tr><td class="code_line_class">286</td><td><code> ... </code></td></tr>
 <tr><td class="code_line_class">297</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">298</td><td><code>  virtual PsiValueType ratioGrad(ParticleSet& P, int iat, GradType& grad_iat);</code></td></tr>
-<tr><td class="code_line_class">299</td><td><span class="highlightme"><code></code></span></td></tr>
-<tr><td class="code_line_class">300</td><td><code>  /** evaluate the ratio of the new to old WaveFunctionComponent value and the new spin gradient</code></td></tr>
+<tr><td class="code_line_class">298</td><td><code>        {</code></td></tr>
+<tr><td class="code_line_class">299</td><td><span class="highlightme"><code>          opt_B.resize(3);</code></span></td></tr>
+<tr><td class="code_line_class">300</td><td><code>          if (opt.size() == 3 && is_bitstr)</code></td></tr>
 <tr><td class="code_line_class">301</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">341</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">342</td><td><code>                                    const std::vector<bool>& isAccepted,</code></td></tr>
-<tr><td class="code_line_class">343</td><td><span class="highlightme"><code>                                    bool safe_to_delay = false) const;</code></span></td></tr>
-<tr><td class="code_line_class">344</td><td><code></code></td></tr>
-<tr><td class="code_line_class">345</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">426</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">427</td><td><code>  {</code></td></tr>
+<tr><td class="code_line_class">428</td><td><span class="highlightme"><code>    RealType dxval = 0, dxlap = 0;</code></span></td></tr>
+<tr><td class="code_line_class">429</td><td><code>    GradType dxgrad = 0;</code></td></tr>
+<tr><td class="code_line_class">430</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

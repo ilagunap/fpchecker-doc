@@ -21,28 +21,89 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/QMCHamiltonians/QMCHamiltonian.cpp
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/QMCDrivers/WFOpt/QMCCostFunctionBatched.cpp
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-QMCHamiltonian.cpp
+QMCCostFunctionBatched.cpp
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">551</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">552</td><td><code>  pset.PropertyList[WP::LOCALENERGY]    = ham.LocalEnergy;</code></td></tr>
-<tr><td class="code_line_class">553</td><td><span class="highlightme"><code>  pset.PropertyList[WP::LOCALPOTENTIAL] = ham.LocalEnergy - ham.KineticEnergy;</code></span></td></tr>
-<tr><td class="code_line_class">554</td><td><code>}</code></td></tr>
-<tr><td class="code_line_class">555</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">781</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">782</td><td><code>  P.PropertyList[WP::LOCALENERGY]    = LocalEnergy;</code></td></tr>
-<tr><td class="code_line_class">783</td><td><span class="highlightme"><code>  P.PropertyList[WP::LOCALPOTENTIAL] = LocalEnergy - KineticEnergy;</code></span></td></tr>
-<tr><td class="code_line_class">784</td><td><code>  //   auxHevaluate(P);</code></td></tr>
-<tr><td class="code_line_class">785</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">69</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">70</td><td><code>      QMCTraits::RealType CostMinus = this->Cost();</code></td></tr>
+<tr><td class="code_line_class">71</td><td><span class="highlightme"><code>      PGradient[i]                  = (CostPlus - CostMinus) * dh;</code></span></td></tr>
+<tr><td class="code_line_class">72</td><td><code>    }</code></td></tr>
+<tr><td class="code_line_class">73</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">82</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">83</td><td><code>    //    Return_t curAvg2_w = curAvg_w*curAvg_w;</code></td></tr>
+<tr><td class="code_line_class">84</td><td><span class="highlightme"><code>    curVar_w = SumValue[SUM_ESQ_WGT] / SumValue[SUM_WGT] - curAvg_w * curAvg_w;</code></span></td></tr>
+<tr><td class="code_line_class">85</td><td><code>    std::vector<Return_rt> EDtotals(NumOptimizables, 0.0);</code></td></tr>
+<tr><td class="code_line_class">86</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">96</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">97</td><td><code>        Return_rt eloc_new              = saved[ENERGY_NEW];</code></td></tr>
+<tr><td class="code_line_class">98</td><td><span class="highlightme"><code>        delE_bar += weight * std::pow(std::abs(eloc_new - EtargetEff), PowerE);</code></span></td></tr>
+<tr><td class="code_line_class">99</td><td><code>        const Return_rt* HDsaved = HDerivRecords_[iw];</code></td></tr>
+<tr><td class="code_line_class">100</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">112</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">113</td><td><code>        Return_rt eloc_new              = saved[ENERGY_NEW];</code></td></tr>
+<tr><td class="code_line_class">114</td><td><span class="highlightme"><code>        Return_rt delta_l               = (eloc_new - curAvg_w);</code></span></td></tr>
+<tr><td class="code_line_class">115</td><td><code>        bool ltz(true);</code></td></tr>
+<tr><td class="code_line_class">116</td><td><span class="highlightme"><code>        if (eloc_new - EtargetEff < 0)</code></span></td></tr>
+<tr><td class="code_line_class">117</td><td><code>          ltz = false;</code></td></tr>
+<tr><td class="code_line_class">118</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">141</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">142</td><td><code>        Return_rt eloc_new              = saved[ENERGY_NEW];</code></td></tr>
+<tr><td class="code_line_class">143</td><td><span class="highlightme"><code>        Return_rt delta_l               = (eloc_new - curAvg_w);</code></span></td></tr>
+<tr><td class="code_line_class">144</td><td><code>        Return_rt sigma_l               = delta_l * delta_l;</code></td></tr>
+<tr><td class="code_line_class">145</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">434</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">435</td><td><code>  app_log() << "  VMC Eavg = " << Etarget << std::endl;</code></td></tr>
+<tr><td class="code_line_class">436</td><td><span class="highlightme"><code>  app_log() << "  VMC Evar = " << etemp[2] / etemp[1] - Etarget * Etarget << std::endl;</code></span></td></tr>
+<tr><td class="code_line_class">437</td><td><code>  app_log() << "  Total weights = " << etemp[1] << std::endl;</code></td></tr>
+<tr><td class="code_line_class">438</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">597</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">598</td><td><code>        p_list[ib].L += *lapPsi[is];</code></td></tr>
+<tr><td class="code_line_class">599</td><td><span class="highlightme"><code>        Return_rt weight            = vmc_or_dmc * (opt_data.get_log_psi_opt()[ib] - RecordsOnNode[is][LOGPSI_FREE]);</code></span></td></tr>
+<tr><td class="code_line_class">600</td><td><code>        RecordsOnNode[is][REWEIGHT] = weight;</code></td></tr>
+<tr><td class="code_line_class">601</td><td><code>        // move to opt_data</code></td></tr>
+<tr><td class="code_line_class">602</td><td><span class="highlightme"><code>        opt_data.get_wgt() += inv_n_samples * weight;</code></span></td></tr>
+<tr><td class="code_line_class">603</td><td><code>        opt_data.get_wgt2() += inv_n_samples * weight * weight;</code></td></tr>
+<tr><td class="code_line_class">604</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">671</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">672</td><td><code>      saved[REWEIGHT] =</code></td></tr>
+<tr><td class="code_line_class">673</td><td><span class="highlightme"><code>          std::min(std::exp(saved[REWEIGHT] - wgtnorm), std::numeric_limits<Return_rt>::max() * (RealType)0.1);</code></span></td></tr>
+<tr><td class="code_line_class">674</td><td><code>      wgt_tot += inv_n_samples * saved[REWEIGHT];</code></td></tr>
+<tr><td class="code_line_class">675</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">697</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">698</td><td><code>      Return_rt eloc_new = saved[ENERGY_NEW];</code></td></tr>
+<tr><td class="code_line_class">699</td><td><span class="highlightme"><code>      Return_rt delE     = std::pow(std::abs(eloc_new - EtargetEff), PowerE);</code></span></td></tr>
+<tr><td class="code_line_class">700</td><td><code>      SumValue[SUM_E_BARE] += eloc_new;</code></td></tr>
+<tr><td class="code_line_class">701</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">747</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">748</td><td><code>  //    RealType H2_avg = 1.0/std::sqrt(curAvg_w*curAvg_w*curAvg2_w);</code></td></tr>
+<tr><td class="code_line_class">749</td><td><span class="highlightme"><code>  RealType V_avg = curAvg2_w - curAvg_w * curAvg_w;</code></span></td></tr>
+<tr><td class="code_line_class">750</td><td><code>  std::vector<Return_rt> D_avg(getNumParams(), 0.0);</code></td></tr>
+<tr><td class="code_line_class">751</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">775</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">776</td><td><code>      {</code></td></tr>
+<tr><td class="code_line_class">777</td><td><span class="highlightme"><code>        Return_rt wfe = (HDsaved[pm] + (Dsaved[pm] - D_avg[pm]) * eloc_new) * weight;</code></span></td></tr>
+<tr><td class="code_line_class">778</td><td><code>        Return_rt wfd = (Dsaved[pm] - D_avg[pm]) * weight;</code></td></tr>
+<tr><td class="code_line_class">779</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">792</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">793</td><td><code>          //                Hamiltonian</code></td></tr>
+<tr><td class="code_line_class">794</td><td><span class="highlightme"><code>          Left(pm + 1, pm2 + 1) += (1 - b2) * wfd * (HDsaved[pm2] + (Dsaved[pm2] - D_avg[pm2]) * eloc_new);</code></span></td></tr>
+<tr><td class="code_line_class">795</td><td><code>          //                Overlap</code></td></tr>
+<tr><td class="code_line_class">796</td><td><span class="highlightme"><code>          RealType ovlij = wfd * (Dsaved[pm2] - D_avg[pm2]);</code></span></td></tr>
+<tr><td class="code_line_class">797</td><td><code>          Right(pm + 1, pm2 + 1) += ovlij;</code></td></tr>
+<tr><td class="code_line_class">798</td><td><code>          //                Variance</code></td></tr>
+<tr><td class="code_line_class">799</td><td><span class="highlightme"><code>          RealType varij = weight * (HDsaved[pm] - 2.0 * (Dsaved[pm] - D_avg[pm]) * eloc_new) *</code></span></td></tr>
+<tr><td class="code_line_class">800</td><td><span class="highlightme"><code>              (HDsaved[pm2] - 2.0 * (Dsaved[pm2] - D_avg[pm2]) * eloc_new);</code></span></td></tr>
+<tr><td class="code_line_class">801</td><td><code>          //                  RealType varij=weight*(HDsaved[pm] +(Dsaved[pm]-D_avg[pm])*eloc_new-curAvg_w)*</code></td></tr>
+<tr><td class="code_line_class">802</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>
