@@ -18,7 +18,7 @@ FPChecker is a dynamic analysis tool to detect floating-point errors in HPC appl
 
 - **Easy to use:** it only requires a few changes to the application build script, such as changing the compiler (e.g., clang++) by the FPChecker compiler wrappers (e.g., clang++-fpchecker). It automatically instruments the code at build time.
 - **Accurate detection:** it accurately detects errors dynamically (when code is executed) for specific inputs; it doesn’t give alarms for unused or invalid inputs. 
-- **Design for HPC:** it supports the most used programming languages and models in HPC: C/C++, MPI, OpenMP, Pthreads, and CUDA.
+- **Designed for HPC:** it supports the most used programming languages and models in HPC: C/C++, MPI, OpenMP, Pthreads, and CUDA.
 - **Detailed report:** it provides a detailed report that programmers can use to identify the exact location (file and line number) of floating-point errors in the software.
 
 <!--
