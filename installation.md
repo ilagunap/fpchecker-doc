@@ -1,5 +1,5 @@
 ---
-title: "Bulding FPChecker"
+title: "Bulding FPChecker with CMake"
 keywords: sample homepage
 layout: page
 tags: [getting_started]
@@ -7,6 +7,8 @@ sidebar: mydoc_sidebar
 permalink: installation.html
 summary: These brief instructions will help you get started to install FPChecker.
 ---
+
+To install with Spack instead of CMake, see [./installation_spack.html](./installation_spack.html)
 
 ## Requirements
 - A Linux system is required to run FPChecker. Support for macOS is coming soon.
