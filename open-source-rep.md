@@ -21,3 +21,4 @@ We always use the latest version available of the codes from their corresponding
 | [RAJA Perf](https://github.com/LLNL/RAJAPerf) <br> Input: ./bin/raja-perf.exe | [report](open-source-reports/RAJAPerf-0.3.0/fpc-report/){:target="_blank"} |
 | [Kripke](https://github.com/LLNL/Kripke) <br> Input: ./bin/kripke.exe | [report](open-source-reports/kripke/fpc-report/){:target="_blank"} |
 | [Quicksilver](https://github.com/LLNL/Quicksilver) <br> Input: mpirun -np 2 --oversubscribe ./qs | [report](open-source-reports/quicksilver/fpc-report/){:target="_blank"} |
+| [AMG](https://asc.llnl.gov/coral-2-benchmarks) <br> Input: mpirun -np 8 -host localhost --oversubscribe ./amg | [report](open-source-reports/AMG/fpc-report/){:target="_blank"} |

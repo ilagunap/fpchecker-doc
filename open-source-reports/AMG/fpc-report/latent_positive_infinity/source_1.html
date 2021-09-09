@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+mpirun -np 8 -host localhost --oversubscribe ./amg
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./latent_positive_infinity.html">Latent Positive Infinity
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/AMG/AMG/test/amg.c
+</div>
+<h2 id="heading">
+Latent Positive Infinity
+	Report
+</h2>
+<h3 id="heading">
+amg.c
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">405</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">406</td><td><code></code></td></tr>
+<tr><td class="code_line_class">407</td><td><span class="highlightme"><code>      FOM1 = cum_nnz_AP/ wall_time;</code></span></td></tr>
+<tr><td class="code_line_class">408</td><td><code></code></td></tr>
+<tr><td class="code_line_class">409</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">432</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">433</td><td><code></code></td></tr>
+<tr><td class="code_line_class">434</td><td><span class="highlightme"><code>      FOM2 = cum_nnz_AP*(HYPRE_Real)num_iterations/ wall_time;</code></span></td></tr>
+<tr><td class="code_line_class">435</td><td><code></code></td></tr>
+<tr><td class="code_line_class">436</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>

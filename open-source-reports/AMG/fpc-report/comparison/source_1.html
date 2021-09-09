@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+mpirun -np 8 -host localhost --oversubscribe ./amg
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./comparison.html">Comparison
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/AMG/AMG/seq_mv/csr_matvec.c
+</div>
+<h2 id="heading">
+Comparison
+	Report
+</h2>
+<h3 id="heading">
+csr_matvec.c
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">1</td><td><code>/*BHEADER**********************************************************************</code></td></tr>
+<tr><td class="code_line_class">2</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">108</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">109</td><td><code></code></td></tr>
+<tr><td class="code_line_class">110</td><td><span class="highlightme"><code>   if (alpha == 0.0)</code></span></td></tr>
+<tr><td class="code_line_class">111</td><td><code>   {</code></td></tr>
+<tr><td class="code_line_class">112</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">145</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">146</td><td><code>      {</code></td></tr>
+<tr><td class="code_line_class">147</td><td><span class="highlightme"><code>         if (temp == 0.0)</code></span></td></tr>
+<tr><td class="code_line_class">148</td><td><code>         {</code></td></tr>
+<tr><td class="code_line_class">149</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">250</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">251</td><td><code></code></td></tr>
+<tr><td class="code_line_class">252</td><td><span class="highlightme"><code>      if (0 == temp)</code></span></td></tr>
+<tr><td class="code_line_class">253</td><td><code>      {</code></td></tr>
+<tr><td class="code_line_class">254</td><td><span class="highlightme"><code>         if (1 == alpha) // JSP: a common path</code></span></td></tr>
+<tr><td class="code_line_class">255</td><td><code>         {</code></td></tr>
+<tr><td class="code_line_class">256</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">289</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">290</td><td><code>      } // temp == 0</code></td></tr>
+<tr><td class="code_line_class">291</td><td><span class="highlightme"><code>      else if (-1 == temp) // beta == -alpha</code></span></td></tr>
+<tr><td class="code_line_class">292</td><td><code>      {</code></td></tr>
+<tr><td class="code_line_class">293</td><td><span class="highlightme"><code>         if (1 == alpha) // JSP: a common path</code></span></td></tr>
+<tr><td class="code_line_class">294</td><td><code>         {</code></td></tr>
+<tr><td class="code_line_class">295</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">303</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">304</td><td><code>         } // y = A*x - y</code></td></tr>
+<tr><td class="code_line_class">305</td><td><span class="highlightme"><code>         else if (-1 == alpha) // JSP: a common path</code></span></td></tr>
+<tr><td class="code_line_class">306</td><td><code>         {</code></td></tr>
+<tr><td class="code_line_class">307</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">328</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">329</td><td><code>      } // temp == -1</code></td></tr>
+<tr><td class="code_line_class">330</td><td><span class="highlightme"><code>      else if (1 == temp)</code></span></td></tr>
+<tr><td class="code_line_class">331</td><td><code>      {</code></td></tr>
+<tr><td class="code_line_class">332</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">497</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">498</td><td><code></code></td></tr>
+<tr><td class="code_line_class">499</td><td><span class="highlightme"><code>   if (alpha == 0.0)</code></span></td></tr>
+<tr><td class="code_line_class">500</td><td><code>   {</code></td></tr>
+<tr><td class="code_line_class">501</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">522</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">523</td><td><code>   {</code></td></tr>
+<tr><td class="code_line_class">524</td><td><span class="highlightme"><code>      if (temp == 0.0)</code></span></td></tr>
+<tr><td class="code_line_class">525</td><td><code>      {</code></td></tr>
+<tr><td class="code_line_class">526</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>
