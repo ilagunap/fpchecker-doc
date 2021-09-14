@@ -14,35 +14,38 @@
 <div class="separation_class"></div>
 <div class="report_title">
 <b>Report Title:</b>
-./benchmark_ij.jobs
+benchmark_ij.jobs
 </div>
 	
 <div class="separation_class"></div>
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/hypre/hypre/src/parcsr_ls/par_interp.c
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/hypre/hypre/src/parcsr_ls/par_stats.c
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-par_interp.c
+par_stats.c
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">2335</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">2336</td><td><code>               {</code></td></tr>
-<tr><td class="code_line_class">2337</td><td><span class="highlightme"><code>                  if (A_diag_data[jj] > 0)</code></span></td></tr>
-<tr><td class="code_line_class">2338</td><td><code>                     sum_N_pos += A_diag_data[jj];</code></td></tr>
-<tr><td class="code_line_class">2339</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">2367</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">2368</td><td><code>                  {</code></td></tr>
-<tr><td class="code_line_class">2369</td><td><span class="highlightme"><code>                     if (A_offd_data[jj] > 0)</code></span></td></tr>
-<tr><td class="code_line_class">2370</td><td><code>                        sum_N_pos += A_offd_data[jj];</code></td></tr>
-<tr><td class="code_line_class">2371</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">586</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">587</td><td><code>            for (j = A_offd_i[0]; j < A_offd_i[1]; j++)</code></td></tr>
+<tr><td class="code_line_class">588</td><td><span class="highlightme"><code>               min_rowsum += A_offd_data[j];</code></span></td></tr>
+<tr><td class="code_line_class">589</td><td><code></code></td></tr>
+<tr><td class="code_line_class">590</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">598</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">599</td><td><code>               for (i = A_diag_i[j]; i < A_diag_i[j+1]; i++)</code></td></tr>
+<tr><td class="code_line_class">600</td><td><span class="highlightme"><code>                  rowsum += A_diag_data[i];</code></span></td></tr>
+<tr><td class="code_line_class">601</td><td><code></code></td></tr>
+<tr><td class="code_line_class">602</td><td><code>               for (i = A_offd_i[j]; i < A_offd_i[j+1]; i++)</code></td></tr>
+<tr><td class="code_line_class">603</td><td><span class="highlightme"><code>                  rowsum += A_offd_data[i];</code></span></td></tr>
+<tr><td class="code_line_class">604</td><td><code></code></td></tr>
+<tr><td class="code_line_class">605</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

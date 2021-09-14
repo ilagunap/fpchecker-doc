@@ -14,45 +14,37 @@
 <div class="separation_class"></div>
 <div class="report_title">
 <b>Report Title:</b>
-./benchmark_ij.jobs
+benchmark_ij.jobs
 </div>
 	
 <div class="separation_class"></div>
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/hypre/hypre/src/parcsr_ls/par_strength.c
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/hypre/hypre/src/utilities/timing.c
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-par_strength.c
+timing.c
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">276</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">277</td><td><code>                     row_scale = hypre_min(row_scale, A_diag_data[jA]);</code></td></tr>
-<tr><td class="code_line_class">278</td><td><span class="highlightme"><code>                     row_sum += A_diag_data[jA];</code></span></td></tr>
-<tr><td class="code_line_class">279</td><td><code>                  }</code></td></tr>
-<tr><td class="code_line_class">280</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">284</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">285</td><td><code>                     row_scale = hypre_min(row_scale, A_offd_data[jA]);</code></td></tr>
-<tr><td class="code_line_class">286</td><td><span class="highlightme"><code>                     row_sum += A_offd_data[jA];</code></span></td></tr>
-<tr><td class="code_line_class">287</td><td><code>                  }</code></td></tr>
-<tr><td class="code_line_class">288</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">309</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">310</td><td><code>                  row_scale = hypre_min(row_scale, A_diag_data[jA]);</code></td></tr>
-<tr><td class="code_line_class">311</td><td><span class="highlightme"><code>                  row_sum += A_diag_data[jA];</code></span></td></tr>
-<tr><td class="code_line_class">312</td><td><code>               }</code></td></tr>
-<tr><td class="code_line_class">313</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">314</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">315</td><td><code>                  row_scale = hypre_min(row_scale, A_offd_data[jA]);</code></td></tr>
-<tr><td class="code_line_class">316</td><td><span class="highlightme"><code>                  row_sum += A_offd_data[jA];</code></span></td></tr>
-<tr><td class="code_line_class">317</td><td><code>               }</code></td></tr>
-<tr><td class="code_line_class">318</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">229</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">230</td><td><code></code></td></tr>
+<tr><td class="code_line_class">231</td><td><span class="highlightme"><code>      hypre_StartTiming();</code></span></td></tr>
+<tr><td class="code_line_class">232</td><td><code>   }</code></td></tr>
+<tr><td class="code_line_class">233</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">253</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">254</td><td><code>      hypre_TimingWallTime(time_index) += hypre_TimingWallCount;</code></td></tr>
+<tr><td class="code_line_class">255</td><td><span class="highlightme"><code>      hypre_TimingCPUTime(time_index)  += hypre_TimingCPUCount;</code></span></td></tr>
+<tr><td class="code_line_class">256</td><td><code>      hypre_TimingFLOPS(time_index)    += hypre_TimingFLOPCount;</code></td></tr>
+<tr><td class="code_line_class">257</td><td><span class="highlightme"><code>      hypre_StartTiming();</code></span></td></tr>
+<tr><td class="code_line_class">258</td><td><code>   }</code></td></tr>
+<tr><td class="code_line_class">259</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

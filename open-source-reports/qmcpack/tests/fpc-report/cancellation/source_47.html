@@ -21,25 +21,28 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Estimators/accumulators.h
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Utilities/RunTimeManager.cpp
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-accumulators.h
+RunTimeManager.cpp
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">1</td><td><code>//////////////////////////////////////////////////////////////////////////////////////</code></td></tr>
-<tr><td class="code_line_class">2</td><td><code> ... </code></td></tr>
 <tr><td class="code_line_class">27</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">28</td><td><code> *</code></td></tr>
-<tr><td class="code_line_class">29</td><td><span class="highlightme"><code> * To simplify i/o, the values are storged in contents</code></span></td></tr>
-<tr><td class="code_line_class">30</td><td><code> */</code></td></tr>
+<tr><td class="code_line_class">28</td><td><code></code></td></tr>
+<tr><td class="code_line_class">29</td><td><span class="highlightme"><code>template<class CLOCK></code></span></td></tr>
+<tr><td class="code_line_class">30</td><td><code>LoopTimer<CLOCK>::LoopTimer() : nloop(0), ticking(false), start_time(0.0), total_time(0.0)</code></td></tr>
 <tr><td class="code_line_class">31</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">46</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">47</td><td><code>  nloop++;</code></td></tr>
+<tr><td class="code_line_class">48</td><td><span class="highlightme"><code>  total_time += CLOCK()() - start_time;</code></span></td></tr>
+<tr><td class="code_line_class">49</td><td><code>  ticking = false;</code></td></tr>
+<tr><td class="code_line_class">50</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

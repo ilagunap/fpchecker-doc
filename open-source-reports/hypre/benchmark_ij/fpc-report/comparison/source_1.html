@@ -14,91 +14,35 @@
 <div class="separation_class"></div>
 <div class="report_title">
 <b>Report Title:</b>
-./benchmark_ij.jobs
+benchmark_ij.jobs
 </div>
 	
 <div class="separation_class"></div>
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./comparison.html">Comparison
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/hypre/hypre/src/seq_mv/csr_matvec.c
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/hypre/hypre/src/seq_mv/vector.c
 </div>
 <h2 id="heading">
 Comparison
 	Report
 </h2>
 <h3 id="heading">
-csr_matvec.c
+vector.c
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">1</td><td><code>/******************************************************************************</code></td></tr>
-<tr><td class="code_line_class">2</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">89</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">90</td><td><code></code></td></tr>
-<tr><td class="code_line_class">91</td><td><span class="highlightme"><code>   if (alpha == 0.0)</code></span></td></tr>
-<tr><td class="code_line_class">92</td><td><code>   {</code></td></tr>
-<tr><td class="code_line_class">93</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">223</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">224</td><td><code></code></td></tr>
-<tr><td class="code_line_class">225</td><td><span class="highlightme"><code>      if (temp == 0.0)</code></span></td></tr>
-<tr><td class="code_line_class">226</td><td><code>      {</code></td></tr>
-<tr><td class="code_line_class">227</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">282</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">283</td><td><code>      } // temp == 0</code></td></tr>
-<tr><td class="code_line_class">284</td><td><span class="highlightme"><code>      else if (temp == -1.0) // beta == -alpha</code></span></td></tr>
-<tr><td class="code_line_class">285</td><td><code>      {</code></td></tr>
-<tr><td class="code_line_class">286</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">357</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">358</td><td><code>      } // temp == -1</code></td></tr>
-<tr><td class="code_line_class">359</td><td><span class="highlightme"><code>      else if (temp == 1.0) // beta == alpha</code></span></td></tr>
-<tr><td class="code_line_class">360</td><td><code>      {</code></td></tr>
-<tr><td class="code_line_class">361</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">520</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">521</td><td><code></code></td></tr>
-<tr><td class="code_line_class">522</td><td><span class="highlightme"><code>         if (temp == 0.0)</code></span></td></tr>
-<tr><td class="code_line_class">523</td><td><code>         {</code></td></tr>
-<tr><td class="code_line_class">524</td><td><span class="highlightme"><code>            if (alpha == 1.0) // JSP: a common path</code></span></td></tr>
-<tr><td class="code_line_class">525</td><td><code>            {</code></td></tr>
-<tr><td class="code_line_class">526</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">534</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">535</td><td><code>            } // y = A*x</code></td></tr>
-<tr><td class="code_line_class">536</td><td><span class="highlightme"><code>            else if (alpha == -1.0)</code></span></td></tr>
-<tr><td class="code_line_class">537</td><td><code>            {</code></td></tr>
-<tr><td class="code_line_class">538</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">559</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">560</td><td><code>         } // temp == 0</code></td></tr>
-<tr><td class="code_line_class">561</td><td><span class="highlightme"><code>         else if (temp == -1.0) // beta == -alpha</code></span></td></tr>
-<tr><td class="code_line_class">562</td><td><code>         {</code></td></tr>
-<tr><td class="code_line_class">563</td><td><span class="highlightme"><code>            if (alpha == 1.0) // JSP: a common path</code></span></td></tr>
-<tr><td class="code_line_class">564</td><td><code>            {</code></td></tr>
-<tr><td class="code_line_class">565</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">574</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">575</td><td><code>            } // y = A*x - y</code></td></tr>
-<tr><td class="code_line_class">576</td><td><span class="highlightme"><code>            else if (alpha == -1.0) // JSP: a common path</code></span></td></tr>
-<tr><td class="code_line_class">577</td><td><code>            {</code></td></tr>
-<tr><td class="code_line_class">578</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">601</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">602</td><td><code>         } // temp == -1</code></td></tr>
-<tr><td class="code_line_class">603</td><td><span class="highlightme"><code>         else if (temp == 1.0)</code></span></td></tr>
-<tr><td class="code_line_class">604</td><td><code>         {</code></td></tr>
-<tr><td class="code_line_class">605</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">658</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">659</td><td><code>            } // y = A*x + temp*y</code></td></tr>
-<tr><td class="code_line_class">660</td><td><span class="highlightme"><code>            else if (alpha == -1.0)</code></span></td></tr>
-<tr><td class="code_line_class">661</td><td><code>            {</code></td></tr>
-<tr><td class="code_line_class">662</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">812</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">813</td><td><code></code></td></tr>
-<tr><td class="code_line_class">814</td><td><span class="highlightme"><code>   if (alpha == 0.0)</code></span></td></tr>
-<tr><td class="code_line_class">815</td><td><code>   {</code></td></tr>
-<tr><td class="code_line_class">816</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">837</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">838</td><td><code>   {</code></td></tr>
-<tr><td class="code_line_class">839</td><td><span class="highlightme"><code>      if (temp == 0.0)</code></span></td></tr>
-<tr><td class="code_line_class">840</td><td><code>      {</code></td></tr>
-<tr><td class="code_line_class">841</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">445</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">446</td><td><code>   /* special cases */</code></td></tr>
+<tr><td class="code_line_class">447</td><td><span class="highlightme"><code>   if (alpha == 1.0)</code></span></td></tr>
+<tr><td class="code_line_class">448</td><td><code>   {</code></td></tr>
+<tr><td class="code_line_class">449</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">450</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">451</td><td><code></code></td></tr>
+<tr><td class="code_line_class">452</td><td><span class="highlightme"><code>   if (alpha == 0.0)</code></span></td></tr>
+<tr><td class="code_line_class">453</td><td><code>   {</code></td></tr>
+<tr><td class="code_line_class">454</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

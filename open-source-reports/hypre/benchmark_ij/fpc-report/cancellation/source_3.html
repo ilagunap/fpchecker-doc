@@ -14,38 +14,45 @@
 <div class="separation_class"></div>
 <div class="report_title">
 <b>Report Title:</b>
-./benchmark_ij.jobs
+benchmark_ij.jobs
 </div>
 	
 <div class="separation_class"></div>
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/hypre/hypre/src/parcsr_ls/par_stats.c
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/hypre/hypre/src/parcsr_ls/par_strength.c
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-par_stats.c
+par_strength.c
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">586</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">587</td><td><code>            for (j = A_offd_i[0]; j < A_offd_i[1]; j++)</code></td></tr>
-<tr><td class="code_line_class">588</td><td><span class="highlightme"><code>               min_rowsum += A_offd_data[j];</code></span></td></tr>
-<tr><td class="code_line_class">589</td><td><code></code></td></tr>
-<tr><td class="code_line_class">590</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">598</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">599</td><td><code>               for (i = A_diag_i[j]; i < A_diag_i[j+1]; i++)</code></td></tr>
-<tr><td class="code_line_class">600</td><td><span class="highlightme"><code>                  rowsum += A_diag_data[i];</code></span></td></tr>
-<tr><td class="code_line_class">601</td><td><code></code></td></tr>
-<tr><td class="code_line_class">602</td><td><code>               for (i = A_offd_i[j]; i < A_offd_i[j+1]; i++)</code></td></tr>
-<tr><td class="code_line_class">603</td><td><span class="highlightme"><code>                  rowsum += A_offd_data[i];</code></span></td></tr>
-<tr><td class="code_line_class">604</td><td><code></code></td></tr>
-<tr><td class="code_line_class">605</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">276</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">277</td><td><code>                     row_scale = hypre_min(row_scale, A_diag_data[jA]);</code></td></tr>
+<tr><td class="code_line_class">278</td><td><span class="highlightme"><code>                     row_sum += A_diag_data[jA];</code></span></td></tr>
+<tr><td class="code_line_class">279</td><td><code>                  }</code></td></tr>
+<tr><td class="code_line_class">280</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">284</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">285</td><td><code>                     row_scale = hypre_min(row_scale, A_offd_data[jA]);</code></td></tr>
+<tr><td class="code_line_class">286</td><td><span class="highlightme"><code>                     row_sum += A_offd_data[jA];</code></span></td></tr>
+<tr><td class="code_line_class">287</td><td><code>                  }</code></td></tr>
+<tr><td class="code_line_class">288</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">309</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">310</td><td><code>                  row_scale = hypre_min(row_scale, A_diag_data[jA]);</code></td></tr>
+<tr><td class="code_line_class">311</td><td><span class="highlightme"><code>                  row_sum += A_diag_data[jA];</code></span></td></tr>
+<tr><td class="code_line_class">312</td><td><code>               }</code></td></tr>
+<tr><td class="code_line_class">313</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">314</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">315</td><td><code>                  row_scale = hypre_min(row_scale, A_offd_data[jA]);</code></td></tr>
+<tr><td class="code_line_class">316</td><td><span class="highlightme"><code>                  row_sum += A_offd_data[jA];</code></span></td></tr>
+<tr><td class="code_line_class">317</td><td><code>               }</code></td></tr>
+<tr><td class="code_line_class">318</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

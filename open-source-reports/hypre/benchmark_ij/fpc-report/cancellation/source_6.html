@@ -14,37 +14,43 @@
 <div class="separation_class"></div>
 <div class="report_title">
 <b>Report Title:</b>
-./benchmark_ij.jobs
+benchmark_ij.jobs
 </div>
 	
 <div class="separation_class"></div>
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/hypre/hypre/src/utilities/timing.c
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/hypre/hypre/src/parcsr_ls/par_mod_lr_interp.c
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-timing.c
+par_mod_lr_interp.c
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">229</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">230</td><td><code></code></td></tr>
-<tr><td class="code_line_class">231</td><td><span class="highlightme"><code>      hypre_StartTiming();</code></span></td></tr>
-<tr><td class="code_line_class">232</td><td><code>   }</code></td></tr>
-<tr><td class="code_line_class">233</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">253</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">254</td><td><code>      hypre_TimingWallTime(time_index) += hypre_TimingWallCount;</code></td></tr>
-<tr><td class="code_line_class">255</td><td><span class="highlightme"><code>      hypre_TimingCPUTime(time_index)  += hypre_TimingCPUCount;</code></span></td></tr>
-<tr><td class="code_line_class">256</td><td><code>      hypre_TimingFLOPS(time_index)    += hypre_TimingFLOPCount;</code></td></tr>
-<tr><td class="code_line_class">257</td><td><span class="highlightme"><code>      hypre_StartTiming();</code></span></td></tr>
-<tr><td class="code_line_class">258</td><td><code>   }</code></td></tr>
-<tr><td class="code_line_class">259</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">289</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">290</td><td><code>               {</code></td></tr>
+<tr><td class="code_line_class">291</td><td><span class="highlightme"><code>                  D_w[row] += A_diag_data[j];</code></span></td></tr>
+<tr><td class="code_line_class">292</td><td><code>               }</code></td></tr>
+<tr><td class="code_line_class">293</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">294</td><td><code>               {</code></td></tr>
+<tr><td class="code_line_class">295</td><td><span class="highlightme"><code>                  D_w[row] += A_offd_data[j];</code></span></td></tr>
+<tr><td class="code_line_class">296</td><td><code>               }</code></td></tr>
+<tr><td class="code_line_class">297</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1532</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1533</td><td><code>               {</code></td></tr>
+<tr><td class="code_line_class">1534</td><td><span class="highlightme"><code>                  D_w[row] += A_diag_data[j];</code></span></td></tr>
+<tr><td class="code_line_class">1535</td><td><code>               }</code></td></tr>
+<tr><td class="code_line_class">1536</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1537</td><td><code>               {</code></td></tr>
+<tr><td class="code_line_class">1538</td><td><span class="highlightme"><code>                  D_w[row] += A_offd_data[j];</code></span></td></tr>
+<tr><td class="code_line_class">1539</td><td><code>               }</code></td></tr>
+<tr><td class="code_line_class">1540</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

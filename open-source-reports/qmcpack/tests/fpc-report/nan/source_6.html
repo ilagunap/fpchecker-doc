@@ -21,49 +21,18 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./nan.html">Nan
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/einspline/bspline_create.c
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Utilities/Timer.h
 </div>
 <h2 id="heading">
 Nan
 	Report
 </h2>
 <h3 id="heading">
-bspline_create.c
+Timer.h
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">996</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">997</td><td><code>  bands[4*(0)+0] /= bands[4*(0)+1];</code></td></tr>
-<tr><td class="code_line_class">998</td><td><span class="highlightme"><code>  bands[4*(0)+3] /= bands[4*(0)+1];</code></span></td></tr>
-<tr><td class="code_line_class">999</td><td><code>  bands[4*(0)+1]  = 1.0;</code></td></tr>
-<tr><td class="code_line_class">1000</td><td><code>  bands[4*(M-1)+1] -= bands[4*(M-1)+2]*bands[4*(0)+0];</code></td></tr>
-<tr><td class="code_line_class">1001</td><td><span class="highlightme"><code>  bands[4*(M-1)+3] -= bands[4*(M-1)+2]*bands[4*(0)+3];</code></span></td></tr>
-<tr><td class="code_line_class">1002</td><td><code>  bands[4*(M-1)+2]  = -bands[4*(M-1)+2]*bands[4*(0)+2];</code></td></tr>
-<tr><td class="code_line_class">1003</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">1005</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">1006</td><td><code>    bands[4*(row)+1] -= bands[4*(row)+0] * bands[4*(row-1)+2];</code></td></tr>
-<tr><td class="code_line_class">1007</td><td><span class="highlightme"><code>    bands[4*(row)+3] -= bands[4*(row)+0] * bands[4*(row-1)+3];</code></span></td></tr>
-<tr><td class="code_line_class">1008</td><td><code>    lastCol[row]   = -bands[4*(row)+0] * lastCol[row-1];</code></td></tr>
-<tr><td class="code_line_class">1009</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">1010</td><td><code>    bands[4*(row)+2] /= bands[4*(row)+1];</code></td></tr>
-<tr><td class="code_line_class">1011</td><td><span class="highlightme"><code>    bands[4*(row)+3] /= bands[4*(row)+1];</code></span></td></tr>
-<tr><td class="code_line_class">1012</td><td><code>    lastCol[row]  /= bands[4*(row)+1];</code></td></tr>
-<tr><td class="code_line_class">1013</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">1014</td><td><code>    if (row < (M-2)) {</code></td></tr>
-<tr><td class="code_line_class">1015</td><td><span class="highlightme"><code>      bands[4*(M-1)+3] -= bands[4*(M-1)+2]*bands[4*(row)+3];</code></span></td></tr>
-<tr><td class="code_line_class">1016</td><td><code>      bands[4*(M-1)+1] -= bands[4*(M-1)+2]*lastCol[row];</code></td></tr>
-<tr><td class="code_line_class">1017</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">1023</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">1024</td><td><code>  bands[4*(M-1)+1] -= bands[4*(M-1)+0] * (bands[4*(M-2)+2]+lastCol[M-2]);</code></td></tr>
-<tr><td class="code_line_class">1025</td><td><span class="highlightme"><code>  bands[4*(M-1)+3] -= bands[4*(M-1)+0] *  bands[4*(M-2)+3];</code></span></td></tr>
-<tr><td class="code_line_class">1026</td><td><span class="highlightme"><code>  bands[4*(M-1)+3] /= bands[4*(M-1)+1];</code></span></td></tr>
-<tr><td class="code_line_class">1027</td><td><code>  coefs[M*cstride] = bands[4*(M-1)+3];</code></td></tr>
-<tr><td class="code_line_class">1028</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">1029</td><td><code>    coefs[(row+1)*cstride] = </code></td></tr>
-<tr><td class="code_line_class">1030</td><td><span class="highlightme"><code>      bands[4*(row)+3] - bands[4*(row)+2]*coefs[(row+2)*cstride] - lastCol[row]*coefs[M*cstride];</code></span></td></tr>
-<tr><td class="code_line_class">1031</td><td><code>  </code></td></tr>
-<tr><td class="code_line_class">1032</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

@@ -21,35 +21,23 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Containers/OhmmsPETE/TinyVectorTensorOps.h
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Utilities/Timer.h
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-TinyVectorTensorOps.h
+Timer.h
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">39</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">40</td><td><code>        sum += lhs(i, j) * rhs[j];</code></td></tr>
-<tr><td class="code_line_class">41</td><td><span class="highlightme"><code>      ret[i] = sum;</code></span></td></tr>
-<tr><td class="code_line_class">42</td><td><code>    }</code></td></tr>
-<tr><td class="code_line_class">43</td><td><span class="highlightme"><code>    return ret;</code></span></td></tr>
-<tr><td class="code_line_class">44</td><td><code>  }</code></td></tr>
-<tr><td class="code_line_class">45</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">54</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">55</td><td><code>  }</code></td></tr>
-<tr><td class="code_line_class">56</td><td><span class="highlightme"><code>};</code></span></td></tr>
-<tr><td class="code_line_class">57</td><td><code></code></td></tr>
-<tr><td class="code_line_class">58</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">60</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">61</td><td><code>  typedef typename BinaryReturn<T1, T2, OpMultiply>::Type_t Type_t;</code></td></tr>
-<tr><td class="code_line_class">62</td><td><span class="highlightme"><code>  inline static TinyVector<Type_t, 2> apply(const Tensor<T1, 2>& lhs, const TinyVector<T2, 2>& rhs)</code></span></td></tr>
-<tr><td class="code_line_class">63</td><td><code>  {</code></td></tr>
-<tr><td class="code_line_class">64</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">27</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">28</td><td><code>  inline void restart() { start_time = CPUClock()(); }</code></td></tr>
+<tr><td class="code_line_class">29</td><td><span class="highlightme"><code>  inline double elapsed() const { return CPUClock()() - start_time; }</code></span></td></tr>
+<tr><td class="code_line_class">30</td><td><code>};</code></td></tr>
+<tr><td class="code_line_class">31</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

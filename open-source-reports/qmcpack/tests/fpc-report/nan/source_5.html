@@ -21,18 +21,25 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./nan.html">Nan
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Utilities/Timer.h
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Particle/Lattice/ParticleBConds3DSoa.h
 </div>
 <h2 id="heading">
 Nan
 	Report
 </h2>
 <h3 id="heading">
-Timer.h
+ParticleBConds3DSoa.h
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
+<tr><td class="code_line_class">51</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">52</td><td><code>      dx[iat]     = px[iat] - x0;</code></td></tr>
+<tr><td class="code_line_class">53</td><td><span class="highlightme"><code>      dy[iat]     = py[iat] - y0;</code></span></td></tr>
+<tr><td class="code_line_class">54</td><td><span class="highlightme"><code>      dz[iat]     = pz[iat] - z0;</code></span></td></tr>
+<tr><td class="code_line_class">55</td><td><span class="highlightme"><code>      temp_r[iat] = std::sqrt(dx[iat] * dx[iat] + dy[iat] * dy[iat] + dz[iat] * dz[iat]);</code></span></td></tr>
+<tr><td class="code_line_class">56</td><td><code>    }</code></td></tr>
+<tr><td class="code_line_class">57</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

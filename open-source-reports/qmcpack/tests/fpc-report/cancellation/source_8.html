@@ -21,87 +21,39 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Particle/Lattice/ParticleBConds3DSoa.h
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/external_codes/catch/catch.hpp
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-ParticleBConds3DSoa.h
+catch.hpp
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">50</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">51</td><td><code>    {</code></td></tr>
-<tr><td class="code_line_class">52</td><td><span class="highlightme"><code>      dx[iat]     = px[iat] - x0;</code></span></td></tr>
-<tr><td class="code_line_class">53</td><td><span class="highlightme"><code>      dy[iat]     = py[iat] - y0;</code></span></td></tr>
-<tr><td class="code_line_class">54</td><td><span class="highlightme"><code>      dz[iat]     = pz[iat] - z0;</code></span></td></tr>
-<tr><td class="code_line_class">55</td><td><code>      temp_r[iat] = std::sqrt(dx[iat] * dx[iat] + dy[iat] * dy[iat] + dz[iat] * dz[iat]);</code></td></tr>
-<tr><td class="code_line_class">56</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">123</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">124</td><td><code>    {</code></td></tr>
-<tr><td class="code_line_class">125</td><td><span class="highlightme"><code>      const T x   = (px[iat] - x0) * Linv0;</code></span></td></tr>
-<tr><td class="code_line_class">126</td><td><span class="highlightme"><code>      const T y   = (py[iat] - y0) * Linv1;</code></span></td></tr>
-<tr><td class="code_line_class">127</td><td><span class="highlightme"><code>      const T z   = (pz[iat] - z0) * Linv2;</code></span></td></tr>
-<tr><td class="code_line_class">128</td><td><span class="highlightme"><code>      dx[iat]     = L0 * (x - round(x));</code></span></td></tr>
-<tr><td class="code_line_class">129</td><td><span class="highlightme"><code>      dy[iat]     = L1 * (y - round(y));</code></span></td></tr>
-<tr><td class="code_line_class">130</td><td><span class="highlightme"><code>      dz[iat]     = L2 * (z - round(z));</code></span></td></tr>
-<tr><td class="code_line_class">131</td><td><code>      temp_r[iat] = std::sqrt(dx[iat] * dx[iat] + dy[iat] * dy[iat] + dz[iat] * dz[iat]);</code></td></tr>
-<tr><td class="code_line_class">132</td><td><code> ... </code></td></tr>
 <tr><td class="code_line_class">214</td><td><code> ... </code></td></tr>
 <tr><td class="code_line_class">215</td><td><code></code></td></tr>
-<tr><td class="code_line_class">216</td><td><span class="highlightme"><code>#pragma omp simd aligned(temp_r, px, py, pz, dx, dy, dz: QMC_SIMD_ALIGNMENT)</code></span></td></tr>
-<tr><td class="code_line_class">217</td><td><code>    for (int iat = first; iat < last; ++iat)</code></td></tr>
+<tr><td class="code_line_class">216</td><td><span class="highlightme"><code>////////////////////////////////////////////////////////////////////////////////</code></span></td></tr>
+<tr><td class="code_line_class">217</td><td><code>// PS4</code></td></tr>
 <tr><td class="code_line_class">218</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">232</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">233</td><td><code>      dx[iat] = ar_0 * r00 + ar_1 * r10 + ar_2 * r20;</code></td></tr>
-<tr><td class="code_line_class">234</td><td><span class="highlightme"><code>      dy[iat] = ar_0 * r01 + ar_1 * r11 + ar_2 * r21;</code></span></td></tr>
-<tr><td class="code_line_class">235</td><td><code>      dz[iat] = ar_0 * r02 + ar_1 * r12 + ar_2 * r22;</code></td></tr>
-<tr><td class="code_line_class">236</td><td><code> ... </code></td></tr>
 <tr><td class="code_line_class">287</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">288</td><td><code>*/</code></td></tr>
-<tr><td class="code_line_class">289</td><td><span class="highlightme"><code>template<class T></code></span></td></tr>
-<tr><td class="code_line_class">290</td><td><code>struct DTD_BConds<T, 3, PPPG + SOA_OFFSET></code></td></tr>
+<tr><td class="code_line_class">288</td><td><code>////////////////////////////////////////////////////////////////////////////////</code></td></tr>
+<tr><td class="code_line_class">289</td><td><span class="highlightme"><code></code></span></td></tr>
+<tr><td class="code_line_class">290</td><td><code>// Use of __COUNTER__ is suppressed during code analysis in</code></td></tr>
 <tr><td class="code_line_class">291</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">297</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">298</td><td><code>    TinyVector<TinyVector<T, 3>, 3> rb;</code></td></tr>
-<tr><td class="code_line_class">299</td><td><span class="highlightme"><code>    rb[0] = lat.a(0);</code></span></td></tr>
-<tr><td class="code_line_class">300</td><td><code>    rb[1] = lat.a(1);</code></td></tr>
-<tr><td class="code_line_class">301</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">339</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">340</td><td><code>      corners_dim[3] = minusone * (rb[2][idim]);</code></td></tr>
-<tr><td class="code_line_class">341</td><td><span class="highlightme"><code>      corners_dim[4] = minusone * (rb[0][idim] + rb[1][idim]);</code></span></td></tr>
-<tr><td class="code_line_class">342</td><td><span class="highlightme"><code>      corners_dim[5] = minusone * (rb[0][idim] + rb[2][idim]);</code></span></td></tr>
-<tr><td class="code_line_class">343</td><td><span class="highlightme"><code>      corners_dim[6] = minusone * (rb[1][idim] + rb[2][idim]);</code></span></td></tr>
-<tr><td class="code_line_class">344</td><td><code>      corners_dim[7] = minusone * (rb[0][idim] + rb[1][idim] + rb[2][idim]);</code></td></tr>
+<tr><td class="code_line_class">341</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">342</td><td><code>  #      else</code></td></tr>
+<tr><td class="code_line_class">343</td><td><span class="highlightme"><code>  #        define CATCH_INTERNAL_CONFIG_CPP17_VARIANT</code></span></td></tr>
+<tr><td class="code_line_class">344</td><td><code>  #      endif // defined(__GLIBCXX__) && defined(_GLIBCXX_RELEASE) && (_GLIBCXX_RELEASE < 9)</code></td></tr>
 <tr><td class="code_line_class">345</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">377</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">378</td><td><code>      const T flip    = iat < flip_ind ? one : minusone;</code></td></tr>
-<tr><td class="code_line_class">379</td><td><span class="highlightme"><code>      const T displ_0 = (px[iat] - x0) * flip;</code></span></td></tr>
-<tr><td class="code_line_class">380</td><td><span class="highlightme"><code>      const T displ_1 = (py[iat] - y0) * flip;</code></span></td></tr>
-<tr><td class="code_line_class">381</td><td><span class="highlightme"><code>      const T displ_2 = (pz[iat] - z0) * flip;</code></span></td></tr>
-<tr><td class="code_line_class">382</td><td><code></code></td></tr>
-<tr><td class="code_line_class">383</td><td><span class="highlightme"><code>      const T ar_0 = -std::floor(displ_0 * g00 + displ_1 * g10 + displ_2 * g20);</code></span></td></tr>
-<tr><td class="code_line_class">384</td><td><span class="highlightme"><code>      const T ar_1 = -std::floor(displ_0 * g01 + displ_1 * g11 + displ_2 * g21);</code></span></td></tr>
-<tr><td class="code_line_class">385</td><td><span class="highlightme"><code>      const T ar_2 = -std::floor(displ_0 * g02 + displ_1 * g12 + displ_2 * g22);</code></span></td></tr>
-<tr><td class="code_line_class">386</td><td><code></code></td></tr>
-<tr><td class="code_line_class">387</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">394</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">395</td><td><code>      {</code></td></tr>
-<tr><td class="code_line_class">396</td><td><span class="highlightme"><code>        const T x  = delx + cellx[c];</code></span></td></tr>
-<tr><td class="code_line_class">397</td><td><span class="highlightme"><code>        const T y  = dely + celly[c];</code></span></td></tr>
-<tr><td class="code_line_class">398</td><td><span class="highlightme"><code>        const T z  = delz + cellz[c];</code></span></td></tr>
-<tr><td class="code_line_class">399</td><td><code>        const T r2 = x * x + y * y + z * z;</code></td></tr>
-<tr><td class="code_line_class">400</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">403</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">404</td><td><code>      temp_r[iat] = std::sqrt(rmin);</code></td></tr>
-<tr><td class="code_line_class">405</td><td><span class="highlightme"><code>      dx[iat]     = flip * (delx + cellx[ic]);</code></span></td></tr>
-<tr><td class="code_line_class">406</td><td><span class="highlightme"><code>      dy[iat]     = flip * (dely + celly[ic]);</code></span></td></tr>
-<tr><td class="code_line_class">407</td><td><span class="highlightme"><code>      dz[iat]     = flip * (delz + cellz[ic]);</code></span></td></tr>
-<tr><td class="code_line_class">408</td><td><code>    }</code></td></tr>
-<tr><td class="code_line_class">409</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1018</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1019</td><td><code>    #ifndef CATCH_CONFIG_TRADITIONAL_MSVC_PREPROCESSOR</code></td></tr>
+<tr><td class="code_line_class">1020</td><td><span class="highlightme"><code>        #define INTERNAL_CATCH_TEMPLATE_TEST_CASE_SIG_NO_REGISTRATION(Name, Tags, Signature, ...) \</code></span></td></tr>
+<tr><td class="code_line_class">1021</td><td><span class="highlightme"><code>            INTERNAL_CATCH_TEMPLATE_TEST_CASE_NO_REGISTRATION_2( INTERNAL_CATCH_UNIQUE_NAME( ____C_A_T_C_H____T_E_M_P_L_A_T_E____T_E_S_T____ ), INTERNAL_CATCH_UNIQUE_NAME( ____C_A_T_C_H____T_E_M_P_L_A_T_E____T_E_S_T____F_U_N_C____ ), Name, Tags, Signature, __VA_ARGS__ )</code></span></td></tr>
+<tr><td class="code_line_class">1022</td><td><code>    #else</code></td></tr>
+<tr><td class="code_line_class">1023</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

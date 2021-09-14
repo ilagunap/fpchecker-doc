@@ -21,24 +21,25 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Particle/LongRange/StructFact.cpp
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Particle/LongRange/KContainer.cpp
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-StructFact.cpp
+KContainer.cpp
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">114</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">115</td><td><code>        qmcplusplus::sincos(dot(k_lists_->kpts_cart[ki], pos), &eikr_i_ptr[ki], &eikr_r_ptr[ki]);</code></td></tr>
-<tr><td class="code_line_class">116</td><td><span class="highlightme"><code>        rhok_r_ptr[ki] += eikr_r_ptr[ki];</code></span></td></tr>
-<tr><td class="code_line_class">117</td><td><span class="highlightme"><code>        rhok_i_ptr[ki] += eikr_i_ptr[ki];</code></span></td></tr>
-<tr><td class="code_line_class">118</td><td><code>      }</code></td></tr>
-<tr><td class="code_line_class">119</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">72</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">73</td><td><code>    tempr = dot(x,temp);</code></td></tr>
+<tr><td class="code_line_class">74</td><td><span class="highlightme"><code>    mmax[idim] = static_cast<int>(sqrt(4.0*kcut2/tempr)) + 1;</code></span></td></tr>
+<tr><td class="code_line_class">75</td><td><span class="highlightme"><code>  }</code></span></td></tr>
+<tr><td class="code_line_class">76</td><td><span class="highlightme"><code>  */</code></span></td></tr>
+<tr><td class="code_line_class">77</td><td><code>  // see rmm, Electronic Structure, p. 85 for details</code></td></tr>
+<tr><td class="code_line_class">78</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

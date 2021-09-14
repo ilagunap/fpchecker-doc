@@ -14,35 +14,30 @@
 <div class="separation_class"></div>
 <div class="report_title">
 <b>Report Title:</b>
-./benchmark_ij.jobs
+benchmark_ij.jobs
 </div>
 	
 <div class="separation_class"></div>
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./comparison.html">Comparison
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/hypre/hypre/src/parcsr_ls/ams.c
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/hypre/hypre/src/parcsr_ls/par_amg_setup.c
 </div>
 <h2 id="heading">
 Comparison
 	Report
 </h2>
 <h3 id="heading">
-ams.c
+par_amg_setup.c
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">645</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">646</td><td><code>         {</code></td></tr>
-<tr><td class="code_line_class">647</td><td><span class="highlightme"><code>            if (l1_norm[i] == 0.0)</code></span></td></tr>
-<tr><td class="code_line_class">648</td><td><code>            {</code></td></tr>
-<tr><td class="code_line_class">649</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">692</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">693</td><td><code>         /* if (fabs(l1_norm[i]) < DBL_EPSILON) */</code></td></tr>
-<tr><td class="code_line_class">694</td><td><span class="highlightme"><code>         if (fabs(l1_norm[i]) == 0.0)</code></span></td></tr>
-<tr><td class="code_line_class">695</td><td><code>         {</code></td></tr>
-<tr><td class="code_line_class">696</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">3099</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">3100</td><td><code>      }</code></td></tr>
+<tr><td class="code_line_class">3101</td><td><span class="highlightme"><code>      if (relax_weight[j] == 0.0)</code></span></td></tr>
+<tr><td class="code_line_class">3102</td><td><code>      {</code></td></tr>
+<tr><td class="code_line_class">3103</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

@@ -21,22 +21,24 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Utilities/Timer.h
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Estimators/accumulators.h
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-Timer.h
+accumulators.h
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
+<tr><td class="code_line_class">1</td><td><code>//////////////////////////////////////////////////////////////////////////////////////</code></td></tr>
+<tr><td class="code_line_class">2</td><td><code> ... </code></td></tr>
 <tr><td class="code_line_class">27</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">28</td><td><code>  inline void restart() { start_time = CPUClock()(); }</code></td></tr>
-<tr><td class="code_line_class">29</td><td><span class="highlightme"><code>  inline double elapsed() const { return CPUClock()() - start_time; }</code></span></td></tr>
-<tr><td class="code_line_class">30</td><td><code>};</code></td></tr>
+<tr><td class="code_line_class">28</td><td><code> *</code></td></tr>
+<tr><td class="code_line_class">29</td><td><span class="highlightme"><code> * To simplify i/o, the values are storged in contents</code></span></td></tr>
+<tr><td class="code_line_class">30</td><td><code> */</code></td></tr>
 <tr><td class="code_line_class">31</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>

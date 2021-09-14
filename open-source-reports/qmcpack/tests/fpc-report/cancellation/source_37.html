@@ -21,35 +21,59 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/QMCDrivers/tests/test_drift.cpp
+//opt/rh/devtoolset-8/root/usr/lib/gcc/ppc64le-redhat-linux/8/../../../../include/c++/8/bits/predefined_ops.h
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-test_drift.cpp
+predefined_ops.h
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">47</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">48</td><td><code></code></td></tr>
-<tr><td class="code_line_class">49</td><td><span class="highlightme"><code>    double scale_factor = (-1. + std::sqrt(1. + 2. * gradx * gradx * tau / mass)) / (gradx * gradx * tau / mass);</code></span></td></tr>
-<tr><td class="code_line_class">50</td><td><code>    REQUIRE(dval == Approx(scale_factor * gradx * tau / mass));</code></td></tr>
-<tr><td class="code_line_class">51</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">52</td><td><code>    //app_log() << gradx << " " << dval << std::endl;</code></td></tr>
-<tr><td class="code_line_class">53</td><td><span class="highlightme"><code>    gradx += dx;</code></span></td></tr>
-<tr><td class="code_line_class">54</td><td><code>  }</code></td></tr>
-<tr><td class="code_line_class">55</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">120</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">121</td><td><code></code></td></tr>
-<tr><td class="code_line_class">122</td><td><span class="highlightme"><code>    double scale_factor = (-1. + std::sqrt(1. + 2. * gradx * gradx * tau / mass)) / (gradx * gradx * tau / mass);</code></span></td></tr>
-<tr><td class="code_line_class">123</td><td><code>    REQUIRE(dval == Approx(scale_factor * gradx * tau / mass));</code></td></tr>
-<tr><td class="code_line_class">124</td><td><code></code></td></tr>
-<tr><td class="code_line_class">125</td><td><span class="highlightme"><code>    gradx += dx;</code></span></td></tr>
-<tr><td class="code_line_class">126</td><td><code>  }</code></td></tr>
-<tr><td class="code_line_class">127</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">72</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">73</td><td><code>  __iter_comp_val(_Iter_less_iter)</code></td></tr>
+<tr><td class="code_line_class">74</td><td><span class="highlightme"><code>  { return _Iter_less_val(); }</code></span></td></tr>
+<tr><td class="code_line_class">75</td><td><span class="highlightme"><code></code></span></td></tr>
+<tr><td class="code_line_class">76</td><td><span class="highlightme"><code>  struct _Val_less_iter</code></span></td></tr>
+<tr><td class="code_line_class">77</td><td><code>  {</code></td></tr>
+<tr><td class="code_line_class">78</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">136</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">137</td><td><code>      { }</code></td></tr>
+<tr><td class="code_line_class">138</td><td><span class="highlightme"><code></code></span></td></tr>
+<tr><td class="code_line_class">139</td><td><code>      template<typename _Iterator1, typename _Iterator2></code></td></tr>
+<tr><td class="code_line_class">140</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">150</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">151</td><td><code></code></td></tr>
+<tr><td class="code_line_class">152</td><td><span class="highlightme"><code>  template<typename _Compare></code></span></td></tr>
+<tr><td class="code_line_class">153</td><td><code>    struct _Iter_comp_val</code></td></tr>
+<tr><td class="code_line_class">154</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">155</td><td><code>      _Compare _M_comp;</code></td></tr>
+<tr><td class="code_line_class">156</td><td><span class="highlightme"><code></code></span></td></tr>
+<tr><td class="code_line_class">157</td><td><code>      explicit</code></td></tr>
+<tr><td class="code_line_class">158</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">162</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">163</td><td><code>      _Iter_comp_val(const _Iter_comp_iter<_Compare>& __comp)</code></td></tr>
+<tr><td class="code_line_class">164</td><td><span class="highlightme"><code>	: _M_comp(__comp._M_comp)</code></span></td></tr>
+<tr><td class="code_line_class">165</td><td><code>      { }</code></td></tr>
+<tr><td class="code_line_class">166</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">186</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">187</td><td><code>    __iter_comp_val(_Iter_comp_iter<_Compare> __comp)</code></td></tr>
+<tr><td class="code_line_class">188</td><td><span class="highlightme"><code>    { return _Iter_comp_val<_Compare>(_GLIBCXX_MOVE(__comp)); }</code></span></td></tr>
+<tr><td class="code_line_class">189</td><td><code></code></td></tr>
+<tr><td class="code_line_class">190</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">314</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">315</td><td><code>    struct _Iter_comp_to_iter</code></td></tr>
+<tr><td class="code_line_class">316</td><td><span class="highlightme"><code>    {</code></span></td></tr>
+<tr><td class="code_line_class">317</td><td><code>      _Compare _M_comp;</code></td></tr>
+<tr><td class="code_line_class">318</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">335</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">336</td><td><code>    }</code></td></tr>
+<tr><td class="code_line_class">337</td><td><span class="highlightme"><code></code></span></td></tr>
+<tr><td class="code_line_class">338</td><td><code>  template<typename _Predicate></code></td></tr>
+<tr><td class="code_line_class">339</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

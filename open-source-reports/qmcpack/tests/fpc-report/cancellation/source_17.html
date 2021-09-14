@@ -21,36 +21,28 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Numerics/OneDimGridBase.h
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Numerics/Ylm.h
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-OneDimGridBase.h
+Ylm.h
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">39</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">40</td><td><code></code></td></tr>
-<tr><td class="code_line_class">41</td><td><span class="highlightme"><code>  int GridTag;</code></span></td></tr>
-<tr><td class="code_line_class">42</td><td><code>  int num_points;</code></td></tr>
-<tr><td class="code_line_class">43</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">127</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">128</td><td><code> * The analytic form \f$ r_i = r_0 +</code></td></tr>
-<tr><td class="code_line_class">129</td><td><span class="highlightme"><code> * i\left( \frac{r_f - r_0}{N-1} \right), \f$</code></span></td></tr>
-<tr><td class="code_line_class">130</td><td><code> * where \f$ N \f$ is the number of points and the index</code></td></tr>
-<tr><td class="code_line_class">131</td><td><span class="highlightme"><code> * \f$ i \f$ runs from 0 to \f$ N-1 \f$.</code></span></td></tr>
-<tr><td class="code_line_class">132</td><td><span class="highlightme"><code> */</code></span></td></tr>
-<tr><td class="code_line_class">133</td><td><code>template<class T, class CT = Vector<T>></code></td></tr>
-<tr><td class="code_line_class">134</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">290</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">291</td><td><code>    GridTag = CUSTOM_1DGRID;</code></td></tr>
-<tr><td class="code_line_class">292</td><td><span class="highlightme"><code>    assign(nv.begin(), nv.end());</code></span></td></tr>
-<tr><td class="code_line_class">293</td><td><code>  }</code></td></tr>
-<tr><td class="code_line_class">294</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">29</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">30</td><td><code>  {</code></td></tr>
+<tr><td class="code_line_class">31</td><td><span class="highlightme"><code>    T sqt     = std::sqrt(1.0 - x) * std::sqrt(1.0 + x);</code></span></td></tr>
+<tr><td class="code_line_class">32</td><td><code>    T val     = 1.0;</code></td></tr>
+<tr><td class="code_line_class">33</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">73</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">74</td><td><code>    {</code></td></tr>
+<tr><td class="code_line_class">75</td><td><span class="highlightme"><code>      Pl    = (1.0 / static_cast<T>(i - m)) * (x * (2 * i - 1) * Plm1m - (i + m - 1) * Plm2m);</code></span></td></tr>
+<tr><td class="code_line_class">76</td><td><code>      Plm2m = Plm1m;</code></td></tr>
+<tr><td class="code_line_class">77</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

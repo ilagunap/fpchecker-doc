@@ -21,23 +21,23 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./underflow.html">Underflow
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Numerics/MinimizeOneDim.h
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/external_codes/catch/catch.hpp
 </div>
 <h2 id="heading">
 Underflow
 	Report
 </h2>
 <h3 id="heading">
-MinimizeOneDim.h
+catch.hpp
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">27</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">28</td><td><code></code></td></tr>
-<tr><td class="code_line_class">29</td><td><span class="highlightme"><code>  Bracket_min_t(T a1, T b1, T c1, bool okay = true) : a(a1), b(b1), c(c1), success(okay) {}</code></span></td></tr>
-<tr><td class="code_line_class">30</td><td><code>};</code></td></tr>
-<tr><td class="code_line_class">31</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">7861</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">7862</td><td><code>bool marginComparison(double lhs, double rhs, double margin) {</code></td></tr>
+<tr><td class="code_line_class">7863</td><td><span class="highlightme"><code>    return (lhs + margin >= rhs) && (rhs + margin >= lhs);</code></span></td></tr>
+<tr><td class="code_line_class">7864</td><td><code>}</code></td></tr>
+<tr><td class="code_line_class">7865</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

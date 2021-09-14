@@ -21,25 +21,34 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Particle/LongRange/KContainer.cpp
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Particle/FastParticleOperators.h
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-KContainer.cpp
+FastParticleOperators.h
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">72</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">73</td><td><code>    tempr = dot(x,temp);</code></td></tr>
-<tr><td class="code_line_class">74</td><td><span class="highlightme"><code>    mmax[idim] = static_cast<int>(sqrt(4.0*kcut2/tempr)) + 1;</code></span></td></tr>
-<tr><td class="code_line_class">75</td><td><span class="highlightme"><code>  }</code></span></td></tr>
-<tr><td class="code_line_class">76</td><td><span class="highlightme"><code>  */</code></span></td></tr>
-<tr><td class="code_line_class">77</td><td><code>  // see rmm, Electronic Structure, p. 85 for details</code></td></tr>
-<tr><td class="code_line_class">78</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">281</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">282</td><td><code>      T x(pinout[i][0] * g00 + pinout[i][1] * g10 + pinout[i][2] * g20);</code></td></tr>
+<tr><td class="code_line_class">283</td><td><span class="highlightme"><code>      T y(pinout[i][0] * g01 + pinout[i][1] * g11 + pinout[i][2] * g21);</code></span></td></tr>
+<tr><td class="code_line_class">284</td><td><span class="highlightme"><code>      T z(pinout[i][0] * g02 + pinout[i][1] * g12 + pinout[i][2] * g22);</code></span></td></tr>
+<tr><td class="code_line_class">285</td><td><code>      THREE_DIM_BOUNDARY_BLOCK(x, y, z, epsilon, plus_one);</code></td></tr>
+<tr><td class="code_line_class">286</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">287</td><td><code>      pinout[i][1] = x * r01 + y * r11 + z * r21;</code></td></tr>
+<tr><td class="code_line_class">288</td><td><span class="highlightme"><code>      pinout[i][2] = x * r02 + y * r12 + z * r22;</code></span></td></tr>
+<tr><td class="code_line_class">289</td><td><span class="highlightme"><code>    }</code></span></td></tr>
+<tr><td class="code_line_class">290</td><td><code>  }</code></td></tr>
+<tr><td class="code_line_class">291</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">297</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">298</td><td><code>  }</code></td></tr>
+<tr><td class="code_line_class">299</td><td><span class="highlightme"><code></code></span></td></tr>
+<tr><td class="code_line_class">300</td><td><code>  static inline Component_t Cart2Unit(const Component_t& pos, const Transformer_t& G)</code></td></tr>
+<tr><td class="code_line_class">301</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

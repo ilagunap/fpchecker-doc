@@ -14,30 +14,30 @@
 <div class="separation_class"></div>
 <div class="report_title">
 <b>Report Title:</b>
-./benchmark_ij.jobs
+benchmark_ij.jobs
 </div>
 	
 <div class="separation_class"></div>
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./comparison.html">Comparison
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/hypre/hypre/src/parcsr_ls/par_amg_setup.c
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/hypre/hypre/src/krylov/pcg.c
 </div>
 <h2 id="heading">
 Comparison
 	Report
 </h2>
 <h3 id="heading">
-par_amg_setup.c
+pcg.c
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">3099</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">3100</td><td><code>      }</code></td></tr>
-<tr><td class="code_line_class">3101</td><td><span class="highlightme"><code>      if (relax_weight[j] == 0.0)</code></span></td></tr>
-<tr><td class="code_line_class">3102</td><td><code>      {</code></td></tr>
-<tr><td class="code_line_class">3103</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">514</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">515</td><td><code>      sdotp = (*(pcg_functions->InnerProd))(s, p);</code></td></tr>
+<tr><td class="code_line_class">516</td><td><span class="highlightme"><code>      if ( sdotp==0.0 )</code></span></td></tr>
+<tr><td class="code_line_class">517</td><td><code>      {</code></td></tr>
+<tr><td class="code_line_class">518</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

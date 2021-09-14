@@ -21,23 +21,47 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/QMCHamiltonians/BareKineticEnergy.h
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/QMCWaveFunctions/EinsplineSetBuilderCommon.cpp
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-BareKineticEnergy.h
+EinsplineSetBuilderCommon.cpp
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">168</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">169</td><td><code>    {</code></td></tr>
-<tr><td class="code_line_class">170</td><td><span class="highlightme"><code>      SameMass &= (std::abs(tspecies(massind, i) - M) < 1e-6);</code></span></td></tr>
-<tr><td class="code_line_class">171</td><td><code>      MinusOver2M[i] = -1.0 / (2.0 * tspecies(massind, i));</code></td></tr>
-<tr><td class="code_line_class">172</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">72</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">73</td><td><code>}</code></td></tr>
+<tr><td class="code_line_class">74</td><td><span class="highlightme"><code></code></span></td></tr>
+<tr><td class="code_line_class">75</td><td><span class="highlightme"><code>template<typename T></code></span></td></tr>
+<tr><td class="code_line_class">76</td><td><span class="highlightme"><code>inline TinyVector<T, 3> IntPart(const TinyVector<T, 3>& twist)</code></span></td></tr>
+<tr><td class="code_line_class">77</td><td><code>{</code></td></tr>
+<tr><td class="code_line_class">78</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">107</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">108</td><td><code>      if (max_abs > MatchingTol)</code></td></tr>
+<tr><td class="code_line_class">109</td><td><span class="highlightme"><code>        diff = std::max(diff, std::abs(SuperLattice(i, j) - TargetPtcl.Lattice.R(i, j)) / max_abs);</code></span></td></tr>
+<tr><td class="code_line_class">110</td><td><code>    }</code></td></tr>
+<tr><td class="code_line_class">111</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">142</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">143</td><td><code>  aibuffer.add(Format);</code></td></tr>
+<tr><td class="code_line_class">144</td><td><span class="highlightme"><code>  abuffer.add(Lattice.begin(), Lattice.end());           //myComm->bcast(Lattice);</code></span></td></tr>
+<tr><td class="code_line_class">145</td><td><span class="highlightme"><code>  abuffer.add(RecipLattice.begin(), RecipLattice.end()); //myComm->bcast(RecipLattice);</code></span></td></tr>
+<tr><td class="code_line_class">146</td><td><span class="highlightme"><code>  abuffer.add(SuperLattice.begin(), SuperLattice.end()); //myComm->bcast(SuperLattice);</code></span></td></tr>
+<tr><td class="code_line_class">147</td><td><code>  abuffer.add(LatticeInv.begin(), LatticeInv.end());     //myComm->bcast(LatticeInv);</code></td></tr>
+<tr><td class="code_line_class">148</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">297</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">298</td><td><code>    cibuffer.get(AtomicCentersInfo.lmax.begin(), AtomicCentersInfo.lmax.end());</code></td></tr>
+<tr><td class="code_line_class">299</td><td><span class="highlightme"><code>    cibuffer.get(AtomicCentersInfo.GroupID.begin(), AtomicCentersInfo.GroupID.end());</code></span></td></tr>
+<tr><td class="code_line_class">300</td><td><code>    cibuffer.get(AtomicCentersInfo.spline_npoints.begin(), AtomicCentersInfo.spline_npoints.end());</code></td></tr>
+<tr><td class="code_line_class">301</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">629</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">630</td><td><code>      if (std::abs(twist[j] - 0.0) > MatchingTol && std::abs(twist[j] - 0.5) > MatchingTol &&</code></td></tr>
+<tr><td class="code_line_class">631</td><td><span class="highlightme"><code>          std::abs(twist[j] + 0.5) > MatchingTol)</code></span></td></tr>
+<tr><td class="code_line_class">632</td><td><code>        UseRealOrbitals = false;</code></td></tr>
+<tr><td class="code_line_class">633</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>

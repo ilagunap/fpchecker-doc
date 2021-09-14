@@ -21,78 +21,28 @@ ctest -L deterministic
 <div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
 <a href="./cancellation.html">Cancellation
 	</a> &nbsp; &gt; &nbsp;
-/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/Containers/PETE/OperatorTags.h
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/ecp_apps/qmcpack/qmcpack/src/QMCWaveFunctions/Jastrow/UserFunctor.h
 </div>
 <h2 id="heading">
 Cancellation
 	Report
 </h2>
 <h3 id="heading">
-OperatorTags.h
+UserFunctor.h
 </h3>
 	
 <table width="600" border="0" class="report_box_source">
   <tbody>
-<tr><td class="code_line_class">190</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">191</td><td><code>{</code></td></tr>
-<tr><td class="code_line_class">192</td><td><span class="highlightme"><code>  PETE_EMPTY_CONSTRUCTORS(FnTan)</code></span></td></tr>
-<tr><td class="code_line_class">193</td><td><code>  template<class T></code></td></tr>
-<tr><td class="code_line_class">194</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">261</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">262</td><td><code>{</code></td></tr>
-<tr><td class="code_line_class">263</td><td><span class="highlightme"><code>  typedef bool Type_t;</code></span></td></tr>
-<tr><td class="code_line_class">264</td><td><code>};</code></td></tr>
-<tr><td class="code_line_class">265</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">270</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">271</td><td><code>  inline UnaryReturn<T2, OpCast<T1>> operator()(const T2& a) const</code></td></tr>
-<tr><td class="code_line_class">272</td><td><span class="highlightme"><code>  {</code></span></td></tr>
-<tr><td class="code_line_class">273</td><td><code>    return T1(a);</code></td></tr>
-<tr><td class="code_line_class">274</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">279</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">280</td><td><code>  typedef T1 Type_t;</code></td></tr>
-<tr><td class="code_line_class">281</td><td><span class="highlightme"><code>};</code></span></td></tr>
-<tr><td class="code_line_class">282</td><td><code></code></td></tr>
-<tr><td class="code_line_class">283</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">286</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">287</td><td><code>  inline typename BinaryReturn<T1, T2, OpAdd>::Type_t operator()(const T1& a, const T2& b) const</code></td></tr>
-<tr><td class="code_line_class">288</td><td><span class="highlightme"><code>  {</code></span></td></tr>
-<tr><td class="code_line_class">289</td><td><span class="highlightme"><code>    return (a + b);</code></span></td></tr>
-<tr><td class="code_line_class">290</td><td><code>  }</code></td></tr>
-<tr><td class="code_line_class">291</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">299</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">300</td><td><code>  }</code></td></tr>
-<tr><td class="code_line_class">301</td><td><span class="highlightme"><code>};</code></span></td></tr>
-<tr><td class="code_line_class">302</td><td><code></code></td></tr>
-<tr><td class="code_line_class">303</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">304</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">305</td><td><code>  PETE_EMPTY_CONSTRUCTORS(OpMultiply)</code></td></tr>
-<tr><td class="code_line_class">306</td><td><span class="highlightme"><code>  template<class T1, class T2></code></span></td></tr>
-<tr><td class="code_line_class">307</td><td><code>  inline typename BinaryReturn<T1, T2, OpMultiply>::Type_t operator()(const T1& a, const T2& b) const</code></td></tr>
-<tr><td class="code_line_class">308</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">391</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">392</td><td><code></code></td></tr>
-<tr><td class="code_line_class">393</td><td><span class="highlightme"><code>struct FnArcTan2</code></span></td></tr>
-<tr><td class="code_line_class">394</td><td><code>{</code></td></tr>
-<tr><td class="code_line_class">395</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">396</td><td><code>  template<class T1, class T2></code></td></tr>
-<tr><td class="code_line_class">397</td><td><span class="highlightme"><code>  inline typename BinaryReturn<T1, T2, FnArcTan2>::Type_t operator()(const T1& a, const T2& b) const</code></span></td></tr>
-<tr><td class="code_line_class">398</td><td><code>  {</code></td></tr>
-<tr><td class="code_line_class">399</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">567</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">568</td><td><code>  {</code></td></tr>
-<tr><td class="code_line_class">569</td><td><span class="highlightme"><code>    (const_cast<T1&>(a) += b);</code></span></td></tr>
-<tr><td class="code_line_class">570</td><td><code>    return const_cast<T1&>(a);</code></td></tr>
-<tr><td class="code_line_class">571</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">617</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">618</td><td><code>  inline typename BinaryReturn<T1, T2, OpDivideAssign>::Type_t operator()(const T1& a, const T2& b) const</code></td></tr>
-<tr><td class="code_line_class">619</td><td><span class="highlightme"><code>  {</code></span></td></tr>
-<tr><td class="code_line_class">620</td><td><code>    (const_cast<T1&>(a) /= b);</code></td></tr>
-<tr><td class="code_line_class">621</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">622</td><td><code> ... </code></td></tr>
-<tr><td class="code_line_class">623</td><td><code>};</code></td></tr>
-<tr><td class="code_line_class">624</td><td><span class="highlightme"><code></code></span></td></tr>
-<tr><td class="code_line_class">625</td><td><code>template<class T1, class T2></code></td></tr>
-<tr><td class="code_line_class">626</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">90</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">91</td><td><code>  {</code></td></tr>
+<tr><td class="code_line_class">92</td><td><span class="highlightme"><code>    dudr   = -A * B * r / ((B * r + 1) * (B * r + 1)) + A / (B * r + 1);</code></span></td></tr>
+<tr><td class="code_line_class">93</td><td><code>    d2udr2 = 2 * A * B * (B * r / (B * r + 1) - 1) / ((B * r + 1) * (B * r + 1));</code></td></tr>
+<tr><td class="code_line_class">94</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">323</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">324</td><td><code>  {</code></td></tr>
+<tr><td class="code_line_class">325</td><td><span class="highlightme"><code>    if (myVars.size())</code></span></td></tr>
+<tr><td class="code_line_class">326</td><td><code>    {</code></td></tr>
+<tr><td class="code_line_class">327</td><td><code> ... </code></td></tr>
   <!--
 	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
   <tr><td class="code_line_class">10245</td><td>...</td></tr>
