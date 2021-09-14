@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+./benchmark_struct.jobs
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./cancellation.html">Cancellation
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/hypre/hypre/src/struct_ls/pfmg2_setup_rap.c
+</div>
+<h2 id="heading">
+Cancellation
+	Report
+</h2>
+<h3 id="heading">
+pfmg2_setup_rap.c
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">480</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">481</td><td><code>            +          rb[iR-rbOffset] * a_cs[iAm1]</code></td></tr>
+<tr><td class="code_line_class">482</td><td><span class="highlightme"><code>            +                 a_cs[iA] * pa[iP1];</code></span></td></tr>
+<tr><td class="code_line_class">483</td><td><code>         iP1 = iP - yOffsetP + xOffsetP;</code></td></tr>
+<tr><td class="code_line_class">484</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">998</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">999</td><td><code>         rap_cs[iAc] = rb[iR-rbOffset] * a_cc[iAm1] * pa[iP1]</code></td></tr>
+<tr><td class="code_line_class">1000</td><td><span class="highlightme"><code>            +          rb[iR-rbOffset] * a_cs[iAm1]</code></span></td></tr>
+<tr><td class="code_line_class">1001</td><td><code>            +                   a_cs[iA]   * pa[iP1];</code></td></tr>
+<tr><td class="code_line_class">1002</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1011</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1012</td><td><code>            +          rb[iR-rbOffset] * a_cnw[iAm1]</code></td></tr>
+<tr><td class="code_line_class">1013</td><td><span class="highlightme"><code>            +          ra[iR] * a_csw[iAp1]</code></span></td></tr>
+<tr><td class="code_line_class">1014</td><td><code>            +                   a_csw[iA]  * pb[iP1-pbOffset]</code></td></tr>
+<tr><td class="code_line_class">1015</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>

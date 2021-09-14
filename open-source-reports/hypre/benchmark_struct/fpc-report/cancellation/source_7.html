@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+./benchmark_struct.jobs
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./cancellation.html">Cancellation
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/hypre/hypre/src/struct_ls/pfmg3_setup_rap.c
+</div>
+<h2 id="heading">
+Cancellation
+	Report
+</h2>
+<h3 id="heading">
+pfmg3_setup_rap.c
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">574</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">575</td><td><code>            +          rb[iR-rbOffset] * a_cc[iAm1] * pa[iP1]</code></td></tr>
+<tr><td class="code_line_class">576</td><td><span class="highlightme"><code>            +          rb[iR-rbOffset] * a_bc[iAm1];</code></span></td></tr>
+<tr><td class="code_line_class">577</td><td><code></code></td></tr>
+<tr><td class="code_line_class">578</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1305</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1306</td><td><code>         rap_bs[iAc] = rb[iR-rbOffset] * a_cs[iAm1] * pa[iP1]</code></td></tr>
+<tr><td class="code_line_class">1307</td><td><span class="highlightme"><code>            +          rb[iR-rbOffset] * a_bs[iAm1]</code></span></td></tr>
+<tr><td class="code_line_class">1308</td><td><code>            +                   a_bs[iA]   * pa[iP1];</code></td></tr>
+<tr><td class="code_line_class">1309</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1331</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1332</td><td><code>         rap_bn[iAc] = rb[iR-rbOffset] * a_cn[iAm1] * pa[iP1]</code></td></tr>
+<tr><td class="code_line_class">1333</td><td><span class="highlightme"><code>            +          rb[iR-rbOffset] * a_bn[iAm1]</code></span></td></tr>
+<tr><td class="code_line_class">1334</td><td><code>            +                   a_bn[iA]   * pa[iP1];</code></td></tr>
+<tr><td class="code_line_class">1335</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1346</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1347</td><td><code>            +          ra[iR] * a_cs[iAp1] * pa[iP1]</code></td></tr>
+<tr><td class="code_line_class">1348</td><td><span class="highlightme"><code>            +                   a_bs[iA]   * pb[iP1-pbOffset]</code></span></td></tr>
+<tr><td class="code_line_class">1349</td><td><code>            +                   a_as[iA]   * pa[iP1]</code></td></tr>
+<tr><td class="code_line_class">1350</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">2315</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">2316</td><td><code>         rap_bc[iAc] =          a_bc[iA]   * pa[iP1]</code></td></tr>
+<tr><td class="code_line_class">2317</td><td><span class="highlightme"><code>            +          rb[iR-rbOffset] * a_cc[iAm1] * pa[iP1]</code></span></td></tr>
+<tr><td class="code_line_class">2318</td><td><code>            +          rb[iR-rbOffset] * a_bc[iAm1];</code></td></tr>
+<tr><td class="code_line_class">2319</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">2352</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">2353</td><td><code>            +                   a_bs[iA]   * pb[iP1-pbOffset]</code></td></tr>
+<tr><td class="code_line_class">2354</td><td><span class="highlightme"><code>            +                   a_as[iA]   * pa[iP1]</code></span></td></tr>
+<tr><td class="code_line_class">2355</td><td><code>            +          rb[iR-rbOffset] * a_as[iAm1]</code></td></tr>
+<tr><td class="code_line_class">2356</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">2370</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">2371</td><td><code>            +                   a_bw[iA]   * pb[iP1-pbOffset]</code></td></tr>
+<tr><td class="code_line_class">2372</td><td><span class="highlightme"><code>            +                   a_aw[iA]   * pa[iP1]</code></span></td></tr>
+<tr><td class="code_line_class">2373</td><td><code>            +          rb[iR-rbOffset] * a_aw[iAm1]</code></td></tr>
+<tr><td class="code_line_class">2374</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>

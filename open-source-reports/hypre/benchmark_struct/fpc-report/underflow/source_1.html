@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+./benchmark_struct.jobs
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./underflow.html">Underflow
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/hypre/hypre/src/struct_ls/cyclic_reduction.c
+</div>
+<h2 id="heading">
+Underflow
+	Report
+</h2>
+<h3 id="heading">
+cyclic_reduction.c
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">362</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">363</td><td><code></code></td></tr>
+<tr><td class="code_line_class">364</td><td><span class="highlightme"><code>            ac_cw[iAc] = -a_cw[iA] * a_cw[iAm1] / a_cc[iAm1];</code></span></td></tr>
+<tr><td class="code_line_class">365</td><td><code></code></td></tr>
+<tr><td class="code_line_class">366</td><td><span class="highlightme"><code>            ac_cc[iAc] = a_cc[iA] - a_cw[iA] * a_ce[iAm1] / a_cc[iAm1] -</code></span></td></tr>
+<tr><td class="code_line_class">367</td><td><span class="highlightme"><code>                         a_ce[iA] * a_cw[iAp1] / a_cc[iAp1];</code></span></td></tr>
+<tr><td class="code_line_class">368</td><td><code>         }</code></td></tr>
+<tr><td class="code_line_class">369</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">978</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">979</td><td><code>                  xcp[xci] = xp[xi] - Awp[Ai] * xwp[xi+xwp_offset] -</code></td></tr>
+<tr><td class="code_line_class">980</td><td><span class="highlightme"><code>                                      Aep[Ai] * xep[xi+xep_offset];</code></span></td></tr>
+<tr><td class="code_line_class">981</td><td><code>               }</code></td></tr>
+<tr><td class="code_line_class">982</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1143</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1144</td><td><code>               {</code></td></tr>
+<tr><td class="code_line_class">1145</td><td><span class="highlightme"><code>                  xp[xi] -= (Awp[Ai]*xp[xi+xwp_offset] + Aep[Ai]*xp[xi+xep_offset]) / Ap[Ai];</code></span></td></tr>
+<tr><td class="code_line_class">1146</td><td><code>               }</code></td></tr>
+<tr><td class="code_line_class">1147</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>
