@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+./benchmark_ij.jobs
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./cancellation.html">Cancellation
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/hypre/hypre/src/parcsr_ls/par_rap.c
+</div>
+<h2 id="heading">
+Cancellation
+	Report
+</h2>
+<h3 id="heading">
+par_rap.c
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">833</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">834</td><td><code>                        {</code></td></tr>
+<tr><td class="code_line_class">835</td><td><span class="highlightme"><code>                           RAP_int_data[P_marker[i3]] += r_a_p_product;</code></span></td></tr>
+<tr><td class="code_line_class">836</td><td><code>                        }</code></td></tr>
+<tr><td class="code_line_class">837</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">858</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">859</td><td><code>                        {</code></td></tr>
+<tr><td class="code_line_class">860</td><td><span class="highlightme"><code>                           RAP_int_data[P_marker[i3]] += r_a_p_product;</code></span></td></tr>
+<tr><td class="code_line_class">861</td><td><code>                        }</code></td></tr>
+<tr><td class="code_line_class">862</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">874</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">875</td><td><code>                        r_a_p_product = r_a_product * P_ext_diag_data[jj3];</code></td></tr>
+<tr><td class="code_line_class">876</td><td><span class="highlightme"><code>                        RAP_int_data[P_marker[i3]] += r_a_p_product;</code></span></td></tr>
+<tr><td class="code_line_class">877</td><td><code>                     }</code></td></tr>
+<tr><td class="code_line_class">878</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">880</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">881</td><td><code>                        r_a_p_product = r_a_product * P_ext_offd_data[jj3];</code></td></tr>
+<tr><td class="code_line_class">882</td><td><span class="highlightme"><code>                        RAP_int_data[P_marker[i3]] += r_a_p_product;</code></span></td></tr>
+<tr><td class="code_line_class">883</td><td><code>                     }</code></td></tr>
+<tr><td class="code_line_class">884</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">932</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">933</td><td><code>                        {</code></td></tr>
+<tr><td class="code_line_class">934</td><td><span class="highlightme"><code>                           RAP_int_data[P_marker[i3]] += r_a_p_product;</code></span></td></tr>
+<tr><td class="code_line_class">935</td><td><code>                        }</code></td></tr>
+<tr><td class="code_line_class">936</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">956</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">957</td><td><code>                        {</code></td></tr>
+<tr><td class="code_line_class">958</td><td><span class="highlightme"><code>                           RAP_int_data[P_marker[i3]] += r_a_p_product;</code></span></td></tr>
+<tr><td class="code_line_class">959</td><td><code>                        }</code></td></tr>
+<tr><td class="code_line_class">960</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">972</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">973</td><td><code>                        r_a_p_product = r_a_product * P_diag_data[jj3];</code></td></tr>
+<tr><td class="code_line_class">974</td><td><span class="highlightme"><code>                        RAP_int_data[P_marker[i3]] += r_a_p_product;</code></span></td></tr>
+<tr><td class="code_line_class">975</td><td><code>                     }</code></td></tr>
+<tr><td class="code_line_class">976</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">978</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">979</td><td><code>                        r_a_p_product = r_a_product * P_offd_data[jj3];</code></td></tr>
+<tr><td class="code_line_class">980</td><td><span class="highlightme"><code>                        RAP_int_data[P_marker[i3]] += r_a_p_product;</code></span></td></tr>
+<tr><td class="code_line_class">981</td><td><code>                     }</code></td></tr>
+<tr><td class="code_line_class">982</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1639</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1640</td><td><code>                           RAP_offd_data[P_marker[jcol]]</code></td></tr>
+<tr><td class="code_line_class">1641</td><td><span class="highlightme"><code>                              += RAP_ext_data[k];</code></span></td></tr>
+<tr><td class="code_line_class">1642</td><td><code>                     }</code></td></tr>
+<tr><td class="code_line_class">1643</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1728</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1729</td><td><code>               {</code></td></tr>
+<tr><td class="code_line_class">1730</td><td><span class="highlightme"><code>                  RA_diag.data[marker - ra_row_begin_diag] += r_entry * a_entry;</code></span></td></tr>
+<tr><td class="code_line_class">1731</td><td><code>               }</code></td></tr>
+<tr><td class="code_line_class">1732</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1764</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1765</td><td><code>               else</code></td></tr>
+<tr><td class="code_line_class">1766</td><td><span class="highlightme"><code>                  RAP_diag_data[marker] += r_a_product * p_entry;</code></span></td></tr>
+<tr><td class="code_line_class">1767</td><td><code>            }</code></td></tr>
+<tr><td class="code_line_class">1768</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1785</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1786</td><td><code>               else</code></td></tr>
+<tr><td class="code_line_class">1787</td><td><span class="highlightme"><code>                  RAP_offd_data[marker] += r_a_product * p_entry;</code></span></td></tr>
+<tr><td class="code_line_class">1788</td><td><code>            }</code></td></tr>
+<tr><td class="code_line_class">1789</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1822</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1823</td><td><code>               {</code></td></tr>
+<tr><td class="code_line_class">1824</td><td><span class="highlightme"><code>                  RAP_diag_data[marker] += r_a_product * p_entry;</code></span></td></tr>
+<tr><td class="code_line_class">1825</td><td><code>               }</code></td></tr>
+<tr><td class="code_line_class">1826</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1848</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1849</td><td><code>                  {</code></td></tr>
+<tr><td class="code_line_class">1850</td><td><span class="highlightme"><code>                     RAP_offd_data[marker] += r_a_product * p_entry;</code></span></td></tr>
+<tr><td class="code_line_class">1851</td><td><code>                  }</code></td></tr>
+<tr><td class="code_line_class">1852</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>

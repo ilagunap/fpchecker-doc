@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+./benchmark_ij.jobs
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./cancellation.html">Cancellation
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/hypre/hypre/src/seq_mv/csr_matop.c
+</div>
+<h2 id="heading">
+Cancellation
+	Report
+</h2>
+<h3 id="heading">
+csr_matop.c
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">323</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">324</td><td><code>               hypre_assert(C_j[marker[jcol]] == jcol);</code></td></tr>
+<tr><td class="code_line_class">325</td><td><span class="highlightme"><code>               C_data[marker[jcol]] += beta*B_data[ib];</code></span></td></tr>
+<tr><td class="code_line_class">326</td><td><code>            }</code></td></tr>
+<tr><td class="code_line_class">327</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">890</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">891</td><td><code>               {</code></td></tr>
+<tr><td class="code_line_class">892</td><td><span class="highlightme"><code>                  C_data[B_marker[jb]] += a_entry*b_entry;</code></span></td></tr>
+<tr><td class="code_line_class">893</td><td><code>               }</code></td></tr>
+<tr><td class="code_line_class">894</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1738</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">1739</td><td><code>                  {</code></td></tr>
+<tr><td class="code_line_class">1740</td><td><span class="highlightme"><code>                     C_data[marker[jcol]] += B_data[ib];</code></span></td></tr>
+<tr><td class="code_line_class">1741</td><td><code>                  }</code></td></tr>
+<tr><td class="code_line_class">1742</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>

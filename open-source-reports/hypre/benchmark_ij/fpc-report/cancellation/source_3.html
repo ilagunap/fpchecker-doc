@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_3/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+./benchmark_ij.jobs
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./cancellation.html">Cancellation
+	</a> &nbsp; &gt; &nbsp;
+/usr/workspace/wsa/laguna/fpchecker/cpu_checking/apps/hypre/hypre/src/parcsr_ls/par_stats.c
+</div>
+<h2 id="heading">
+Cancellation
+	Report
+</h2>
+<h3 id="heading">
+par_stats.c
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">586</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">587</td><td><code>            for (j = A_offd_i[0]; j < A_offd_i[1]; j++)</code></td></tr>
+<tr><td class="code_line_class">588</td><td><span class="highlightme"><code>               min_rowsum += A_offd_data[j];</code></span></td></tr>
+<tr><td class="code_line_class">589</td><td><code></code></td></tr>
+<tr><td class="code_line_class">590</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">598</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">599</td><td><code>               for (i = A_diag_i[j]; i < A_diag_i[j+1]; i++)</code></td></tr>
+<tr><td class="code_line_class">600</td><td><span class="highlightme"><code>                  rowsum += A_diag_data[i];</code></span></td></tr>
+<tr><td class="code_line_class">601</td><td><code></code></td></tr>
+<tr><td class="code_line_class">602</td><td><code>               for (i = A_offd_i[j]; i < A_offd_i[j+1]; i++)</code></td></tr>
+<tr><td class="code_line_class">603</td><td><span class="highlightme"><code>                  rowsum += A_offd_data[i];</code></span></td></tr>
+<tr><td class="code_line_class">604</td><td><code></code></td></tr>
+<tr><td class="code_line_class">605</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>

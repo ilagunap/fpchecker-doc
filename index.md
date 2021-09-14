@@ -34,9 +34,9 @@ FPChecker detects the following floating-point issues:
 - **Infinity -:** this is the same as infinity +, except that the sign of the resulting calculation is negative.
 - **NaN:** NaN (not a number) results from invalid operations, such as 0/0 or sqrt(-1).
 - **Division by zero:** This occurs when a finite nonzero number is divided by zero. This typically produces either infinity or NaN.
-- **Underflow (subnormal):** Underflow is detected when an operation produces a subnormal number because the result was not representable as a normal number.
-- **Comparison:** This occurs when two floating-point numbers are compared for equality. Sometimes checking if two floating-point numbers are equal can lead to inaccuracies.
-- **Cancellation:** cancellation occurs when two nearly equal numbers are subtracted. By default, this event is detected when at least ten decimal digits are lost due to a subtraction.
+- **Underflow (subnormal):** Underflow is detected when an operation produces a subnormal number because the result was not representable as a normal number. More [here](/subnormal-numbers.html).
+- **Comparison:** This occurs when two floating-point numbers are compared for equality. Sometimes checking if two floating-point numbers are equal can lead to inaccuracies. More [here](https://floating-point-gui.de/errors/comparison/).
+- **Cancellation:** cancellation occurs when two nearly equal numbers are subtracted. By default, this event is detected when at least ten decimal digits are lost due to a subtraction. More [here](http://localhost:4000/2021-07-12-dealing-with-cancellation.html).
 - **Latent Infinity +:** is detected when an operation produces a large normal and is close to positive infinity.
 - **Latent Infinity -:** is detected when an operation produces a large normal number and is close to negative infinity.
 - **Latent underflow:** is detected when an operation produces a small normal number and is close to becoming an underflow (subnormal number).
