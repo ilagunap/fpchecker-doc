@@ -23,7 +23,7 @@ If we compute **c = a – b**, the result has only one significant digit:
 {% include image.html file="fpchecker/cancellation.png" alt="fpchecker" max-width=300  %}
 
 The values for the **uuu...** digits are not necessarily zero. Therefore, the relative error of the result can be significant.
-The above is an example of catastrophic cancellation, which occurs because the original quantities **a** and **b** were not represented exactly with the available precision of the system. On the other hand, suppose the a and be quantities are exactly represented as floating-point numbers in the available precision. In that case, cancellation can occur, but it is considered benign (i.e., the result of the subtraction is exact).
+The above is an example of catastrophic cancellation, which occurs because the original quantities **a** and **b** were not represented exactly with the available precision of the system. On the other hand, suppose the **a** and **b** quantities are exactly represented as floating-point numbers in the available precision. In that case, cancellation can occur, but it is considered benign (i.e., the result of the subtraction is exact).
 
 ## What Can be Done?
 

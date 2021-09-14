@@ -9,7 +9,7 @@ tags: [subnormal numbers, optimizations]
 
 Subnormal numbers (previously known as denormal numbers) fill the underflow gap in floating-point arithmetic. Traditionally, an underflow computation is said to occur when the exact result of the calculation is nonzero but is smaller than the smallest normalized floating-point number. Subnormal numbers represent the result of computations that produce very small numbers but are not too small to become zero. 
 
-While subnormal numbers are generated frequently in numerical software (e.g., scientific applications), combining such numbers with specific compiler optimizations can produce unexpected results. 
+While subnormal numbers are generated frequently in numerical software, combining such numbers with specific compiler optimizations can produce unexpected results. 
 
 ## Simple Example
 Let’s examine an simple example where combining subnormal numbers and compiler optimizations produce inconsistencies.
@@ -43,7 +43,7 @@ $ ./test
 Correct branch
 ```
 What happened? How can we have a different behavior by simply changing the optimization level from `–O3` to `–O2`? 
-To understand what happened, we can look at the assembly code (we use the Linus objdump tool to disassemble the code). Here’s a portion of the assembly code for the `–O2` case:
+To understand what happened, we can look at the assembly code (we use the Linux objdump tool to disassemble the code). Here’s a portion of the assembly code for the `–O2` case:
 ```
  7 0000000000000000 <compute>:
  8    0: 00 00 4c 3c   addis   r2,r12,0
