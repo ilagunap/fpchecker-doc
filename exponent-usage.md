@@ -11,9 +11,9 @@ summary: This functionality helps you understand the floating-point exponent usa
 ## Background on Floating-Point
 
 Floating-point numbers are represented in the following form:
-
+```
 significant x 2^exponent,
-
+```
 where significant (or mantissa) and exponent are integers.
 
 The FP32 (32-bit) floating-point format uses 8 bits for exponents. FP32 exponents range from −126 to +127; exponents of −127 (all 0s) and +128 (all 1s) are reserved for special numbers. Similarly, the FP64 (64-bit) floating-point format uses 11 bits for exponents. FP64 exponents range from −1022 to +1023; exponents of −1023 (all 0s) and +1024 (all 1s) are reserved for special numbers.
@@ -42,8 +42,10 @@ A directory called `fpc-report` will be generated with report. Open `index.html`
 
 Histogram plots show the number of times a range of exponents were used in the floating-point operations of your application. The report provides a histogram plot for the entire program and different histogram plots for the application files.
 
+{% include image.html file="fpchecker/lulesh2.0_-s_10_-p_-i_10_.png" alt="fpchecker" max-width=500  %}
+
 ## Sample Reports
 
 These are some sample reports from open-source applications:
-- LULESH
-- AMG
+- [LULESH](https://fpchecker.org/open-source-reports/exponent_usage/LULESH/fpc-report/)
+- [AMG](https://fpchecker.org/open-source-reports/exponent_usage/AMG/fpc-report/)
