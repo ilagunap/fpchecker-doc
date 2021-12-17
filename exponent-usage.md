@@ -12,7 +12,7 @@ summary: This functionality helps you understand the floating-point exponent usa
 
 Floating-point numbers are represented in the following form:
 ```
-significant x 2^exponent,
+significant x 2^exponent
 ```
 where significant (or mantissa) and exponent are integers.
 
