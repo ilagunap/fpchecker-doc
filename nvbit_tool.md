@@ -24,7 +24,7 @@ You should see the following output:
 ```
 ## Error Reports
 
-If a calculation that result in a NaN or infinity is found, you should see the following output:
+If a calculation that results in a NaN or infinity is found, you should see the following output:
 ```
 #FPCHECKER: NaN found @ /tests/my_code/dot_product.cu:18
 #FPCHECKER: INF found @ /tests/my_code/mult_matrix.cu:26
