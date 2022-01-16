@@ -2,6 +2,7 @@
 title: "Binary Instrumentation Tool"
 keywords: tools
 layout: page
+sidebar: mydoc_sidebar
 permalink: nvbit_tool.html
 ---
 
