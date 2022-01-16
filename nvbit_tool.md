@@ -8,19 +8,19 @@ permalink: nvbit_tool.html
 
 ## Tool Description
 
-This tool can detect NaN, Infinity (positive and negative), and subnormal quantities in NVIDIA GPU applications using binary analysis. As a result, it requires no re-compilation of the application and can analyze libraries. The tool uses the [NVBit tool](https://github.com/NVlabs/NVBit), which is provided by NVIDIA Labs.
+This tool can detect NaN, infinity (positive and negative), and subnormal quantities in NVIDIA GPU applications using binary analysis. As a result, it requires no re-compilation of the application and can analyze libraries. The tool uses the [NVBit tool](https://github.com/NVlabs/NVBit), which is provided by NVIDIA Labs.
 
-## How to use it
+## How to Use it
 
-Simply preload the shared library ` detect_fp_exceptions.so` before running the application using the Linux LD_PRELOAD variable method:
+Simply preload the shared library `detect_fp_exceptions.so` before running the application using the Linux LD_PRELOAD variable method:
 ```
 $ LD_PRELOAD=/path/detect_fp_exceptions.so ./application input
 ```
 You should see the following output:
 ```
 #FPCHECKER: Initializing...
-#FPCHECKER: kernel void RAJA::internal::CudaKernelLauncherFixed…
-#FPCHECKER: kernel …
+#FPCHECKER: kernel void RAJA::internal::CudaKernelLauncherFixed...
+#FPCHECKER: kernel...
 ```
 ## Error Reports
 
@@ -31,7 +31,7 @@ If a calculation that result in a NaN or infinity is found, you should see the f
 ```
 ## Requirements
 
-The GPU code must be compiled with the –generate-line-info flag (see the nvcc options [here](https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html#options-for-altering-compiler-linker-behavior-generate-line-info)).
+The GPU code must be compiled with the `--generate-line-info` flag (see the nvcc options [here](https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html#options-for-altering-compiler-linker-behavior-generate-line-info)).
 
 Other requirements:
 - SM compute capability: >= 3.5 && <= 8.6
