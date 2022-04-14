@@ -8,6 +8,7 @@ permalink: nvbit_tool.html
 
 ## Tool Description
 
+The BinFPE tool can be used as an alternative to FPChcker to detect exceptions in NVIDIA GPUs: [https://github.com/LLNL/BinFPE](https://github.com/LLNL/BinFPE).
 This tool can detect NaN, infinity (positive and negative), and subnormal quantities in NVIDIA GPU applications using binary analysis. As a result, it requires no re-compilation of the application and can analyze libraries. The tool uses the [NVBit tool](https://github.com/NVlabs/NVBit), which is provided by NVIDIA Labs.
 
 ## How to Use it
