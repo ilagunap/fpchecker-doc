@@ -41,23 +41,22 @@ FPChecker detects the following floating-point issues:
 - **Latent Infinity -:** detected when an operation produces a large normal number and is close to negative infinity.
 - **Latent underflow:** detected when an operation produces a small normal number and is close to becoming an underflow (subnormal number).
 
-## Dynamic Range Usage
+## Exponent Usage
 FPChecker profiles the code and quantifies the exponent usage of the application in FP32 and FP64 precision. For FP32 (single-precision) and FP64 (double-precision), these ranges determine the magnitude of the numbers that can be represented. While the internal representation uses a base 2 exponent, the equivalent range in base 10 is often used to provide a more intuitive understanding of the scale of numbers supported:
 
-- FP32: an approximate base 10 exponent range from 10^−38 to 10^38.
+- FP32: an approximate base 10 exponent range from $10^{−38}$ to 10^38.
 - FP64: and approximate base 10 exponent range from 10^−308 to 10^308.
+- <p>This is x<sup>2</sup> + y<sup>3</sup>.</p>
 
 FPChecker can create histograms of the exponent usage in your application. Understanding the exponent usage in your application allows you to understand the numerical magnitudes your code operates on. This is useful when porting code to lower precision or mixed-precision.
+
+{% include image.html file="fpchecker/exponent_usage.png" url="https://github.com/LLNL/FPChecker" alt="fpchecker" max-width=300  %}
 
 ## How FPChecker Works
 
 FPChecker is designed as an extension of the clang/LLVM compiler. When the application is compiled, an LLVM pass instruments the LLVM IR code after optimizations and inserts check code to all floating-point operations. The check code calls routines in the FPChecker runtime system, which detects several floating-point events (see above). When the code execution ends, traces are saved in the current directory. These traces are then used to build a detailed report of the location of the detected events.
 
 ## Demo
-
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1083326382?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="fpchecker-video-May-2025"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-
-New video
 
 <div style="width: 70%; margin: auto;"> <div style="padding:56.25% 0 0 0;position:relative;">
     <iframe src="https://player.vimeo.com/video/1083326382?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="fpchecker-video-May-2025"></iframe>
