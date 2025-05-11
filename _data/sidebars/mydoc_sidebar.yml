@@ -32,9 +32,9 @@ entries:
       url: /installation.html
       output: web, pdf
 
-    - title: Building with Spack
-      url: /installation_spack.html
-      output: web, pdf
+    #- title: Building with Spack
+    #  url: /installation_spack.html
+    #  output: web, pdf
 
     - title: How to Use
       url: /how-to-use.html

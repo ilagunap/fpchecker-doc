@@ -39,7 +39,7 @@ $ conda install clangxx=19.1.7 -c conda-forge
 
 
 ## Checking Prerequisites
-Before building, check that the supported version of clang++ is in your path:
+Before building, check that the supported version of `clang++` is in your path:
 
 ```
 $ clang++ --version
