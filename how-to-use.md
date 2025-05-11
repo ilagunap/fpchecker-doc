@@ -55,8 +55,8 @@ The MPI wrappers use the MPI compilers (`mpicc`, `mpicxx`, or `mpic++`) availabl
 The third method to instrument the code is to add the following compilation flags to CFLAGS and or CXXFLAGS:
 
 - "-g"
-- "-include /tmp/tutorial/FPChecker/build/install/src/Runtime_cpu.h"
-- "-fpass-plugin=/tmp/tutorial/FPChecker/build/install/lib/libfpchecker_cpu.so"
+- "-include /path/to/install/src/Runtime_cpu.h"
+- "-fpass-plugin=/path/to/install/lib/libfpchecker_cpu.so"
 
 The first one allows compilations with debug information; the second pre-included the runtime system; the third load the plug-in library.
 
