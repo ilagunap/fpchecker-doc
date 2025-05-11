@@ -44,13 +44,12 @@ FPChecker detects the following floating-point issues:
 ## Exponent Usage
 FPChecker profiles the code and quantifies the exponent usage of the application in FP32 and FP64 precision. For FP32 (single-precision) and FP64 (double-precision), these ranges determine the magnitude of the numbers that can be represented. While the internal representation uses a base 2 exponent, the equivalent range in base 10 is often used to provide a more intuitive understanding of the scale of numbers supported:
 
-- FP32: an approximate base 10 exponent range from $10^{−38}$ to 10^38.
-- FP64: and approximate base 10 exponent range from 10^−308 to 10^308.
-- <p>This is x<sup>2</sup> + y<sup>3</sup>.</p>
+- <p>FP32: an approximate base 10 exponent range from 10<sup>−38</sup> to 10<sup>38</sup>.</p>
+- <p>FP64: an approximate base 10 exponent range from 10<sup>−308</sup> to 10<sup>308</sup>.</p>
 
 FPChecker can create histograms of the exponent usage in your application. Understanding the exponent usage in your application allows you to understand the numerical magnitudes your code operates on. This is useful when porting code to lower precision or mixed-precision.
 
-{% include image.html file="fpchecker/exponent_usage.png" url="https://github.com/LLNL/FPChecker" alt="fpchecker" max-width=300  %}
+{% include image.html file="fpchecker/exponent_usage.png" url="https://github.com/LLNL/FPChecker" alt="fpchecker" max-width=500  %}
 
 ## How FPChecker Works
 
