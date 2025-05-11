@@ -12,14 +12,14 @@ toc: false
 
 ## Overview
 
-FPChecker is a dynamic analysis tool to detect floating-point errors in HPC applications; it helps developers gain a better picture of what's happening in terms of floating-point arithmetic in their applications. It is the only tool of its class that supports common programming languages and models in HPC, including C/C++, MPI, and OpenMP. It is designed to be easy to use and easy to integrate into applications. The tool provides a detailed HTML report that helps users identify the exact location of floating-point errors, such as exceptions, in the software.
+FPChecker is a dynamic analysis tool to detect floating-point errors in HPC applications; it helps developers gain a better picture of what's happening in terms of floating-point arithmetic in their applications. It is the only tool of its class that supports common programming languages and models in HPC, including C/C++, MPI, and OpenMP. It is designed to be easy to use and easy to integrate into applications. The tool provides a detailed HTML report that helps users identify the exact location of floating-point issues, such as exceptions, in the software.
 
 ## Features
 
 - **Easy to use:** it only requires a few changes to the application build script, such as changing the compiler (e.g., clang++) by the FPChecker compiler wrappers (e.g., clang++-fpchecker). It automatically instruments the code at build time.
-- **Accurate detection:** it accurately detects errors dynamically (when code is executed) for specific inputs; it doesn’t give alarms for unused or invalid inputs. 
+- **Accurate detection:** it accurately detects issues dynamically (when code is executed) for specific inputs; it doesn’t give alarms for unused or invalid inputs. 
 - **Designed for HPC:** it supports different programming languages and models in HPC: C/C++, MPI, OpenMP, and Pthreads.
-- **Detailed report:** it provides a detailed report that programmers can use to identify the exact location (file and line number) of floating-point errors in the software.
+- **Detailed report:** it provides a detailed report that programmers can use to identify the exact location (file and line number) of floating-point issues in the software.
 
 <!--
 {% include image.html file="fpchecker/report-1.png" url="https://github.com/LLNL/FPChecker" alt="fpchecker" max-width=500  %}
@@ -71,4 +71,6 @@ To cite FPChecker please use
 
 ```
 Laguna, Ignacio. "FPChecker: Detecting Floating-point Exceptions in GPU Applications." In 2019 34th IEEE/ACM International Conference on Automated Software Engineering (ASE), pp. 1126-1129. IEEE, 2019.
+
+Laguna, Ignacio, Tanmay Tirpankar, Xinyi Li, and Ganesh Gopalakrishnan. "FPChecker: Floating-point exception detection tool and benchmark for parallel and distributed hpc." In 2022 IEEE International Symposium on Workload Characterization (IISWC), pp. 39-50. IEEE, 2022.
 ```
