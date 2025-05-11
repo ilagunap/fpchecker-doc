@@ -49,6 +49,15 @@ FPChecker is designed as an extension of the clang/LLVM compiler. When the appli
 
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1083326382?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="fpchecker-video-May-2025"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
+New video
+
+<div style="width: 80%; margin: auto;"> <div style="padding:56.25% 0 0 0;position:relative;">
+    <iframe src="https://player.vimeo.com/video/1083326382?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="fpchecker-video-May-2025"></iframe>
+  </div>
+</div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+
+
 ## Contact
 For questions, contact Ignacio Laguna <ilaguna@llnl.gov>.
 
