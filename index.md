@@ -12,13 +12,13 @@ toc: false
 
 ## Overview
 
-FPChecker is a dynamic analysis tool to detect floating-point errors in HPC applications. It is the only tool of its class that supports the most common programming languages and models in HPC, including C/C++, MPI, OpenMP, and CUDA. It is designed to be easy to use and easy to integrate into applications. The tool provides a detailed HTML report that helps users identify the exact location of floating-point errors in the software.
+FPChecker is a dynamic analysis tool to detect floating-point errors in HPC applications; it helps developers gain a better picture of what's happening in terms of floating-point arithmetic in their applications. It is the only tool of its class that supports common programming languages and models in HPC, including C/C++, MPI, and OpenMP. It is designed to be easy to use and easy to integrate into applications. The tool provides a detailed HTML report that helps users identify the exact location of floating-point errors, such as exceptions, in the software.
 
 ## Features
 
 - **Easy to use:** it only requires a few changes to the application build script, such as changing the compiler (e.g., clang++) by the FPChecker compiler wrappers (e.g., clang++-fpchecker). It automatically instruments the code at build time.
 - **Accurate detection:** it accurately detects errors dynamically (when code is executed) for specific inputs; it doesn’t give alarms for unused or invalid inputs. 
-- **Designed for HPC:** it supports the most used programming languages and models in HPC: C/C++, MPI, OpenMP, Pthreads, and CUDA.
+- **Designed for HPC:** it supports different programming languages and models in HPC: C/C++, MPI, OpenMP, and Pthreads.
 - **Detailed report:** it provides a detailed report that programmers can use to identify the exact location (file and line number) of floating-point errors in the software.
 
 <!--
@@ -37,9 +37,17 @@ FPChecker detects the following floating-point issues:
 - **Underflow (subnormal):** Underflow is detected when an operation produces a subnormal number because the result was not representable as a normal number. More [here](/subnormal-numbers.html).
 - **Comparison:** This occurs when two floating-point numbers are compared for equality. Sometimes checking if two floating-point numbers are equal can lead to inaccuracies. More [here](https://floating-point-gui.de/errors/comparison/).
 - **Cancellation:** cancellation occurs when two nearly equal numbers are subtracted. By default, this event is detected when at least ten decimal digits are lost due to a subtraction. More [here](2021-07-12-dealing-with-cancellation.html).
-- **Latent Infinity +:** is detected when an operation produces a large normal and is close to positive infinity.
-- **Latent Infinity -:** is detected when an operation produces a large normal number and is close to negative infinity.
-- **Latent underflow:** is detected when an operation produces a small normal number and is close to becoming an underflow (subnormal number).
+- **Latent Infinity +:** detected when an operation produces a large normal and is close to positive infinity.
+- **Latent Infinity -:** detected when an operation produces a large normal number and is close to negative infinity.
+- **Latent underflow:** detected when an operation produces a small normal number and is close to becoming an underflow (subnormal number).
+
+## Dynamic Range Usage
+FPChecker profiles the code and quantifies the exponent usage of the application in FP32 and FP64 precision. For FP32 (single-precision) and FP64 (double-precision), these ranges determine the magnitude of the numbers that can be represented. While the internal representation uses a base 2 exponent, the equivalent range in base 10 is often used to provide a more intuitive understanding of the scale of numbers supported:
+
+- FP32: an approximate base 10 exponent range from 10^−38 to 10^38.
+- FP64: and approximate base 10 exponent range from 10^−308 to 10^308.
+
+FPChecker can create histograms of the exponent usage in your application. Understanding the exponent usage in your application allows you to understand the numerical magnitudes your code operates on. This is useful when porting code to lower precision or mixed-precision.
 
 ## How FPChecker Works
 
