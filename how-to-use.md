@@ -8,11 +8,27 @@ permalink: how-to-use.html
 summary: These brief instructions will help you get started to use FPChecker in your application.
 ---
 
-FPChecker instruments applications at compile time. There are two ways to instrument code: **semi-automatic** mode or **automatic** mode (see below).
+FPChecker works by instrumenting applications at compile time. There are three ways to instrument applications:
 
-## Compiling C/C++
-### Semi-automatic Mode
-FPChecker provides the following wrapper scripts for C/C++ and MPI:
+- (1) Makefile interceptor (automatic mode)
+- (2) Clang wrappers (semi-automatic mode)
+- (3) Adding compilation flags (manual mode)
+
+The automatic mode is the easiest to use, but it only works in Linux using the `LD_PRELOAD` trick (assuming the system allows it fully). The semi-automatic mode works in most cases but can have issues with some build systems. The manual mode works in all cases but requires more changes to the application build scripts.
+
+## Makefile Interceptor (Automatic mode)
+
+
+To instrument the code, one must modify the build scripts to allow LLVM load the appropriate plug-in library. However, instead of modifying the application build scripts, FPChecker can automatically intercept the original compiler commands and will add the required flags. Just run `fpchecker` and provide the `make` build command as input:
+```
+$ fpchecker make -j
+```
+In this mode, the `fpchecker` interceptor, will use the `LD_PRELOAD` trick in Linux to intercept all the `clang` and `clang++` commands and add the required flags. This only works in Linux (not supported in MacOS).
+
+
+## Clang wrappers (Semi-automatic mode)
+
+In this mode, the `clang` and `clang++` compilers must be replaced by the `clang-fpchecker` and `clang++-fpchecker` wrappers, respectively. FPChecker provides the following wrapper scripts for C/C++ and MPI:
 
 | Original Compiler | Wrapper | Purpose |
 |-------|--------|---------|
@@ -31,32 +47,41 @@ $ FPC_INSTRUMENT=1 make -j
 ```
 If `FPC_INSTRUMENT` is not set, the application will be compiled without instrumentation, and no events will be detected.
 
-#### MPI and OpenMP
+### MPI and OpenMP
 The MPI wrappers use the MPI compilers (`mpicc`, `mpicxx`, or `mpic++`) available in the environment. Therefore, an MPI implementation must be installed in the system to compile MPI code. FPChecker supports (Open MPI)[https://www.open-mpi.org/]; support for MPICH is coming soon. To compile OpenMP code, provide the `-fopenmp` flag at compile time.
 
-### Automatic Mode
-Alternatively, instead of modifying the application build scripts, FPChecker can automatically intercept the original compiler commands and replace them with the appropriate wrappers. Just run `fpchecker` and provide the build command as input:
-```
-$ fpchecker make -j
-```
-This mode doesn’t require setting `FPC_INSTRUMENT` (it does it automatically).
+##  Adding compilation flags (Manual mode)
 
-See the [videos](videos.html) for how to use the wrappers and the automatic mode.
+The third method to instrument the code is to add the following compilation flags to CFLAGS and or CXXFLAGS:
 
-## Compiling CUDA
-To compile CUDA, FPChecker uses a simple front-end that instruments arithmetic operations (e.g., x = a + b …) with no dependencies on clang/LLVM. While this version is a work in progress, it can instrument most CUDA kernels.
+- "-g"
+- "-include /tmp/tutorial/FPChecker/build/install/src/Runtime_cpu.h"
+- "-fpass-plugin=/tmp/tutorial/FPChecker/build/install/lib/libfpchecker_cpu.so"
 
-The CUDA checking component only detects the most critical events: infinity (+), infinity (-), NaN, and division by zero.
+The first one allows compilations with debug information; the second pre-included the runtime system; the third load the plug-in library.
 
-Replace `nvcc` in your build system with `nvcc-fpchecker` (the nvcc wrapper). For `cmake`, one can use `cmake -DCMAKE_CUDA_COMPILER=nvcc-fpchecker`, for example. To instrument the code at build time, the `FPC_INSTRUMENT` environment variable must be set:
+Running the `fpchecker-show` command shows the location af these files and the flags to add:
+
 ```
-$ FPC_INSTRUMENT=1 make -j
+$ fpchecker-show
+========================================
+         FPChecker Configuration        
+========================================
+
+Installation path: /tmp/tutorial/FPChecker/build/install
+
+Add this to CFLAGS and/or CXXFLAGS:
+-g -include /tmp/tutorial/FPChecker/build/install/src/Runtime_cpu.h -fpass-plugin=/tmp/tutorial/FPChecker/build/install/lib/libfpchecker_cpu.so
+
+Wrappers are located here:
+/tmp/tutorial/FPChecker/build/install/bin/clang-fpchecker
+/tmp/tutorial/FPChecker/build/install/bin/clang++-fpchecker
+/tmp/tutorial/FPChecker/build/install/bin/mpicc-fpchecker
+/tmp/tutorial/FPChecker/build/install/bin/mpicxx-fpchecker
 ```
-### Automatic Mode
-Alternatively, FPChecker can automatically intercept the original compiler commands and replace them with the nvcc wrapper:
-```
-$ fpchecker make -j
-```
+
+In this mode, the original `clang` and `clang++` compilers must be used (not the wrappers). The `FPC_INSTRUMENT` environment variable must be set.
+
 
 ## Running the Instrumented Application
 After compiling and instrumenting, the application can be run normally:
