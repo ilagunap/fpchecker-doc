@@ -10,16 +10,16 @@ summary: These brief instructions will help you get started to use FPChecker in 
 
 FPChecker works by instrumenting applications at compile time. There are three ways to instrument applications:
 
-- (1) Makefile interceptor (automatic mode)
-- (2) Clang wrappers (semi-automatic mode)
-- (3) Adding compilation flags (manual mode)
+1. Makefile interceptor (automatic mode)
+2. Clang wrappers (semi-automatic mode)
+3. Adding compilation flags (manual mode)
 
 The automatic mode is the easiest to use, but it only works in Linux using the `LD_PRELOAD` trick (assuming the system allows it fully). The semi-automatic mode works in most cases but can have issues with some build systems. The manual mode works in all cases but requires more changes to the application build scripts.
 
 ## Makefile Interceptor (Automatic mode)
 
 
-To instrument the code, one must modify the build scripts to allow LLVM load the appropriate plug-in library. However, instead of modifying the application build scripts, FPChecker can automatically intercept the original compiler commands and will add the required flags. Just run `fpchecker` and provide the `make` build command as input:
+To instrument the code, one must modify the build scripts to allow LLVM load the appropriate plug-in library and the needed flags. However, instead of modifying the application build scripts, FPChecker can automatically intercept the original compiler commands and add the required flags. Just run `fpchecker` and provide the `make` build command as input:
 ```
 $ fpchecker make -j
 ```

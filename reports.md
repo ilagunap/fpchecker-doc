@@ -22,9 +22,7 @@ fpc-report
 
 {% include image.html file="fpchecker/main_report.png" url="https://github.com/LLNL/FPChecker" alt="fpchecker" max-width=500  %}
 
-The above picture shows the main report (located at `fpc-report/index.html`). The first column shows the classes of events detected. The second column shows the number of events detected. Finally, the third column shows the severity of the event type (high, medium, low).
-
-Most of the time, the events of severity medium or low are benign and could be ignored (it can be, however, handy to know where they occur). However, attention should be paid to the events of high severity.
+The above picture shows the main report (located at `fpc-report/index.html`). The first column shows the classes of events detected. The second column shows the number of events detected.
 
 ## Files Report
 
@@ -36,6 +34,6 @@ This report shows also ther inputs that generated such event (in this case, NaN)
 
 ## Source Code Report
 
-The source code report is shown by clicking on the Line column in the File Report (see example below). This report shows the lines of code affected by the event in the corresponding file. The affected code lines are highlighted.
+The source code report is shown by clicking on the Lines column in the File Report (see example below). This report shows the lines of code affected by the event in the corresponding file. The affected code lines are highlighted.
 
 {% include image.html file="fpchecker/source_report.png" url="https://github.com/LLNL/FPChecker" alt="fpchecker" max-width=500  %}

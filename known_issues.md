@@ -6,13 +6,9 @@ sidebar: mydoc_sidebar
 permalink: known_issues.html
 ---
 
-## Limitations of the CUDA Front-End
+## Makefile wrapper (automatic mode)
 
-The FPChecker CUDA fron-end is work-in-progress and has some limitations:
-
-- It doesn't instrument header files (only source files: .cu, .cpp, .c++, etc.)
-- It requires using C++11
-- The capabilities to parse macros and commets is good, but not perfect yet.
+The automatic mode (`fpchecker` wrapper) only works in Linux when the `LD_PRELOAD` trick is allowed.
 
 ## Passing Strings to the Compiler
 
