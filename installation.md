@@ -12,7 +12,7 @@ summary: These brief instructions will help you get started to install FPChecker
 - Operating systems: Linux or MacOS (not all features supported in MacOS).
 - Cmake (a recent version)
 - FPChecker is developed as an extension of the clang/LLVM compiler. Currently, the clang/LLVM version that is supported is 19.1.7.
-- Python 3 with:  matplotlib, colorama/termcolor (for terminal output color).
+- Python 3 (and matplotlib).
 - Pytest (optional) to run the tests (see [here](https://docs.pytest.org/)).
 
 ## Source Code
