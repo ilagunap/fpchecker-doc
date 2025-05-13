@@ -44,6 +44,11 @@ entries:
       url: /reports.html
       output: web, pdf
 
+    - title: Configuration
+      url: /configuration.html
+      output: web, pdf
+
+
     - title: Known Issues
       url: /known_issues.html
       output: web, pdf
