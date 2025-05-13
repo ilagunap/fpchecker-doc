@@ -28,7 +28,7 @@ What you’ll learn in the tutorial:
 
 The tutorial uses simple examples to showcase the tool's functionality, including examples of linear solvers, finite differences, and finite elements methods applied to simple 2D PDEs using C/C++. 
 
-### Required Knowledge & Software
+## Required Knowledge & Software
 The only prerequisite for this tutorial is the ability to compile C/C++ software with the clang/LLVM compiler (e.g., using Makefiles).
 
 The tutorial uses Conda environments to build the tool and to run the examples on the participants' laptops. To be able to run the examples, participants must have [Anaconda](https://anaconda.org/) installed and running on their Mac or Linux system. Participants who do not want to run the examples can simply watch the demos.
