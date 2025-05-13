@@ -16,10 +16,17 @@ The value of the variable does not matter; it only matters whether it is set or 
 
 ## Availabe Variables
 
-Here’s the list of available variables, their type, and description:
+Here’s the list of available variables, their type, and description.
+
+### Compile-time Variables
 
 | Variable | Type | Description |
 | FPC_INTRUMENT | Compile-time | Instruments the application |
+| FPC_ANNOTATED | Compile-time | Indicates that the program is annotated |
+
+### Run-time Variables
+
+| Variable | Type | Description |
 | FPC_EXPONENT_USAGE | Run-time | Profiles exponent usage for FP32/FP64 |
 | FPC_TRAP_INFINITY_POS | Run-time | Program exits when Infinity positive is found |
 | FPC_TRAP_INFINITY_NEG | Run-time | Program exits when Infinity negative is found |
@@ -31,5 +38,3 @@ Here’s the list of available variables, their type, and description:
 | FPC_TRAP_LATENT_INF_POS | Run-time | Program exits when Latent Infinity positive is found |
 | FPC_TRAP_LATENT_INF_NEG | Run-time | Program exits when Latent Infinity negative is found |
 | FPC_TRAP_LATENT_UNDERFLOW | Run-time | Program exits when Latent Underflow is found |
-
-
