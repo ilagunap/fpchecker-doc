@@ -4,7 +4,7 @@ keywords: sample homepage
 layout: page
 tags: [getting_started]
 sidebar: mydoc_sidebar
-permalink: annotations.html
+permalink: tutorial.html
 summary: Details of the FPChecker tutorial
 ---
 
