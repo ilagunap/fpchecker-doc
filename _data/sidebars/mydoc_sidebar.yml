@@ -77,18 +77,18 @@ entries:
       output: web, pdf
       type: homepage
 
-    - title: Binary Instrumentation
-      url: /nvbit_tool.html
-      output: web, pdf
-      type: homepage
+    #- title: Binary Instrumentation
+    #  url: /nvbit_tool.html
+    #  output: web, pdf
+    #  type: homepage
 
-  - title: Videos
-    output: web
-    folderitems:
+  #- title: Videos
+  #  output: web
+  #  folderitems:
     
-    - title: Videos
-      url: /videos.html
-      output: web
+  #  - title: Videos
+  #    url: /videos.html
+  #    output: web
 
   - title: Blog
     output: web
