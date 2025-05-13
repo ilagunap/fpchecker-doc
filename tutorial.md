@@ -8,7 +8,7 @@ permalink: tutorial.html
 summary: Details of the FPChecker tutorial
 ---
 
-<p align="center">  <img src="./images/fpchecker/logo.jpg" width="300"> </p>
+{% include image.html file="fpchecker/logo_fpchecker.png" url="https://github.com/LLNL/FPChecker" alt="fpchecker" %}
 
 # FPChecker Tutorial:  Understand the Floating-Point Arithmetic Behavior of Your Code
 
