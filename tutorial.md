@@ -12,6 +12,8 @@ summary: Details of the FPChecker tutorial
 
 # FPChecker Tutorial:  Understand the Floating-Point Arithmetic Behavior of Your Code
 
+## Overview
+
 Ever wondered why 0.1 + 0.2 doesn’t always equal 0.3 in your code? Frustrated by “Not a number” (NaN) errors creeping into your calculations? You are not alone. Floating-point arithmetic is fundamental in computing, yet it’s a common source of confusion and bugs for developers working with numerical software.
 
 This tutorial presents [FPChecker](https://fpchecker.org/index.html), a tool that helps developers gain a better picture of what's happening in terms of floating-point arithmetic in their applications. FPChecker allows you to detect hidden exceptions (e.g., division by zero), cancellation, and other errors in C/C++ programs using the clang/LLVM compiler. It can analyze parallel HPC applications using MPI and OpenMP.
