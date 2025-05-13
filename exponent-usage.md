@@ -35,7 +35,7 @@ While the internal representation uses a base 2 exponent, the equivalent range i
 
 ## Exponent Usage Histograms
 
-FPChecker can create histograms of the exponent usage in your application. Understanding the exponent usage in your application allows you to understand the numerical magnitudes your code operates on. This is useful when porting code to lower precision or mixed-precision.
+FPChecker can create histograms of the exponent usage in your application. Understanding the exponent usage in your application allows you to understand the numerical magnitudes your code operates on.
 
 To enable exponent usage histograms, define the `FPC_EXPONENT_USAGE` variable at runtime.
 
