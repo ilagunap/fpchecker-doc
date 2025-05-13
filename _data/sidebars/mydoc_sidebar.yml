@@ -23,7 +23,7 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Get started
+    - title: Overview
       url: /index.html
       output: web, pdf
       type: homepage
@@ -69,6 +69,11 @@ entries:
 
     - title: Exponent Usage
       url: /exponent-usage.html
+      output: web, pdf
+      type: homepage
+
+    - title: Annotations
+      url: /annotations.html
       output: web, pdf
       type: homepage
 
