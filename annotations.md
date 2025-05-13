@@ -16,19 +16,19 @@ When code is annotated, the `FPC_ANNOTATED` variable must be set.
 
 ## Function Annotations
 
-To annotate a function, add `FPC_INSTRUMENT_FUNC` macro to the definition of a function:
+To annotate a function, add `FPC_INSTRUMENT_FUNC` macro to the definition of a function. For example:
 
 ```
 FPC_INSTRUMENT_FUNC
 double my_function(double *x, int size) {
-...
-...
+  ...
+  ...
 } 
 ```
 
 ## Basic Block Annotations
 
-To annotate a basic block of code, add `FPC_INSTRUMENT_BLOCK` macro to the target basic block:
+To annotate a basic block of code, add `FPC_INSTRUMENT_BLOCK` macro to the begininng of the target basic block. For example:
 
 ```
 double my_function(double *x, int size) {
@@ -39,6 +39,7 @@ double my_function(double *x, int size) {
   
   // For loop
   for (int i=0; ...) {
+    // This block is not annotated
     ...
   }
 } 
