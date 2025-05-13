@@ -106,3 +106,11 @@ entries:
       url: /open-source-reports.html
       output: web
 
+  - title: Tutorials
+    output: web
+    folderitems:
+    
+    - title: Tutorial
+      url: /tutorial.html
+      output: web
+
