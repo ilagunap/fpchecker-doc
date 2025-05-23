@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FPChecker Report</title>
+<link href="../sitestyle.css" rel="stylesheet" type="text/css">	
+	
+</head>
+<body class="body_class">
+<header>
+<div class="header_class">&nbsp;&nbsp;<img src="../icons_4/logo_fpchecker.png" alt=""/></div>
+</header>
+
+<div class="separation_class"></div>
+<div class="report_title">
+<b>Report Title:</b>
+srun -n 64 ../../../install_PMcpu/bin/lmp -in common/in.snap.test -var snapdir common/2J8_W.SNAP ...
+</div>
+	
+<div class="separation_class"></div>
+<div class="hierarchy_class"><a href="../index.html">Main Report</a> &nbsp; &gt; &nbsp; 
+<a href="./cancellation.html">Cancellation
+	</a> &nbsp; &gt; &nbsp;
+/global/homes/i/ilaguna/exaalt/lammps_src/src/finish.cpp
+</div>
+<h2 id="heading">
+Cancellation
+	Report
+</h2>
+<h3 id="heading">
+finish.cpp
+</h3>
+	
+<table width="600" border="0" class="report_box_source">
+  <tbody>
+<tr><td class="code_line_class">561</td><td><code> ... </code></td></tr>
+<tr><td class="code_line_class">562</td><td><code></code></td></tr>
+<tr><td class="code_line_class">563</td><td><span class="highlightme"><code>  double del = max - min;</code></span></td></tr>
+<tr><td class="code_line_class">564</td><td><code>  for (i = 0; i < n; i++) {</code></td></tr>
+<tr><td class="code_line_class">565</td><td><code>    if (del == 0.0) m = 0;</code></td></tr>
+<tr><td class="code_line_class">566</td><td><span class="highlightme"><code>    else m = static_cast<int> ((data[i]-min)/del * nhisto);</code></span></td></tr>
+<tr><td class="code_line_class">567</td><td><code>    if (m > nhisto-1) m = nhisto-1;</code></td></tr>
+<tr><td class="code_line_class">568</td><td><code> ... </code></td></tr>
+  <!--
+	<tr><td class="code_line_class">13</td><td> <code>   for(int i; i&lt;4) {</code></td></tr>
+  <tr><td class="code_line_class">10245</td><td>...</td></tr>
+	<tr><td class="code_line_class"></td><td>...</td></tr>
+	<tr><td class="code_line_class">10345</td><td> <span class="highlightme"><code>   x[i] = abs(y) + x[i+1]; </code></span></td></tr>
+  -->
+  </tbody>
+</table>
+	
+</body>
+</html>
