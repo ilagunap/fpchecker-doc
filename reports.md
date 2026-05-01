@@ -37,3 +37,11 @@ This report shows also ther inputs that generated such event (in this case, NaN)
 The source code report is shown by clicking on the Lines column in the File Report (see example below). This report shows the lines of code affected by the event in the corresponding file. The affected code lines are highlighted.
 
 {% include image.html file="fpchecker/source_report.png" url="https://github.com/LLNL/FPChecker" alt="fpchecker" max-width=500  %}
+
+## Rounding Error Report
+
+FPChecker can also generate a rounding error report to show line-level accumulated error metrics (absolute and relative), which are useful for numerical diagnosis and mixed-precision tuning.
+
+{% include image.html file="fpchecker/error_report.png" url="https://github.com/LLNL/FPChecker" alt="fpchecker-rounding-error-report" max-width=500  %}
+
+For more details, see [Rounding Error Tracking](rounding-error-tracking.html).

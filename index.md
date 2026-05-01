@@ -12,7 +12,7 @@ toc: false
 
 ## Overview
 
-FPChecker is a dynamic analysis tool to detect floating-point errors in HPC applications; it helps developers gain a better picture of what's happening in terms of floating-point arithmetic in their applications. It is the only tool of its class that supports common programming languages and models in HPC, including C/C++, MPI, and OpenMP. It is designed to be easy to use and easy to integrate into applications. The tool provides a detailed HTML report that helps users identify the exact location of floating-point issues, such as exceptions, in the software.
+FPChecker is a dynamic analysis tool to profile floating-point errors in HPC applications; it helps developers gain a better picture of what's happening in terms of floating-point arithmetic in their applications. It is the only tool of its class that supports common programming languages and models in HPC, including C/C++, MPI, and OpenMP. It is designed to be easy to use and easy to integrate into applications. The tool provides detailed reports that help users identify the exact location of floating-point issues, such as exceptions, high accumulated rounding error, cancellation, and others in the software. These rounding-error reports can also be used for data-driven mixed-precision tuning by identifying high-error lines that should be promoted from FP32 to FP64.
 
 ## Features
 
@@ -20,6 +20,7 @@ FPChecker is a dynamic analysis tool to detect floating-point errors in HPC appl
 - **Accurate detection:** it accurately detects issues dynamically (when code is executed) for specific inputs; it doesn’t give alarms for unused or invalid inputs. 
 - **Designed for HPC:** it supports different programming languages and models in HPC: C/C++, MPI, OpenMP, and Pthreads.
 - **Detailed report:** it provides a detailed report that programmers can use to identify the exact location (file and line number) of floating-point issues in the software.
+- **Mixed-precision tuning support:** rounding-error accumulation reports highlight high-error lines, helping users prioritize selective FP32-FP64 promotion based on measured numerical risk.
 
 <!--
 {% include image.html file="fpchecker/report-1.png" url="https://github.com/LLNL/FPChecker" alt="fpchecker" max-width=500  %}
@@ -50,6 +51,17 @@ FPChecker profiles the code and quantifies the exponent usage of the application
 FPChecker can create histograms of the exponent usage in your application. Understanding the exponent usage in your application allows you to understand the numerical magnitudes your code operates on. This is useful when porting code to lower precision or mixed-precision.
 
 {% include image.html file="fpchecker/exponent_usage.png" url="https://github.com/LLNL/FPChecker" alt="fpchecker" max-width=500  %}
+
+## Rounding Error Tracking
+
+FPChecker can also generate line-level rounding-error accumulation reports to identify numerically 
+unstable operations in the code. These reports support a data-driven **mixed-precision** 
+workflow by showing where selective FP32 and FP64 promotion is most beneficial 
+for accuracy while minimizing performance impact.
+
+See [Rounding Error Tracking](rounding-error-tracking.html) for details.
+
+{% include image.html file="fpchecker/error_report.png" url="https://github.com/LLNL/FPChecker" alt="fpchecker-rounding-error-report" max-width=500  %}
 
 ## How FPChecker Works
 

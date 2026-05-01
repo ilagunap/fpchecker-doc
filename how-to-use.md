@@ -64,15 +64,20 @@ The first one allows compilations with debug information; the second pre-include
 Running the `fpchecker-show` command shows the location af these files and the flags to add:
 
 ```
-$ fpchecker-show
+$ fpchecker-show 
 ========================================
          FPChecker Configuration        
 ========================================
 
 Installation path: /tmp/tutorial/FPChecker/build/install
 
-Add this to CFLAGS and/or CXXFLAGS:
--g -include /tmp/tutorial/FPChecker/build/install/src/Runtime_cpu.h -fpass-plugin=/tmp/tutorial/FPChecker/build/install/lib/libfpchecker_cpu.so
+Add the following to CFLAGS and/or CXXFLAGS:
+
+(1) For exceptions checking:
+-g -include /tmp/tutorial/FPChecker/build/install/src/Runtime_cpu.h -fpass-plugin=/tmp/tutorial/FPChecker/build/install/lib/libfpchecker_cpu.dylib
+
+(2) For rounding error tracking:
+-g -fno-vectorize -fno-slp-vectorize -include /tmp/tutorial/FPChecker/build/install/src/Runtime_error.h -fpass-plugin=/tmp/tutorial/FPChecker/build/install/lib/libfpchecker_error.dylib
 
 Wrappers are located here:
 /tmp/tutorial/FPChecker/build/install/bin/clang-fpchecker
@@ -80,6 +85,8 @@ Wrappers are located here:
 /tmp/tutorial/FPChecker/build/install/bin/mpicc-fpchecker
 /tmp/tutorial/FPChecker/build/install/bin/mpicxx-fpchecker
 ```
+
+To track rounding error, use the rounding-error flags shown above and instrument with `FPC_INSTRUMENT_ERR_TRACKING=1`. See [Rounding Error Tracking](rounding-error-tracking.html) for details and mixed-precision tuning guidance.
 
 In this mode, the original `clang` and `clang++` compilers must be used (not the wrappers). The `FPC_INSTRUMENT` environment variable must be set.
 

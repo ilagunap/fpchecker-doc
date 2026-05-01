@@ -21,12 +21,15 @@ Here’s the list of available variables, their type, and description.
 ### Compile-time Variables
 
 | Variable | Type | Description |
-| FPC_INTRUMENT | Compile-time | Instruments the application |
+|---|---|---|
+| FPC_INSTRUMENT | Compile-time | Instruments the application for exceptions/event checking |
+| FPC_INSTRUMENT_ERR_TRACKING | Compile-time | Instruments the application for rounding error tracking |
 | FPC_ANNOTATED | Compile-time | Indicates that the program is annotated |
 
 ### Run-time Variables
 
 | Variable | Type | Description |
+|---|---|---|
 | FPC_EXPONENT_USAGE | Run-time | Profiles exponent usage for FP32/FP64 |
 | FPC_TRAP_INFINITY_POS | Run-time | Program exits when Infinity positive is found |
 | FPC_TRAP_INFINITY_NEG | Run-time | Program exits when Infinity negative is found |
