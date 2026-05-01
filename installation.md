@@ -20,7 +20,7 @@ The source is available at github: [https://github.com/LLNL/FPChecker](https://g
 
 Checkout FPChecker:
 
-```
+```bash
 $ git clone https://github.com/LLNL/FPChecker.git
 ```
 
@@ -32,7 +32,7 @@ Installing pre-built packages is the simplest and most common way to get Clang a
 
 Another practical way to install it is using Conda environments:
 
-```
+```bash
 $ conda install llvmdev=19.1.7 -c conda-forge
 $ conda install clangxx=19.1.7 -c conda-forge
 ```
@@ -41,14 +41,14 @@ $ conda install clangxx=19.1.7 -c conda-forge
 ## Checking Prerequisites
 Before building, check that the supported version of `clang++` is in your path:
 
-```
+```bash
 $ clang++ --version
 clang version 19.1.7
 ...
 ```
 
 Check that the `llvm-config` command is in your path:
-```
+```bash
 $ llvm-config --version
 19.1.7
 ```
@@ -56,7 +56,7 @@ $ llvm-config --version
 ## Building
 FPChecker is built using a recent version of `cmake`.
 
-```
+```bash
 $ mkdir build
 $ cd build
 $ cmake -DCMAKE_INSTALL_PREFIX=/path/to/install .. 
@@ -69,7 +69,7 @@ $ make && make install
 
 To run the tests, use `ctest` in the build directory:
 
-```
+```bash
 $ ctest -V
 ```
 

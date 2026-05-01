@@ -20,7 +20,7 @@ The automatic mode is the easiest to use, but it only works in Linux using the `
 
 
 To instrument the code, one must modify the build scripts to allow LLVM load the appropriate plug-in library and the needed flags. However, instead of modifying the application build scripts, FPChecker can automatically intercept the original compiler commands and add the required flags. Just run `fpchecker` and provide the `make` build command as input:
-```
+```bash
 $ fpchecker make -j
 ```
 In this mode, the `fpchecker` interceptor, will use the `LD_PRELOAD` trick in Linux to intercept all the `clang` and `clang++` commands and add the required flags. This only works in Linux (not supported in MacOS).
@@ -39,11 +39,11 @@ In this mode, the `clang` and `clang++` compilers must be replaced by the `clang
 | mpicxx, mpic++ | mpicxx-fpchecker, mpic++-fpchecker | To compile MPI C++ code |
 
 Simply modify the build scripts (e.g., Makefile) of the application to use the above wrappers instead of the original compiler. If the application uses cmake, one could run, for example:
-```
+```bash
 $ CXX=clang++-fpchecker cmake
 ```
 To instrument the code at build time, the `FPC_INSTRUMENT` environment variable must be set; this can be set when running make:
-```
+```bash
 $ FPC_INSTRUMENT=1 make -j
 ```
 If `FPC_INSTRUMENT` is not set, the application will be compiled without instrumentation, and no events will be detected.
@@ -63,7 +63,7 @@ The first one allows compilations with debug information; the second pre-include
 
 Running the `fpchecker-show` command shows the location af these files and the flags to add:
 
-```
+```bash
 $ fpchecker-show 
 ========================================
          FPChecker Configuration        
@@ -93,7 +93,7 @@ In this mode, the original `clang` and `clang++` compilers must be used (not the
 
 ## Running the Instrumented Application
 After compiling and instrumenting, the application can be run normally:
-```
+```bash
 $ ./application input
 #FPCHECKER: Initializing...
 ...

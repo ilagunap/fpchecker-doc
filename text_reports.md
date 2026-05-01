@@ -11,7 +11,7 @@ summary: These instructions will help you get started with the FPChecker text re
 
 FPChecker can print the report in standard output using the `-s` option:
 
-```
+```bash
 $ fpc-create-report -s
 Generating FPChecker report...
 Trace files found: 8
@@ -33,7 +33,7 @@ latent_underflow               0
 
 To see the lines and inputs affected by a given event, provide the event name to the `-s` option (e.g., positive_infinity or nan):
 
-```
+```bash
 $ fpc-create-report -s nan
 Generating FPChecker report...
 Trace files found: 8

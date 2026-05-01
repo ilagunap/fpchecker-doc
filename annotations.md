@@ -18,7 +18,7 @@ When code is annotated, the `FPC_ANNOTATED` variable must be set.
 
 To annotate a function, add `FPC_INSTRUMENT_FUNC` macro to the definition of a function. For example:
 
-```
+```bash
 FPC_INSTRUMENT_FUNC
 double my_function(double *x, int size) {
   ...
@@ -30,7 +30,7 @@ double my_function(double *x, int size) {
 
 To annotate a basic block of code, add `FPC_INSTRUMENT_BLOCK` macro to the begininng of the target basic block. For example:
 
-```
+```bash
 double my_function(double *x, int size) {
   // Annotated basic block
   FPC_INSTRUMENT_BLOCK;
@@ -47,7 +47,7 @@ double my_function(double *x, int size) {
 
 These macros are defined in `Runtime_cpu.h` as:
 
-```
+```bash
 #define FPC_INSTRUMENT_BLOCK __attribute__((annotate("_FPC_INSTRUMENT_BLOCK_"))) int _marker __attribute__((unused)) = 0;
 #define FPC_INSTRUMENT_FUNC __attribute__((annotate("_FPC_INSTRUMENT_FUNCTION_")))
 ```

@@ -10,11 +10,12 @@ summary: These instructions will help you get started with the FPChecker reports
 
 ## Main Report
 To generate the report, run `fpc-create-report` in the directory where the application was executed. You can add a title to the report usign the `-t` option: `$ fpc-create-report -t 'Application Name'`.
-```
+```bash
 $ fpc-create-report
 ```
+
 The report will be created in the `fpc-report` directory in the current directory:
-```
+```bash
 $ ls ./
 fpc-report
 ```

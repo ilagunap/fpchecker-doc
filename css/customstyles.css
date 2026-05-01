@@ -258,6 +258,83 @@ div#toc ul li ul {
 
 }
 
+/* Minimal code styling override: dark fenced blocks, subtle inline code */
+.highlighter-rouge .highlight {
+    background: #2a3a52;
+    border: 1px solid #3c5170;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.highlighter-rouge .highlight pre {
+    background: transparent;
+    color: #eaf1fb;
+    padding: 14px 16px;
+    line-height: 1.45;
+    margin: 0;
+    overflow-x: auto;
+}
+
+/* Syntax token overrides for dark code blocks (Rouge) */
+.highlighter-rouge .highlight .nv,
+.highlighter-rouge .highlight .vc,
+.highlighter-rouge .highlight .vg,
+.highlighter-rouge .highlight .vi {
+    color: #8bd5ff;
+}
+
+.highlighter-rouge .highlight .nb,
+.highlighter-rouge .highlight .nf {
+    color: #c6e3ff;
+}
+
+.highlighter-rouge .highlight .nt,
+.highlighter-rouge .highlight .na,
+.highlighter-rouge .highlight .nl {
+    color: #ffd98e;
+}
+
+.highlighter-rouge .highlight .k,
+.highlighter-rouge .highlight .kt,
+.highlighter-rouge .highlight .o,
+.highlighter-rouge .highlight .ow {
+    color: #ffd98e;
+}
+
+.highlighter-rouge .highlight .s,
+.highlighter-rouge .highlight .s1,
+.highlighter-rouge .highlight .s2,
+.highlighter-rouge .highlight .sb,
+.highlighter-rouge .highlight .sx {
+    color: #b8f7d4;
+}
+
+.highlighter-rouge .highlight .mi,
+.highlighter-rouge .highlight .mf,
+.highlighter-rouge .highlight .m {
+    color: #f7c7ff;
+}
+
+.highlighter-rouge .highlight .c,
+.highlighter-rouge .highlight .c1,
+.highlighter-rouge .highlight .cm {
+    color: #9fb0c9;
+}
+
+.highlighter-rouge .highlight .gp {
+    color: #a7bce0;
+}
+
+p code,
+li code,
+td code {
+    background: #eef4fc;
+    border: 1px solid #d6e2f2;
+    color: #1f2d42;
+    border-radius: 4px;
+    padding: 1px 5px;
+}
+
 div#toc ul li ul li::before {
     content: "–  ";
 }
