@@ -57,6 +57,11 @@ entries:
     output: web, pdf
     folderitems:
 
+    - title: Rounding Error Tracking
+      url: /rounding-error-tracking.html
+      output: web, pdf
+      type: homepage
+
     - title: Text Reports
       url: /text_reports.html
       output: web, pdf
