@@ -1,5 +1,5 @@
 ---
-title: "Exponent Usage"
+title: "Exponent Usage (Dynamic Range)"
 keywords: sample homepage
 layout: page
 tags: [getting_started]
@@ -16,6 +16,12 @@ Checking that the application stays within bounds is important for several reaso
 
 - Avoiding overflows and underflows
 - Checking that mixed-precision code is correct
+
+### Reduced Precision Risk
+This analysis helps you understand the dynamic range of numerical 
+values used by your application at runtime. 
+This is especially useful when using reduced precision, where values 
+can go out of range more easily (overflow/underflow).
 
 ## Background on Floating-Point
 

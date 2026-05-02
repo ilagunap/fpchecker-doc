@@ -46,6 +46,8 @@ fpchecker-show
 
 and copy the rounding-error flags from the output (the section labeled `For rounding error tracking`).
 
+For the full manual workflow, see [Adding compilation flags (Manual mode)](how-to-use.html#adding-compilation-flags-manual-mode), which shows how to get and apply the flags from `fpchecker-show`.
+
 At a minimum, this mode requires adding the rounding runtime include and rounding 
 plugin flags shown by `fpchecker-show` (for example, `Runtime_error.h` and `libfpchecker_error...`) 
 to your compile flags.
@@ -67,9 +69,9 @@ Because each operation can consume values that already carry error, FPChecker ca
 Simple propagation example:
 
 ```text
-a = b + c        -> compute error(a)
-d = a * e        -> use error(a) when computing error(d)
-f = d - g        -> use error(d), producing accumulated error at f
+a = b + 0.1    -> compute error(a)
+d = a * e      -> use error(a) and error(e) when computing error(d)
+f = d - g      -> use error(d) and error(g), producing accumulated error at f
 ```
 
 This allows developers to identify unstable hotspots and 
