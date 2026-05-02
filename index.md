@@ -12,15 +12,22 @@ toc: false
 
 ## Overview
 
-FPChecker is a dynamic analysis tool to profile floating-point errors in HPC applications; it helps developers gain a better picture of what's happening in terms of floating-point arithmetic in their applications. It is the only tool of its class that supports common programming languages and models in HPC, including C/C++, MPI, and OpenMP. It is designed to be easy to use and easy to integrate into applications. The tool provides detailed reports that help users identify the exact location of floating-point issues, such as exceptions, high accumulated rounding error, cancellation, and others in the software. These rounding-error reports can also be used for data-driven mixed-precision tuning by identifying high-error lines that should be promoted from FP32 to FP64.
+FPChecker is a dynamic analysis tool for profiling floating-point behavior in HPC applications.
+It gives developers clear, execution-based insight into how floating-point arithmetic behaves
+under real workloads and is currently the only tool in its class tailored to the HPC domain.
+Designed for straightforward adoption, FPChecker integrates with existing build workflows and
+produces detailed reports that pinpoint the exact file and line locations of numerical issues,
+including exceptions, high accumulated rounding error, cancellation, and related events.
+Its rounding-error reports also support data-driven mixed-precision tuning by highlighting
+code locations where promotion to higher precision is most beneficial.
 
 ## Features
 
-- **Easy to use:** it only requires a few changes to the application build script, such as changing the compiler (e.g., clang++) by the FPChecker compiler wrappers (e.g., clang++-fpchecker). It automatically instruments the code at build time.
-- **Accurate detection:** it accurately detects issues dynamically (when code is executed) for specific inputs; it doesn’t give alarms for unused or invalid inputs. 
-- **Designed for HPC:** it supports different programming languages and models in HPC: C/C++, MPI, OpenMP, and Pthreads.
-- **Detailed report:** it provides a detailed report that programmers can use to identify the exact location (file and line number) of floating-point issues in the software.
-- **Mixed-precision tuning support:** rounding-error accumulation reports highlight high-error lines, helping users prioritize selective FP32-FP64 promotion based on measured numerical risk.
+- **Easy adoption:** FPChecker requires only minor build-script updates, such as replacing the compiler invocation (for example, `clang++`) with FPChecker wrappers (for example, `clang++-fpchecker`). Instrumentation is then applied automatically at build time.
+- **Execution-accurate detection:** FPChecker reports issues based on actual execution for the selected inputs, reducing false alarms from paths that are not exercised.
+- **Built for HPC workflows:** FPChecker supports key HPC languages and programming models, including C/C++, MPI, and, in selected modes, OpenMP and Pthreads.
+- **Actionable reporting:** FPChecker produces detailed reports that identify the exact source location (file and line) of floating-point issues.
+- **Mixed-precision guidance:** Rounding-error accumulation reports highlight high-risk lines, helping users prioritize selective FP32-to-FP64 promotion based on measured numerical impact.
 
 <!--
 {% include image.html file="fpchecker/report-1.png" url="https://github.com/LLNL/FPChecker" alt="fpchecker" max-width=500  %}
