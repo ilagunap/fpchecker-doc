@@ -84,8 +84,6 @@ Rounding-error outputs are line-oriented:
 - Reports show line-level entries so you can rank **hotspots** by relative error.
 - For a given line, the summary view shows a single 
 accumulated value (the last seen value for that line in the trace summary).
-- If you need temporal evolution for selected lines, use `FPC_SAVE_LINE_ERRORS` 
-to save the full sequence and plot it (as shown in `tutorial/example_5`).
 
 ## Example Rounding Error Report
 
@@ -129,15 +127,7 @@ FPC_INSTRUMENT_ERR_TRACKING=1 make
 fpc-create-report -s rounding
 ```
 
-For targeted line-series output (example: line 90):
-
-```bash
-FPC_SAVE_LINE_ERRORS=90 ./your_app your_args
-```
-
-This writes `errors_per_line_*.json`, which can be plotted to inspect how error evolves over repeated executions of that line.
-
-## Mixed-Precision Tuning (Data-Driven)
+## Mixed-Precision Tuning
 
 The rounding-error report can be used as a practical guide for selective promotion from FP32 to FP64.
 
@@ -151,8 +141,8 @@ A common workflow is:
 
 Useful tuning heuristics:
 
-- If a line repeatedly shows relative error above a project tolerance (for example, greater than 1e-5), consider promoting that operation to FP64.
-- If relative error is 1.0 (100 percent) or higher, this often indicates severe *cancellation* or unstable arithmetic and is a strong candidate for FP64 promotion or formula reformulation.
+- If a line repeatedly shows relative error above a tolerance, for example, greater than 1e-5 for FP32, consider promoting that operation to FP64.
+- If relative error is 1.0 (100 percent) or higher, this often indicates severe *cancellation* or unstable arithmetic and is a strong candidate for high-precision promotion or formula reformulation.
 - Keep low-error lines in FP32 when possible to preserve performance.
 
 This enables a data-driven mixed-precision strategy: precision changes are made where the report shows numerical risk, instead of promoting code blindly.
