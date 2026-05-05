@@ -10,7 +10,7 @@ summary: High-level guide to FPChecker rounding-error accumulation, instrumentat
 This page explains:
 - How FPChecker tracks rounding error (absolute and relative)
 - How to enable this mode in practice
-- How to use this mode for **mixed-precision** tuning
+- How to use this mode for [mixed-precision tuning](rounding-error-tracking.html#mixed-precision-tuning)
 
 ## What Is Being Tracked
 
