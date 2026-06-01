@@ -1,0 +1,21 @@
+---
+layout: none
+permalink: /redirect/
+---
+{% capture redirect_url %}{% include_relative target.txt %}{% endcapture %}
+{% assign redirect_url = redirect_url | strip %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <meta http-equiv="refresh" content="0; url={{ redirect_url }}">
+  <link rel="canonical" href="{{ redirect_url }}">
+  <script>
+    window.location.replace({{ redirect_url | jsonify }});
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href="{{ redirect_url }}">{{ redirect_url }}</a>.</p>
+</body>
+</html>
