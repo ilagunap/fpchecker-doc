@@ -6,4 +6,7 @@ gem 'github-pages', group: :jekyll_plugins
 # to publich without github page
 #gem "jekyll"
 
-gem "webrick"
+gem "webrick", ">= 1.8.2"
+
+# Security update
+gem "rexml", ">= 3.3.9"
